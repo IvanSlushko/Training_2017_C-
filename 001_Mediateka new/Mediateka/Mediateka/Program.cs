@@ -7,6 +7,7 @@ using Mediateka;
 using Mediateka.Builders;
 using Mediateka.Classes;
 using Mediateka.Interfaces;
+using Mediateka.Builders.Classes;
 
 
 
@@ -32,7 +33,7 @@ namespace Mediateka
 {
     class Program
     {
-       
+
         static void Main(string[] args)
         {
 
@@ -40,16 +41,21 @@ namespace Mediateka
             //создаем плейлист
             Media audioPList = new Media("Sbornik_1", new List<IMediaItem>());
 
-
-            //добавляем в библиотеку трек
-            AudioItem t1 = new AudioItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
-            AudioItem t2 = new AudioItem("Madonna", "www.listen.ru/dr.dre/track2.mp3");
-            AudioItem t3 = new AudioItem("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
+            
+            //добавляем в библиотеку треки
+            MediaItem t1 = new MediaItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
+            MediaItem t2 = new MediaItem("Madonna", "www.listen.ru/dr.dre/track2.mp3");
+            MediaItem t3 = new MediaItem("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
             audioPList.Items.Add(t1);
             audioPList.Items.Add(t2);
             audioPList.Items.Add(t3);
+            audioPList.Items.Add(new MediaItem("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
 
-            Console.WriteLine(audioPList.Name);
+            foreach (MediaItem a in audioPList.Items)
+            {
+                Console.WriteLine(a.Play);
+            }
+            
 
             
 

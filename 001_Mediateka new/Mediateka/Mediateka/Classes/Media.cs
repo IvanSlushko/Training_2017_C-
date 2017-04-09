@@ -13,7 +13,6 @@ namespace Mediateka.Classes
             get;
             private set;
         }
-
         public Media(string name, ICollection<IMediaItem> items)
         {
             Name = name;

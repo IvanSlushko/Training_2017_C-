@@ -9,14 +9,14 @@ namespace Mediateka.Builders.Classes
 {
     public  class MediaItem: IMediaItem, IReproduceble
     {
-
-        public string Name { get; protected set; }
-        public string Url { get; protected set; }
-        public MediaItem(string name, ICollection<IMediaItem> items)
+        public MediaItem(string name, string url)
         {
             Name = name;
             Url = Url;
         }
+        public string Name { get; protected set; }
+        public string Url { get; protected set; }
+
         public string Play
         {
             get
