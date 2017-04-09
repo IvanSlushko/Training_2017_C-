@@ -18,6 +18,7 @@ namespace Mediateka.Classes
         public Media(string name, ICollection<IMediaItem> items)
         {
             Name = name;
+            Items = items;
             //Url = Url;
         }
     }
