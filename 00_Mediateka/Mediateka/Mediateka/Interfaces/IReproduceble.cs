@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mediateka.Interfaces
 {
-    class IPlay
+    public interface  IReproduceble
     {
         string Play();
     }
