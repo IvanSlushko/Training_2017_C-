@@ -9,9 +9,13 @@ namespace Mediateka.Builders.Classes
 {
     abstract class MediaItem: IMediaItem
     {
-        public MediaItem (string name, string Url)
+        public MediaItem (string name, string url)
         {
-
+            Name = name;
+            Url = url;
         }
+
+        public string Name { get; }
+        public string Url { get; }
     }
 }
