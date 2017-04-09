@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builders\AudioBuilder.cs" />
+    <Compile Include="Components\MediaUrl.cs" />
+    <Compile Include="Maker.cs" />
+    <Compile Include="Components\Media.cs" />
+    <Compile Include="Builders\MediaBuilder.cs" />
+    <Compile Include="Components\MediaFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Builders\VideoBuilder.cs" />
+    <Compile Include="Builders\PhotoBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

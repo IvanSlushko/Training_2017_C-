@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mediateka;
 
 
 
@@ -28,8 +29,26 @@ namespace Mediateka
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
+
+            // содаем объект распорядителя
+            Maker maker = new Maker();
+
+            // создаем билдер для видео
+            MediaBuilder mediaBuilder = new VideoBuilder();
+            Media videoMedia = maker.Make(mediaBuilder);
+            Console.WriteLine(videoMedia.ToString());
+           
+            // оздаем билдер для photo
+            mediaBuilder = new PhotoBuilder();
+            Media photoMedia = maker.Make(mediaBuilder);
+            Console.WriteLine(photoMedia.ToString());
+
+            Console.Read();
+
+
         }
     }
 }
