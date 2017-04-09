@@ -7,13 +7,13 @@ using Mediateka.Interfaces;
 
 namespace Mediateka.Builders.Classes
 {
-    abstract class GeneralMediaItem: IMediaItem
+    abstract class lMediaItem: IMediaItem
     {
 
         public string Name { get; protected set; }
-        //public string Url { get; protected set; }
+        public string Url { get; protected set; }
 
-        public GeneralMediaItem(string name, ICollection<IMediaItem> items)
+        public lMediaItem(string name, ICollection<IMediaItem> items)
         {
             Name = name;
          //   Url = Url;

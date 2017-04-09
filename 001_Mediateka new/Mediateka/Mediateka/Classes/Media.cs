@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Mediateka.Classes
 {
-    public class GeneralMedia: IMedia
+    public class Media: IMedia
     {
 
         public string Name { get; protected set; }
@@ -15,7 +15,7 @@ namespace Mediateka.Classes
             private set;
         }
 
-        public GeneralMedia(string name, ICollection<IMediaItem> items)
+        public Media(string name, ICollection<IMediaItem> items)
         {
             Name = name;
             //Url = Url;
