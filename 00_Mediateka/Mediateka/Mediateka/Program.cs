@@ -58,10 +58,14 @@ namespace Mediateka
 
             //NEW VERSION:
 
+            //добавляем в библиотеку трек
+            AudioItem a = new AudioItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
 
-            Audio a = new Audio("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
+            //создаем плейлист
             GeneralMedia media = new GeneralMedia("ddd", new List<IMediaItem>());
+
             //GeneralMedia m1 = new GeneralMedia("GGGG", new LinkedList<ISaladItem>());
+            //добавляем трек туда
             media.Items.Add(a);
 
 
