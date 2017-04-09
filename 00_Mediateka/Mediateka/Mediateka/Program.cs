@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mediateka;
+using Mediateka.Builders;
 
 
 
@@ -40,14 +41,16 @@ namespace Mediateka
             MediaBuilder mediaBuilder = new VideoBuilder();
             Media videoMedia = maker.Make(mediaBuilder);
             Console.WriteLine(videoMedia.ToString());
-           
+
+            // создаем билдер для audio
+            mediaBuilder = new AudioBuilder();
+            Media audioMedia = maker.Make(mediaBuilder);
+            Console.WriteLine(videoMedia.ToString());
+
             // оздаем билдер для photo
             mediaBuilder = new PhotoBuilder();
             Media photoMedia = maker.Make(mediaBuilder);
             Console.WriteLine(photoMedia.ToString());
-
-            Console.Read();
-
 
         }
     }
