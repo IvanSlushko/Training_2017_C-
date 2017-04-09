@@ -12,7 +12,7 @@ namespace Mediateka
     {
         public override void SetPhotoFile()
         {
-            this.Media.PhotoFile = new MediaFile { FileType = "picture45.jpg" };
+            this.Media.PhotoFile = new MediaFile { FileType = "picture11.jpg" };
         }
         public override void SetUrl()
         {

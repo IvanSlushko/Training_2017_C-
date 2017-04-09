@@ -12,7 +12,7 @@ namespace Mediateka.Builders
 
         public override void SetUrl()
         {
-            this.Media.Url = new MediaUrl { Name = "https://www.listen.com/Dolina_Larisa/Track-1" };
+            this.Media.Url = new MediaUrl { Name = "https://www.listen.com/Dolina_Larisa/Track-18" };
         }
 
         public override void SetAudioFile()
