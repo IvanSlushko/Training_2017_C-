@@ -43,7 +43,7 @@ namespace Mediateka
 
             
             //добавляем в библиотеку треки
-            MediaItem t1 = new MediaItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
+            MediaItem t1 = new MediaItem("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
             MediaItem t2 = new MediaItem("Madonna", "www.listen.ru/dr.dre/track2.mp3");
             MediaItem t3 = new MediaItem("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
             audioPList.Items.Add(t1);
@@ -53,9 +53,8 @@ namespace Mediateka
 
             foreach (MediaItem a in audioPList.Items)
             {
-                Console.WriteLine(a.Play);
+                Console.WriteLine("Исполнитель: {0}, линк:{1}",a.Name, a.Url);
             }
-            
 
             
 

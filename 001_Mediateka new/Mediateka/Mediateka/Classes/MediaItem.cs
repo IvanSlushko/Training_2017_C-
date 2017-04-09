@@ -21,7 +21,7 @@ namespace Mediateka.Builders.Classes
         {
             get
             {
-                return string.Format("Now play track: {0}, url: ", Name, Url);
+                return string.Format("Now play track: {0}, url: {1}", Name, Url);
             }
         }       
     }

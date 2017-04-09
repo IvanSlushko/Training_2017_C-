@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\AudioItem.cs" />
     <Compile Include="Classes\Media.cs" />
     <Compile Include="Classes\MediaItem.cs" />
     <Compile Include="Interfaces\IMedia.cs" />
