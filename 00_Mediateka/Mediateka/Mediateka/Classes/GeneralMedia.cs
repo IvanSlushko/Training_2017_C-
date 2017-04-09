@@ -7,7 +7,7 @@ namespace Mediateka.Classes
     {
 
         public string Name { get; protected set; }
-        public string Url { get; protected set; }
+       // public string Url { get; protected set; }
 
         public ICollection<IMediaItem> Items
         {
@@ -18,7 +18,7 @@ namespace Mediateka.Classes
         public GeneralMedia(string name, ICollection<IMediaItem> items)
         {
             Name = name;
-            Url = Url;
+            //Url = Url;
         }
     }
 }

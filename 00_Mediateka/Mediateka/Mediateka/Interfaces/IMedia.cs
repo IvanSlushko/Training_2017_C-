@@ -6,6 +6,6 @@ namespace Mediateka.Interfaces
     {
         ICollection<IMediaItem> Items { get; }
         string Name { get; }
-        string Url { get; }
+        //string Url { get; }
     }
 }

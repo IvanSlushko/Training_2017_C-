@@ -11,12 +11,12 @@ namespace Mediateka.Builders.Classes
     {
 
         public string Name { get; protected set; }
-        public string Url { get; protected set; }
+        //public string Url { get; protected set; }
 
         public GeneralMediaItem(string name, ICollection<IMediaItem> items)
         {
             Name = name;
-            Url = Url;
+         //   Url = Url;
         }
     }
 }

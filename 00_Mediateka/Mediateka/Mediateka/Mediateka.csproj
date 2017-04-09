@@ -44,7 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\AudioBuilder.cs" />
+    <Compile Include="Classes\AudioItem.cs" />
+    <Compile Include="Classes\GeneralMedia.cs" />
+    <Compile Include="Classes\GeneralMediaItem.cs" />
+    <Compile Include="Classes\MediaComponents.cs" />
     <Compile Include="Components\MediaUrl.cs" />
+    <Compile Include="Interfaces\IMedia.cs" />
+    <Compile Include="Interfaces\IMediaItem.cs" />
+    <Compile Include="Interfaces\IReproduceble.cs" />
     <Compile Include="Maker.cs" />
     <Compile Include="Components\Media.cs" />
     <Compile Include="Builders\MediaBuilder.cs" />
