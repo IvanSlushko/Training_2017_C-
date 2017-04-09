@@ -37,19 +37,21 @@ namespace Mediateka
         {
 
 
-            //добавляем в библиотеку трек
-            AudioItem a = new AudioItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
-
-            MediaComponents mk = new MediaComponents("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
             //создаем плейлист
+            Media audioPList = new Media("Sbornik_1", new List<IMediaItem>());
 
-            Classes.Media media = new Classes.Media("ddd", new List<IMediaItem>());
 
-            //GeneralMedia m1 = new GeneralMedia("GGGG", new LinkedList<ISaladItem>());
-            //добавляем трек туда
-            //
-            //media.Items.Add(a);
+            //добавляем в библиотеку трек
+            AudioItem t1 = new AudioItem("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
+            AudioItem t2 = new AudioItem("Madonna", "www.listen.ru/dr.dre/track2.mp3");
+            AudioItem t3 = new AudioItem("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
+            audioPList.Items.Add(t1);
+            audioPList.Items.Add(t2);
+            audioPList.Items.Add(t3);
 
+            Console.WriteLine(audioPList.Name);
+
+            
 
 
         }

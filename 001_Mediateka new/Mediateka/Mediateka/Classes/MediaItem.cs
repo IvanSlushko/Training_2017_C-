@@ -7,16 +7,22 @@ using Mediateka.Interfaces;
 
 namespace Mediateka.Builders.Classes
 {
-    abstract class lMediaItem: IMediaItem
+    public  class MediaItem: IMediaItem, IReproduceble
     {
 
         public string Name { get; protected set; }
         public string Url { get; protected set; }
-
-        public lMediaItem(string name, ICollection<IMediaItem> items)
+        public MediaItem(string name, ICollection<IMediaItem> items)
         {
             Name = name;
-         //   Url = Url;
+            Url = Url;
         }
+        public string Play
+        {
+            get
+            {
+                return string.Format("Now play track: {0}, url: ", Name, Url);
+            }
+        }       
     }
 }
