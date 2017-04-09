@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Mediateka;
 using Mediateka.Builders;
+using Mediateka.Classes;
+using Mediateka.Interfaces;
 
 
 
@@ -51,6 +53,18 @@ namespace Mediateka
             mediaBuilder = new PhotoBuilder();
             Media photoMedia = maker.Make(mediaBuilder);
             Console.WriteLine(photoMedia.ToString());
+
+
+
+            //NEW VERSION:
+
+
+            Audio a = new Audio("Dr. Dre", "www.listen.ru/dr.dre/track1.mp3");
+            GeneralMedia media = new GeneralMedia("ddd", new List<IMediaItem>());
+            //GeneralMedia m1 = new GeneralMedia("GGGG", new LinkedList<ISaladItem>());
+            media.Items.Add(a);
+
+
 
         }
     }
