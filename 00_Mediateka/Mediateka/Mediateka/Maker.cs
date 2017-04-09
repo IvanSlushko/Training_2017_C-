@@ -7,7 +7,6 @@ using Mediateka;
 
 namespace Mediateka
 {
-    // пекарь
     class Maker
     {
         public Media Make(MediaBuilder mediaBuilder)

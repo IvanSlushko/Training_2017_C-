@@ -45,7 +45,7 @@ namespace Mediateka
             // создаем билдер для audio
             mediaBuilder = new AudioBuilder();
             Media audioMedia = maker.Make(mediaBuilder);
-            Console.WriteLine(videoMedia.ToString());
+            Console.WriteLine(audioMedia.ToString());
 
             // оздаем билдер для photo
             mediaBuilder = new PhotoBuilder();

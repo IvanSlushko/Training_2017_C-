@@ -17,10 +17,8 @@ namespace Mediateka.Builders
 
         public override void SetAudioFile()
         {
-            this.Media.AudioFile = new MediaFile { FileType = "Audio файл 1" };
+            this.Media.AudioFile = new MediaFile { FileType = "Track 18.mp3" };
         }
-
-
 
         public override void SetPhotoFile()
         {

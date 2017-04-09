@@ -12,7 +12,7 @@ namespace Mediateka
     {
         public override void SetVideoFile()
         {
-            this.Media.VideoFile = new MediaFile { FileType = "Видео файл 1" };
+            this.Media.VideoFile = new MediaFile { FileType = "Video 1.avi" };
         }
 
         public override void SetUrl()

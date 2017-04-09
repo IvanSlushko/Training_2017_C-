@@ -21,11 +21,11 @@ namespace Mediateka
             StringBuilder sb = new StringBuilder();
 
             if (PhotoFile != null)
-                sb.Append("Фото " + PhotoFile.FileType + "\n");
+                sb.Append("Фото: " + PhotoFile.FileType + "\n");
             if (VideoFile != null)
-                sb.Append("Видео " + VideoFile.FileType + " \n");
+                sb.Append("Видео: " + VideoFile.FileType + " \n");
             if (AudioFile != null)
-                sb.Append("Аудио " + AudioFile.FileType + " \n");
+                sb.Append("Аудио: " + AudioFile.FileType + " \n");
             if (Url != null)
                 sb.Append("URL: " + Url.Name + " \n");
             return sb.ToString();
