@@ -49,11 +49,25 @@ namespace Mediateka
             audioPList.Items.Add(t3);
             audioPList.Items.Add(new MediaItem("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
 
+            Console.WriteLine("----------{0}----------", audioPList.Name);
             foreach (MediaItem a in audioPList.Items)
             {
                 Console.WriteLine("Исполнитель: {0}, Url: {1}",a.Name, a.Url);
             }
-            Console.WriteLine("---------------------------------");
+
+
+
+            Media photoAlbum = new Media("Photo 2017", new List<IMediaItem>());
+            photoAlbum.Items.Add(new MediaItem("picture 1", "www.pictures.ru/picture1.jpeg"));
+            photoAlbum.Items.Add(new MediaItem("picture 2", "www.pictures.ru/picture2.jpeg"));
+            photoAlbum.Items.Add(new MediaItem("picture 3", "www.pictures.ru/picture3.jpeg"));
+
+            Console.WriteLine("----------{0}----------", photoAlbum.Name);
+            foreach (MediaItem a in photoAlbum.Items)
+            {
+                Console.WriteLine("Картинка: {0}, Url: {1}", a.Name, a.Url);
+            }
+
 
 
 
