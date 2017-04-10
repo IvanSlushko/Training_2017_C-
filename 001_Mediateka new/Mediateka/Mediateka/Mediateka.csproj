@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Disk.cs" />
     <Compile Include="Classes\Media.cs" />
     <Compile Include="Classes\MediaItem.cs" />
+    <Compile Include="Interfaces\IDisk.cs" />
     <Compile Include="Interfaces\IMedia.cs" />
     <Compile Include="Interfaces\IMediaItem.cs" />
     <Compile Include="Interfaces\IReproduceble.cs" />

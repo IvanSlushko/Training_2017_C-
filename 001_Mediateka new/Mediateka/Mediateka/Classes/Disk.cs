@@ -9,6 +9,9 @@ namespace Mediateka.Classes
 {
     public class Disk
     {
+        private string v;
+        private List<IMediaItem> list;
+
         public List<IDisk> Tracks { get; private set; }
 
         public Disk()
@@ -20,11 +23,17 @@ namespace Mediateka.Classes
            Tracks = tracks;
         }
 
-        public string AddTrack(IDisk Tracks)
+        public Disk(string v, List<IMediaItem> list)
         {
-            Tracks.Add(Tracks);
-            return "Track added" + Tracks;
+            this.v = v;
+            this.list = list;
         }
+
+        //public void AddTrack(IDisk Tracks)
+        //{
+        //    Tracks.Add(Tracks);
+            
+        //}
 
     }
 }

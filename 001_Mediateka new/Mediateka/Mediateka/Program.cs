@@ -69,7 +69,9 @@ namespace Mediateka
             }
 
 
-
+            Disk disk = new Disk(new List<IDisk>());
+            disk.AddTrack
+                ("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
 
 
         }
