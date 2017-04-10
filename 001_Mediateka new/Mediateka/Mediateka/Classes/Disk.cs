@@ -11,7 +11,7 @@ namespace Mediateka.Classes
     public class Disk
     {
         public string Name { get; protected set; }
-       // private List<ITrack> list;
+       
 
         public List<IDisk> Tracks { get; private set; }
 

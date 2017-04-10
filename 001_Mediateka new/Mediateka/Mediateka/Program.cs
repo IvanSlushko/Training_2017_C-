@@ -47,9 +47,19 @@ namespace Mediateka
              Console.WriteLine("Track: {0}, Url: {1}", a.Name, a.Url);
             }
 
-    
+            Console.WriteLine("--------------------");
+            Picture p1 = new Picture("Garden", "www.pic.ru/garden.jpg");
+            Console.WriteLine("Picture: {0}, Url: {1}", p1.Name, p1.Url);
+
+            Console.WriteLine("--------------------");
+            Video v1 = new Video("At Barcelona", "www.youtube.ru/321jghjnm31k2");
+            Console.WriteLine("Video: {0}, Url: {1}", v1.Name, v1.Url);
 
 
+
+
+
+            Console.WriteLine("---------------------------------------------");
         }
     }
 }

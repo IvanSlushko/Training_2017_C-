@@ -8,5 +8,6 @@ namespace Mediateka.Interfaces
 {
     interface IPicture
     {
+
     }
 }
