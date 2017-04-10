@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 namespace Mediateka.Classes
 {
-    public class Media: IMedia
+    public class QQQQQMedia : IMedia
     {
 
         public string Name { get; protected set; }
 
-        public ICollection<IMediaItem> Items
+        public ICollection<ITrack> Items
         {
             get;
             private set;
         }
-        public Media(string name, ICollection<IMediaItem> items)
+        public Media(string name, ICollection<ITrack> items)
         {
             Name = name;
             Items = items;

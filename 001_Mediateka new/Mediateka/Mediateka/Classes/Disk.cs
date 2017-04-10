@@ -1,4 +1,5 @@
-﻿using Mediateka.Interfaces;
+﻿using Mediateka.Classes;
+using Mediateka.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,31 +10,22 @@ namespace Mediateka.Classes
 {
     public class Disk
     {
-        private string v;
-        private List<IMediaItem> list;
+        public string Name { get; protected set; }
+        private List<ITrack> list;
 
         public List<IDisk> Tracks { get; private set; }
 
-        public Disk()
+       
+        public Disk(string name, List<IDisk> tracks)
         {
-            Tracks = new List<IDisk>();
+            Name = name;
+            Tracks = tracks;
         }
-        public Disk(List<IDisk> tracks)
+        public string AddTrack(IDisk tracks)
         {
-           Tracks = tracks;
+            Tracks.Add(tracks);
+            return "Add ";
         }
-
-        public Disk(string v, List<IMediaItem> list)
-        {
-            this.v = v;
-            this.list = list;
-        }
-
-        //public void AddTrack(IDisk Tracks)
-        //{
-        //    Tracks.Add(Tracks);
-            
-        //}
-
+      
     }
 }

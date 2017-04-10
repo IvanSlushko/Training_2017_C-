@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Mediateka;
-using Mediateka.Builders;
+﻿using System.Collections.Generic;
 using Mediateka.Classes;
 using Mediateka.Interfaces;
-using Mediateka.Builders.Classes;
+using System;
 
 
 
@@ -37,41 +31,23 @@ namespace Mediateka
         static void Main(string[] args)
         {
 
-            //создаем плейлист
-            Media audioPList = new Media("Sbornik_1", new List<IMediaItem>());
-            
-            //добавляем в него треки
-            MediaItem t1 = new MediaItem("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
-            MediaItem t2 = new MediaItem("Madonna", "www.listen.ru/dr.dre/track2.mp3");
-            MediaItem t3 = new MediaItem("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
-            audioPList.Items.Add(t1);
-            audioPList.Items.Add(t2);
-            audioPList.Items.Add(t3);
-            audioPList.Items.Add(new MediaItem("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
+            Track t1 = new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
+            Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3");
+            Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
 
-            Console.WriteLine("----------{0}----------", audioPList.Name);
-            foreach (MediaItem a in audioPList.Items)
+            Disk disk = new Disk("MyDisk",new List<IDisk>());
+
+            disk.AddTrack(t1);
+            disk.AddTrack(t2);
+            disk.AddTrack(t3);
+            disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
+            Console.WriteLine("-----------{0}---------", disk.Name);
+            foreach (Track a in disk.Tracks)
             {
-                Console.WriteLine("Исполнитель: {0}, Url: {1}",a.Name, a.Url);
+             Console.WriteLine("Track: {0}, Url: {1}", a.Name, a.Url);
             }
 
-
-
-            Media photoAlbum = new Media("Photo 2017", new List<IMediaItem>());
-            photoAlbum.Items.Add(new MediaItem("picture 1", "www.pictures.ru/picture1.jpeg"));
-            photoAlbum.Items.Add(new MediaItem("picture 2", "www.pictures.ru/picture2.jpeg"));
-            photoAlbum.Items.Add(new MediaItem("picture 3", "www.pictures.ru/picture3.jpeg"));
-
-            Console.WriteLine("----------{0}----------", photoAlbum.Name);
-            foreach (MediaItem a in photoAlbum.Items)
-            {
-                Console.WriteLine("Картинка: {0}, Url: {1}", a.Name, a.Url);
-            }
-
-
-            Disk disk = new Disk(new List<IDisk>());
-            disk.AddTrack
-                ("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
+           
 
 
         }

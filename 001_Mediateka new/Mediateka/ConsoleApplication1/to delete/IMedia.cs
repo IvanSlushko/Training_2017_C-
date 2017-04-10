@@ -2,9 +2,9 @@
 
 namespace Mediateka.Interfaces
 {
-    public interface IMedia
+    public interface QQQQQIMedia
     {
-        ICollection<IMediaItem> Items { get; }
+        ICollection<ITrack> Items { get; }
         string Name { get; }
 
 

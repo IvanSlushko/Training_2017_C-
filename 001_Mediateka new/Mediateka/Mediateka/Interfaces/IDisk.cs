@@ -1,7 +1,8 @@
 ﻿namespace Mediateka.Interfaces
 {
-    public interface IDisk : IMediaItem
+    public interface IDisk 
     {
-        
+        string Name { get; }
+        string Url { get; }
     }
 }

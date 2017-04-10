@@ -7,7 +7,7 @@ using Mediateka.Interfaces;
 
 namespace Mediateka.Builders.Classes
 {
-    public  class MediaItem: IMediaItem, IReproduceble
+    public class QQQQQMediaItem : ITrack, IReproduceble
     {
  
         public MediaItem(string name, string url)

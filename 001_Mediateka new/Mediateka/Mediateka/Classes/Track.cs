@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mediateka.Classes
 {
-    public class Track: IReproduceble
+    public class Track: IReproduceble, IDisk
     {
 
 

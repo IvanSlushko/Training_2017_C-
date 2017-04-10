@@ -1,6 +1,6 @@
 ﻿namespace Mediateka.Interfaces
 {
-    public interface IMediaItem
+    public interface QQQQQIMediaItem
     {
         string Name { get; }
         string Url { get; }
