@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Disk.cs" />
+    <Compile Include="Classes\Pictures.cs" />
     <Compile Include="Classes\Track.cs" />
     <Compile Include="Interfaces\IDisk.cs" />
     <Compile Include="Interfaces\IReproduceble.cs" />
