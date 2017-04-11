@@ -7,7 +7,7 @@ namespace Mediateka.Classes
 
 
         public string Url { get; private set; }
-        public new string Name { get; protected set; }
+        public string Name { get; protected set; }
         public string Picture { get; protected set; }
         public Track(string name, string url, string picture) 
         {

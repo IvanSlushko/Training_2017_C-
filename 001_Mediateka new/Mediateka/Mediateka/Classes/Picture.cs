@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Mediateka.Classes
 {
-    public class Picture: IDisk
+    public class Picture: IDisk, IMedia
 
     {
         public string Url { get; private set; }
-        public new string Name { get; protected set; }
+        public string Name { get; protected set; }
 
         public string Pictures
         {
@@ -23,7 +23,7 @@ namespace Mediateka.Classes
 
         public Picture(string name, string url)
         {
-            this.Name = name;
+            Name = name;
             Url = url;
         }
     }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mediateka.Interfaces
 {
-    public interface IEvent
+    public interface IEvent: IMedia
     {
+        
+
         
     }
 }

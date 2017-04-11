@@ -4,7 +4,7 @@ using System;
 
 namespace Mediateka.Classes
 {
-    class Event : IEvent,  IPicture, IVideo 
+    class Event :  IPicture, IVideo 
     {
         public List<IEvent> Events { get; private set; }
 
@@ -30,8 +30,6 @@ namespace Mediateka.Classes
         {
             Events.Sort();
         }
-
-       
 
 
     }
