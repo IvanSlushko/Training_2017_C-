@@ -1,6 +1,6 @@
 ﻿namespace Mediateka.Interfaces
 {
-    interface ITrack: IMedia
+    public interface ITrack: IMedia
     {
 
     }

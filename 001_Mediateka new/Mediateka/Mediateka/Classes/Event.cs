@@ -1,36 +1,42 @@
 ﻿using Mediateka.Interfaces;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Mediateka.Classes
 {
-    class Event :  IPicture, IVideo 
+    class Event  
     {
+
         public List<IEvent> Events { get; private set; }
 
         public Event()
         {
             Events = new List<IEvent>();
         }
-
-        public Event(List<IEvent> eventt)
+        public Event(List<IEvent> events)
         {
-            Events = eventt;
+            Events = events;
         }
 
-        public void AddToEvent(IEvent eventt)
+        public void AddToEvents(IEvent events)
         {
-            Events.Add(eventt);
-        }
-        public void DelFromEvent(IEvent eventt)
-        {
-            Events.Remove(eventt);
-        }
-        public void SortEvent(IEvent eventt)
-        {
-            Events.Sort();
+            Events.Add(events);
         }
 
+        public void DelFromEvents(IEvent events)
+        {
+            Events.Remove(events);
+        }
+        //    public static TSource Aggregate<TSource>(
+        //   this IEnumerable<TSource> source,
+        //   Func<TSource, TSource, TSource> func
 
+        public string PrintAll()
+        {
+            return Events.Aggregate<IEvent, string>(null, 
+                (current, ev) => current +
+                ("Событие: " + ev.Name + " " + ev.Url + "\n"));
+        }
     }
 }

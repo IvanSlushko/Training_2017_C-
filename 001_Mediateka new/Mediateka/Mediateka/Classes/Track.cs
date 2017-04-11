@@ -2,7 +2,7 @@
 
 namespace Mediateka.Classes
 {
-    public class Track: IMedia, IReproduceble, IDisk
+    public class Track: IMedia, IReproduceble, IDisk, IEvent
     {
 
 
@@ -11,7 +11,7 @@ namespace Mediateka.Classes
         public string Picture { get; protected set; }
         public Track(string name, string url, string picture) 
         {
-            this.Name = name;
+            Name = name;
             Url = url;
             Picture = picture;
         }

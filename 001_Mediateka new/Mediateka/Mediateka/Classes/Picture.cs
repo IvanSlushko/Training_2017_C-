@@ -7,19 +7,11 @@ using System.Threading.Tasks;
 
 namespace Mediateka.Classes
 {
-    public class Picture: IDisk, IMedia
+    public class Picture: IDisk, IMedia, IEvent
 
     {
         public string Url { get; private set; }
         public string Name { get; protected set; }
-
-        public string Pictures
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public Picture(string name, string url)
         {

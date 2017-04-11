@@ -1,6 +1,6 @@
 ﻿namespace Mediateka.Interfaces
 {
-    interface IVideo
+    public interface IVideo : IMedia
     {
     }
 }
