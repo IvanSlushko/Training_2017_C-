@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Disk.cs" />
+    <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\Picture.cs" />
     <Compile Include="Classes\Track.cs" />
     <Compile Include="Classes\Video.cs" />
     <Compile Include="Interfaces\IDisk.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Interfaces\IPicture.cs" />
     <Compile Include="Interfaces\IReproduceble.cs" />
     <Compile Include="Interfaces\ITrack.cs" />

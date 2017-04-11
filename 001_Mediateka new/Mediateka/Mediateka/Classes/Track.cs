@@ -2,7 +2,7 @@
 
 namespace Mediateka.Classes
 {
-    public class Track: IReproduceble, IDisk
+    public class Track: IMedia, IReproduceble, IDisk
     {
 
 

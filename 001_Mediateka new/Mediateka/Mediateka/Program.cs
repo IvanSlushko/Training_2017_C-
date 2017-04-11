@@ -49,17 +49,30 @@ namespace Mediateka
 
             Console.WriteLine("--------------------");
             Picture p1 = new Picture("Garden", "www.pic.ru/garden.jpg");
+            Picture p2 = new Picture("Garden1", "www.pic.ru/garden1.jpg");
             Console.WriteLine("Picture: {0}, Url: {1}", p1.Name, p1.Url);
 
             Console.WriteLine("--------------------");
             Video v1 = new Video("At Barcelona", "www.youtube.ru/321jghjnm31k2");
             Console.WriteLine("Video: {0}, Url: {1}", v1.Name, v1.Url);
 
+            Console.WriteLine("--------------------");
             // событие (набор из фото, ссылок на фото, 
             // видео, ссылок на видео),
             Event ev = new Event();
             ev.AddToEvent(p1);
+            ev.AddToEvent(p2);
             ev.AddToEvent(v1);
+
+            foreach (Picture a in ev.Events)
+            {
+                Console.WriteLine("Event : {0}", ev.Events);
+            }
+
+
+
+
+
 
             Console.WriteLine("---------------------------------------------");
         }
