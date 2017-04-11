@@ -31,20 +31,20 @@ namespace Mediateka
         static void Main(string[] args)
         {
 
-            Track t1 = new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
-            Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3");
-            Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
+            Track t1 = new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3", "picture23");
+            Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3", "picture3");
+            Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3", "picture27");
 
             Disk disk = new Disk("MyDisk",new List<IDisk>());
 
             disk.AddTrack(t1);
             disk.AddTrack(t2);
             disk.AddTrack(t3);
-            disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
+            disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3", "picture23"));
             Console.WriteLine("-----------{0}---------", disk.Name);
             foreach (Track a in disk.Tracks)
             {
-             Console.WriteLine("Track: {0}, Url: {1}", a.Name, a.Url);
+             Console.WriteLine("Track: {0}, Url: {1}, Picture: {2}", a.Name, a.Url, a.Picture);
             }
 
             Console.WriteLine("--------------------");
@@ -60,14 +60,14 @@ namespace Mediateka
             // событие (набор из фото, ссылок на фото, 
             // видео, ссылок на видео),
             Event ev = new Event();
-            ev.AddToEvent(p1);
-            ev.AddToEvent(p2);
-            ev.AddToEvent(v1);
+            //ev.AddToEvent(p1);
+            //ev.AddToEvent(p2);
+            //ev.AddToEvent(v1);
 
-            foreach (Picture a in ev.Events)
-            {
-                Console.WriteLine("Event : {0}", ev.Events);
-            }
+            //foreach (Picture a in ev.Events)
+            //{
+            //    Console.WriteLine("Event : {0}", ev.Events);
+            //}
 
 
 

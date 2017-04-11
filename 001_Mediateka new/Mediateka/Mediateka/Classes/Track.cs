@@ -8,18 +8,19 @@ namespace Mediateka.Classes
 
         public string Url { get; private set; }
         public new string Name { get; protected set; }
-        public string Pictures { get; protected set; }
-        public Track(string name, string url) 
+        public string Picture { get; protected set; }
+        public Track(string name, string url, string picture) 
         {
             this.Name = name;
             Url = url;
+            Picture = picture;
         }
 
         public string Play
         {
             get
             {
-                return string.Format("Now play track: {0}, url: {1}", Name, Url);
+                return string.Format("Now play track: {0}, url: {1}, pict: ", Name, Url, Picture);
             }
         }
     }

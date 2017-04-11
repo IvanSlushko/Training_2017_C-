@@ -4,7 +4,7 @@ using System;
 
 namespace Mediateka.Classes
 {
-    class Event : IEvent,  IPicture, IVideo
+    class Event : IEvent,  IPicture, IVideo 
     {
         public List<IEvent> Events { get; private set; }
 
@@ -31,15 +31,7 @@ namespace Mediateka.Classes
             Events.Sort();
         }
 
-        internal void AddToEvent(Picture p1)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void AddToEvent(Video v1)
-        {
-            throw new NotImplementedException();
-        }
+       
 
 
     }
