@@ -55,9 +55,11 @@ namespace Mediateka
             Video v1 = new Video("At Barcelona", "www.youtube.ru/321jghjnm31k2");
             Console.WriteLine("Video: {0}, Url: {1}", v1.Name, v1.Url);
 
-
-
-
+            // событие (набор из фото, ссылок на фото, 
+            // видео, ссылок на видео),
+            Event ev = new Event();
+            ev.AddToEvent(p1);
+            ev.AddToEvent(v1);
 
             Console.WriteLine("---------------------------------------------");
         }
