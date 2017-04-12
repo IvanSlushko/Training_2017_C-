@@ -1,6 +1,6 @@
 ﻿namespace Mediateka.Interfaces
 {
-    public interface IDisk 
+    public interface IDisk :ITrack
     {
 
     }

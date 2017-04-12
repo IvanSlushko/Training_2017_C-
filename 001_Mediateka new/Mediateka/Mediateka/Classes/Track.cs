@@ -20,7 +20,7 @@ namespace Mediateka.Classes
         {
             get
             {
-                return string.Format("Now play track: {0}, url: {1}, pict: ", Name, Url, Picture);
+                return string.Format("Now play track: {0}, url: {1}, pict: {2}", Name, Url, Picture);
             }
         }
     }

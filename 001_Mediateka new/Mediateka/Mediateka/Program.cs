@@ -42,10 +42,20 @@ namespace Mediateka
             disk.AddTrack(t3);
             disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3", "picture23"));
             Console.WriteLine("-----------{0}---------", disk.Name);
+            //disk.DelTrack(t1);
+
             foreach (Track a in disk.Tracks)
             {
              Console.WriteLine("Track: {0}, Url: {1}, Picture: {2}", a.Name, a.Url, a.Picture);
             }
+            Console.WriteLine("--------------------");
+            Disk disk1 = new Disk("MyDisk1", new List<IDisk>()
+            {new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3", "picture55"),
+            new Track("Dr. Dre", "www.listen.ru/dr.dre-track5.mp3", "picture53"),
+            new Track("Dr. Dre", "www.listen.ru/dr.dre-track55.mp3", "picture553")
+            });
+
+            Console.WriteLine(t1.Play);
 
             Console.WriteLine("--------------------");
             Picture p1 = new Picture("Garden", "www.pic.ru/garden.jpg");
@@ -71,6 +81,11 @@ namespace Mediateka
             ev.DelFromEvents(p2);
             Console.WriteLine(ev.PrintAll());
             Console.WriteLine("---------------------------------------------");
+
+            Console.WriteLine();
+
+
+       
         }
     }
 }
