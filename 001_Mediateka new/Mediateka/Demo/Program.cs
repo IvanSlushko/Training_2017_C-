@@ -83,6 +83,11 @@ namespace Demo
             Console.WriteLine(ev.PrintAll());
             Console.WriteLine("---------------------------------------------");
 
+            // --сериал (набор из видео + набор картинок), 
+
+
+
+
             Console.WriteLine();
 
 

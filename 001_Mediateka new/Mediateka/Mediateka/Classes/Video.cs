@@ -3,7 +3,7 @@ using Mediateka.Interfaces;
 
 namespace Mediateka.Classes
 {
-    public class Video: IMedia, IEvent
+    public class Video: IMedia, IEvent, ISerial
     {
 
         public string Url { get; private set; }

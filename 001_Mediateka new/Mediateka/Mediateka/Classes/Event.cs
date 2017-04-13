@@ -1,6 +1,5 @@
 ﻿using Mediateka.Interfaces;
 using System.Collections.Generic;
-using System;
 using System.Linq;
 
 namespace Mediateka.Classes
@@ -38,6 +37,6 @@ namespace Mediateka.Classes
                 (current, ev) => current +
                 ("Событие: " + ev.Name + " " + ev.Url +  "\n"));
         }
-      
+
     }
 }
