@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Mediateka.Classes
 {
-    class Event  
+    public class Event  
     {
 
         public List<IEvent> Events { get; private set; }

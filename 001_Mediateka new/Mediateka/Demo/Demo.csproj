@@ -7,7 +7,7 @@
     <ProjectGuid>{18D221D7-DFA0-4FA5-A378-C06B6939600B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo</RootNamespace>
+    <RootNamespace>Mediateka</RootNamespace>
     <AssemblyName>Demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mediateka\Mediateka.csproj">
+      <Project>{39D6E83B-851D-49DF-8A6B-0B8DEADBEA1E}</Project>
+      <Name>Mediateka</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
