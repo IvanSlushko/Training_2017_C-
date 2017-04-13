@@ -40,11 +40,10 @@ namespace Mediateka.Classes
             for (int i = 0; i < (int)num; i++)
             {
 
-              // Console.WriteLine(Track.ReferenceEquals);
-              //  Console.WriteLine(Player.Equals);
-
-                Console.WriteLine(Thread.CurrentThread.Name + " сейчас проирывает " 
-                    + t1.Name+" c ресурса "+ t1.Url);
+                Console.WriteLine(Thread.CurrentThread.Name 
+                    + " сейчас проирывает " 
+                    + t1.Name+" c ресурса "
+                    + t1.Url);
                 Thread.Sleep(1000);
 
             }
