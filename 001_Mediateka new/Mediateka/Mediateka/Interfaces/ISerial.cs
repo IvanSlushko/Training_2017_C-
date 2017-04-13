@@ -1,6 +1,6 @@
 ﻿namespace Mediateka.Interfaces
 {
-    interface ISerial : IVideo, IPicture
+    public interface ISerial :  IPicture, IVideo
     {
     }
 }

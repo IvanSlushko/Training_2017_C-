@@ -53,6 +53,7 @@
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\Media.cs" />
     <Compile Include="Classes\Picture.cs" />
+    <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Serial.cs" />
     <Compile Include="Classes\Track.cs" />
     <Compile Include="Classes\Video.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Interfaces\IMedia.cs" />
     <Compile Include="Interfaces\IPicture.cs" />
+    <Compile Include="Interfaces\IPlayThread.cs" />
     <Compile Include="Interfaces\IReproduceble.cs" />
     <Compile Include="Interfaces\ISerial.cs" />
     <Compile Include="Interfaces\ITrack.cs" />

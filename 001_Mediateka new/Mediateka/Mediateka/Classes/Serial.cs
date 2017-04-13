@@ -6,7 +6,7 @@ namespace Mediateka.Classes
 {
     public class Serial 
     {
-        public List<ISerial> Serials { get; private set; }
+        public List<ISerial> Serials { get; protected set; }
 
         public Serial()
         {
@@ -31,8 +31,9 @@ namespace Mediateka.Classes
         {
             return Serials.Aggregate<ISerial, string>(null,
                 (current, ev) => current +
-                ("Сериал: " + ev.Name + "\n"));
+                ("Сериал: " + ev.Name +" --> "+ev.Url+ "\n"));
         }
+
 
 
     }

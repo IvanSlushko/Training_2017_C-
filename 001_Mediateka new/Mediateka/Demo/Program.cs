@@ -2,6 +2,7 @@
 using Mediateka.Classes;
 using Mediateka.Interfaces;
 using System;
+using System.Threading;
 
 
 
@@ -27,7 +28,6 @@ namespace Demo
 {
     class Program
     {
-
         static void Main(string[] args)
         {
 
@@ -85,13 +85,18 @@ namespace Demo
 
             // --сериал (набор из видео + набор картинок), 
 
+            Serial ser = new Serial();
+            ser.AddToSerials(v1);
+            ser.AddToSerials(p2);
+            ser.AddToSerials(p1);
+            //ser.DelFromSerials(p2);
+            Console.WriteLine(ser.PrintAll());
+            Console.WriteLine("---------------------------------------------");
 
+            Player pl1 = new Player("Плеер 1", 5 , t1);
+            //Player pl2 = new Player("Плеер 2", 5, v1);
+            //Player pl3 = new Player("Плеер 3", 5, p2);
 
-
-            Console.WriteLine();
-
-
-       
         }
     }
 }
