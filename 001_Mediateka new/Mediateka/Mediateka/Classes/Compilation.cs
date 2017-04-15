@@ -34,9 +34,11 @@ namespace Mediateka.Classes
 
         public bool PrintAll()
         {
-            return ListCompilation.Aggregate<ICompilation, string>(null,
-                 (current, ev) => current +
+            return ListCompilation.Aggregate<ICompilation, string>
+                (null, (current, ev) => current +
                  ("элемент : " + ev.Name + " --> " + ev.Url + "\n"));
+
+            
         }
     }
 }
