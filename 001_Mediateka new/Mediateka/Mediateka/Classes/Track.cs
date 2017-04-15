@@ -1,15 +1,17 @@
-﻿using Mediateka.Interfaces;
+﻿using System;
+using Mediateka.Interfaces;
 
 namespace Mediateka.Classes
 {
-    public class Track: IMedia, IReproduceble, IDisk, IEvent
+    public class Track : IMedia, IReproduceble, IDisk, IEvent, ICompilation
+
     {
 
 
         public string Url { get; private set; }
         public string Name { get; protected set; }
         public string Picture { get; protected set; }
-        public Track(string name, string url, string picture) 
+        public Track(string name, string url, string picture)
         {
             Name = name;
             Url = url;
@@ -22,6 +24,16 @@ namespace Mediateka.Classes
             {
                 return string.Format("Now play track: {0}, url: {1}, pict: {2}", Name, Url, Picture);
             }
+        }
+
+        public IMediaStream GetStream()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IMedia.Play()
+        {
+            throw new NotImplementedException();
         }
     }
 }

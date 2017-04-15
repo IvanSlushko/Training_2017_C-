@@ -33,8 +33,5 @@ namespace Mediateka.Classes
                 (current, ev) => current +
                 ("Сериал: " + ev.Name +" --> "+ev.Url+ "\n"));
         }
-
-
-
     }
 }

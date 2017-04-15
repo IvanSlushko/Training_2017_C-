@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Mediateka.Interfaces;
 
 namespace Mediateka.Classes
@@ -12,6 +13,16 @@ namespace Mediateka.Classes
         {
             Name = name;
             Url = url;
+        }
+
+        public IMediaStream GetStream()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Play()
+        {
+            throw new NotImplementedException();
         }
     }
 }

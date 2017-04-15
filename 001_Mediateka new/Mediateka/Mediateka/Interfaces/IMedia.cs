@@ -6,8 +6,6 @@
         string Url { get; }
 
         IMediaStream GetStream();
-
-
-        поток данных!!!!!
+        void Play();
     }
 }

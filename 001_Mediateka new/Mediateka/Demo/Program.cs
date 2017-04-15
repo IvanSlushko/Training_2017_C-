@@ -35,7 +35,7 @@ namespace Demo
             Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3", "picture3");
             Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3", "picture27");
 
-            Disk disk = new Disk("MyDisk",new List<IDisk>());
+            Disk disk = new Disk("MyDisk", new List<IDisk>());
 
             disk.AddTrack(t1);
             disk.AddTrack(t2);
@@ -46,7 +46,7 @@ namespace Demo
 
             foreach (Track a in disk.Tracks)
             {
-             Console.WriteLine("Track: {0}, Url: {1}, Picture: {2}", a.Name, a.Url, a.Picture);
+                Console.WriteLine("Track: {0}, Url: {1}, Picture: {2}", a.Name, a.Url, a.Picture);
             }
             Console.WriteLine("--------------------");
             Disk disk1 = new Disk("MyDisk1", new List<IDisk>()
@@ -72,16 +72,16 @@ namespace Demo
             // событие: 
             // набор из фото и ссылок на фото 
             // видео и ссылок на видео
-            
+
             Event ev = new Event();
             ev.AddToEvents(v1);
-               ev.AddToEvents(p2);
+            ev.AddToEvents(p2);
             ev.AddToEvents(p1);
-              Console.WriteLine(ev.PrintAll());
-             Console.WriteLine("after delete------");
+            Console.WriteLine(ev.PrintAll());
+            Console.WriteLine("after delete------");
             ev.DelFromEvents(p2);
             Console.WriteLine(ev.PrintAll());
-            Console.WriteLine("---------------------------------------------") ;
+            Console.WriteLine("---------------------------------------------");
 
 
 
@@ -95,9 +95,28 @@ namespace Demo
             Console.WriteLine(ser.PrintAll());
             Console.WriteLine("---------------------------------------------");
 
-            Player pl1 = new Player("Плеер 1", 5 , t1);
-            //Player pl2 = new Player("Плеер 2", 5, v1);
-            //Player pl3 = new Player("Плеер 3", 5, p2);
+
+
+            // --подборка (как диск только с 
+            //возможностью изменения элементов и/или порядка элементов).
+
+            Compilation comp1 = new Compilation();
+            comp1.AddToCompil(p1);
+            comp1.AddToCompil(t1);
+            comp1.AddToCompil(t2);
+            comp1.AddToCompil(t3);
+            Console.WriteLine(comp1.PrintAll());
+            //new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3"),
+            //new Picture("pic1", "www.pic.ru/ooi"),
+            //new Track("Dr. Dre", "www.listen.ru/dr.dre-track55.mp3")
+            Console.WriteLine("---------------------------------------------");
+
+
+
+
+
+
+
 
         }
     }

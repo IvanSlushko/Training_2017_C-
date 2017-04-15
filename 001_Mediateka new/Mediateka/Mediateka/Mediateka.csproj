@@ -55,6 +55,7 @@
     <Compile Include="Classes\Picture.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Serial.cs" />
+    <Compile Include="Classes\Stream.cs" />
     <Compile Include="Classes\Track.cs" />
     <Compile Include="Classes\Video.cs" />
     <Compile Include="Interfaces\IDisk.cs" />
