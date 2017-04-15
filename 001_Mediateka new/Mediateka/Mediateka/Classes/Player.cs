@@ -10,10 +10,10 @@ namespace Mediateka.Classes
         private Picture p1;
         private Track t1;
         private Video v1;
-        Thread thread;
+        
 
         //Конструктор получает имя функции и номер до кторого ведется счет
-        public Player(string name, int num) 
+        public Player(IMediaStream  stream) 
         {
             thread = new Thread(this.func);
             thread.Name = name;

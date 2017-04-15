@@ -4,5 +4,10 @@
     {
         string Name { get; }
         string Url { get; }
+
+        IMediaStream GetStream();
+
+
+        поток данных!!!!!
     }
 }

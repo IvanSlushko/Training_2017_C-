@@ -60,6 +60,7 @@
     <Compile Include="Interfaces\IDisk.cs" />
     <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Interfaces\IMedia.cs" />
+    <Compile Include="Interfaces\IMediaStream.cs" />
     <Compile Include="Interfaces\IPicture.cs" />
     <Compile Include="Interfaces\IPlayThread.cs" />
     <Compile Include="Interfaces\IReproduceble.cs" />

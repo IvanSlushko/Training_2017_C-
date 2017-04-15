@@ -75,13 +75,15 @@ namespace Demo
             
             Event ev = new Event();
             ev.AddToEvents(v1);
-            ev.AddToEvents(p2);
+               ev.AddToEvents(p2);
             ev.AddToEvents(p1);
-            Console.WriteLine(ev.PrintAll());
-            Console.WriteLine("after delete------");
+              Console.WriteLine(ev.PrintAll());
+             Console.WriteLine("after delete------");
             ev.DelFromEvents(p2);
             Console.WriteLine(ev.PrintAll());
-            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("---------------------------------------------") ;
+
+
 
             // --сериал (набор из видео + набор картинок), 
 
