@@ -4,7 +4,7 @@ using Mediateka.Interfaces;
 
 namespace Mediateka.Classes
 {
-    public class Video: IMedia, IEvent, ISerial
+    public class Video: IMedia, IEvent, ISerial, ICompilation
     {
 
         public string Url { get; private set; }

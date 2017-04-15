@@ -1,6 +1,7 @@
 ﻿namespace Mediateka.Interfaces
 {
-    public interface ICompilation : ITrack, IPicture
+    public interface ICompilation : IPicture, ITrack
     {
+
     }
 }

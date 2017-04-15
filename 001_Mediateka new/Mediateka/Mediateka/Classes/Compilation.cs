@@ -1,44 +1,69 @@
 ﻿using Mediateka.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Mediateka.Classes
 {
-    public class Compilation
+    public class Compilation//:IEnumerable
     {
-        public List<ICompilation> ListCompilation { get; private set; }
-        int counter = 12;  //obj in compil
+        public List<ICompilation> Compilations { get; protected set; }
+        // public IEnumerable<ICompilation> Compilations1 { get; protected set; }
+
+        int counter = 10;  //obj in compil
+
         public Compilation()
         {
-            ListCompilation = new List<ICompilation>();
+            Compilations = new List<ICompilation>();
         }
 
-        public Compilation(List<ICompilation> listCompilation)
+        public Compilation(List<ICompilation> compilations)
         {
-            ListCompilation = listCompilation;
+            Compilations = compilations;
+            // Compilations1 = compilations;
         }
-        public void AddToCompil(ICompilation listCompilation)
+
+        public void AddToCompil(ICompilation compilations)
         {
-            if (ListCompilation.Count < counter)
+            if (Compilations.Count < counter)
             {
-                ListCompilation.Add(listCompilation);
-                Console.WriteLine("On compil {0} obj.", ListCompilation.Count);
+                Compilations.Add(compilations);
+                Console.WriteLine("Add to compilation {0} obj. from {1}!", Compilations.Count, counter);
             }
-            else Console.WriteLine("The compil is full, capacity {0} obj.!", counter);
-        }
-        public void DelFromCompil(ICompilation listCompilation)
-        {
-            ListCompilation.Remove(listCompilation);
+            else Console.WriteLine("The compilation is full, capacity {0} obj.!", counter);
         }
 
-        public bool PrintAll()
+        public void DelFromCompil(ICompilation compilations)
         {
-            return ListCompilation.Aggregate<ICompilation, string>
-                (null, (current, ev) => current +
-                 ("элемент : " + ev.Name + " --> " + ev.Url + "\n"));
-
-            
+            Compilations.Remove(compilations);
         }
+
+        public string PrintAll()
+        {
+            return Compilations.Aggregate<ICompilation, string>(null,
+                (current, ev) => current +
+                ("Компиляция: " + " "
+                + ev.GetType().Name
+                + "  " + ev.Name + " --> "
+                + ev.Url + "\n"));
+        }
+
+        //public IEnumerator GetEnumerator()
+        //{
+        //    return (IEnumerator)GetEnumerator();
+        //}
+
+
+        //public void ChangeElement(ICompilation compilations)
+        //{
+        //    var list = new List<int> { 1, 2, 3 };
+        //    //меняем 1 и 3
+        //    var buf = list[0];
+        //    list[0] = list[2];
+        //    list[2] = buf;
+        //    Compilations.Remove(compilations);
+        //}
     }
 }
+

@@ -1,6 +1,7 @@
 ﻿using Mediateka.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Mediateka.Classes
 {
@@ -17,6 +18,7 @@ namespace Mediateka.Classes
             Name = name;
             Tracks = tracks;
         }
+
         public void AddTrack(IDisk tracks)
         {
             if (Tracks.Count < counter)
@@ -30,5 +32,6 @@ namespace Mediateka.Classes
         {
             Tracks.Remove(tracks);
         }
+
     }
 }

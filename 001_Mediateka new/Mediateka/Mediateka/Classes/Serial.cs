@@ -31,7 +31,7 @@ namespace Mediateka.Classes
         {
             return Serials.Aggregate<ISerial, string>(null,
                 (current, ev) => current +
-                ("Сериал: " + ev.Name +" --> "+ev.Url+ "\n"));
+                ("Сериал: " + ev.GetType().Name+" " + ev.Name +" --> "+ev.Url+ "\n"));
         }
     }
 }

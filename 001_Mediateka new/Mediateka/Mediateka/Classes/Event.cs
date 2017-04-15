@@ -35,8 +35,7 @@ namespace Mediateka.Classes
         {
             return Events.Aggregate<IEvent, string>(null, 
                 (current, ev) => current +
-                ("Событие: " + ev.Name + " " + ev.Url +  "\n"));
+                ("Событие: " + ev.GetType().Name+"  " + ev.Name + " " + ev.Url +  "\n"));
         }
-
     }
 }

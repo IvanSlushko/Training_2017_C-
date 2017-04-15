@@ -31,28 +31,28 @@ namespace Demo
         static void Main(string[] args)
         {
 
-            Track t1 = new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3", "picture23");
-            Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3", "picture3");
-            Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3", "picture27");
+            Track t1 = new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3");
+            Track t2 = new Track("Madonna", "www.listen.ru/dr.dre/track2.mp3");
+            Track t3 = new Track("The Prodigy", "www.listen.ru/dr.dre/track3.mp3");
 
             Disk disk = new Disk("MyDisk", new List<IDisk>());
 
             disk.AddTrack(t1);
             disk.AddTrack(t2);
             disk.AddTrack(t3);
-            disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3", "picture23"));
+            disk.AddTrack(new Track("Off Spring", "www.listen.ru/dr.dre/track4.mp3"));
             Console.WriteLine("-----------{0}---------", disk.Name);
             //disk.DelTrack(t1);
 
             foreach (Track a in disk.Tracks)
             {
-                Console.WriteLine("Track: {0}, Url: {1}, Picture: {2}", a.Name, a.Url, a.Picture);
+                Console.WriteLine("Track: {0}, Url: {1}", a.Name, a.Url);
             }
             Console.WriteLine("--------------------");
             Disk disk1 = new Disk("MyDisk1", new List<IDisk>()
-            {new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3", "picture55"),
-            new Track("Dr. Dre", "www.listen.ru/dr.dre-track5.mp3", "picture53"),
-            new Track("Dr. Dre", "www.listen.ru/dr.dre-track55.mp3", "picture553")
+            {new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3"),
+            new Track("Dr. Dre", "www.listen.ru/dr.dre-track5.mp3"),
+            new Track("Dr. Dre", "www.listen.ru/dr.dre-track55.mp3")
             });
 
             Console.WriteLine(t1.Play);
@@ -83,39 +83,32 @@ namespace Demo
             Console.WriteLine(ev.PrintAll());
             Console.WriteLine("---------------------------------------------");
 
-
-
             // --сериал (набор из видео + набор картинок), 
 
             Serial ser = new Serial();
             ser.AddToSerials(v1);
             ser.AddToSerials(p2);
             ser.AddToSerials(p1);
-            //ser.DelFromSerials(p2);
+            //ser.DelFromSerials(p2);1
             Console.WriteLine(ser.PrintAll());
             Console.WriteLine("---------------------------------------------");
-
-
 
             // --подборка (как диск только с 
             //возможностью изменения элементов и/или порядка элементов).
 
             Compilation comp1 = new Compilation();
+            comp1.AddToCompil(p2);
             comp1.AddToCompil(p1);
             comp1.AddToCompil(t1);
             comp1.AddToCompil(t2);
             comp1.AddToCompil(t3);
+
             Console.WriteLine(comp1.PrintAll());
-            //new Track("Dr. Dre", "www.listen.ru/dr.dre-track1.mp3"),
-            //new Picture("pic1", "www.pic.ru/ooi"),
-            //new Track("Dr. Dre", "www.listen.ru/dr.dre-track55.mp3")
+            Console.WriteLine();
+
             Console.WriteLine("---------------------------------------------");
 
-
-
-
-
-
+ 
 
 
         }
