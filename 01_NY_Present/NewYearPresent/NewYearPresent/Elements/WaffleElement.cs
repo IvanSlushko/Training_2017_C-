@@ -4,7 +4,7 @@ namespace NewYearPresent.Elements
 {
     class WaffleElement : GiftElement
     {
-        public enum TypeWaffleElement { };
+        public enum TypeWaffleElement { ChocolateWaffle, CreamyWafer };
         public TypeWaffleElement type;
 
         public WaffleElement(string elementName, int elementWeith, int elementSugar,

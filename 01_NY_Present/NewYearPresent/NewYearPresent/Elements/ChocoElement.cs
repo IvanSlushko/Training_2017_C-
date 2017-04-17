@@ -4,7 +4,7 @@ namespace NewYearPresent
 {
     public class ChocoElement : GiftElement
     {
-        public enum TypeChocoElement { };
+        public enum TypeChocoElement { MilkChocolate, PorousChocolate, DarkChocolate };
         public TypeChocoElement type;
 
         public ChocoElement(string elementName, int elementWeith, int elementSugar, 
