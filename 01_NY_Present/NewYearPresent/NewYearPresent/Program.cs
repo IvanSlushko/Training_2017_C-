@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NewYearPresent.Gift;
+using static NewYearPresent.CandyElement;
 
 namespace NewYearPresent
 {
@@ -11,7 +8,11 @@ namespace NewYearPresent
         static void Main(string[] args)
         {
 
+           // IGift gift = new Gift();
 
+            //     Имя | Вес | Сахар | Калории | Тип элемента
+
+            //gift.Add("Конфета Мишка", 10, 15, 20, CandyElement.TypeCandyElement.ChocolateCandy);
 
 
 

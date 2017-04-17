@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Elements\CandyElement.cs" />
+    <Compile Include="Elements\ChocoElement.cs" />
+    <Compile Include="Elements\GiftElement.cs" />
+    <Compile Include="Elements\WaffleElement.cs" />
+    <Compile Include="Gift\Gift.cs" />
+    <Compile Include="Gift\IGift.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
