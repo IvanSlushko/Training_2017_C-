@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace NewYearPresent
 {
-    class ChocoElement
+    public class ChocoElement : GiftElement
     {
+        public ChocoElement(string elementName, int elementWeith, int elementSugar, int elementCalories) : base(elementName, elementWeith, elementSugar, elementCalories)
+        {
+        }
+
+        public override void TypeGiftElement()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
