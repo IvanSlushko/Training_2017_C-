@@ -10,6 +10,11 @@ namespace NewYearPresent
     {
         static void Main(string[] args)
         {
+
+
+
+
+
         }
     }
 }
