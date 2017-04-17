@@ -4,10 +4,12 @@ namespace NewYearPresent
 {
     public class ChocoElement : GiftElement
     {
-        public TypeGiftElement type;
+        public enum TypeChocoElement { };
+        public TypeChocoElement type;
 
         public ChocoElement(string elementName, int elementWeith, int elementSugar, 
-            int elementCaloriepes, TypeGiftElement type) : base(elementName, elementWeith, elementSugar, elementCalories)
+            int elementCalories, TypeChocoElement type) : 
+            base(elementName, elementWeith, elementSugar, elementCalories)
         {
             this.type = type;
         }
