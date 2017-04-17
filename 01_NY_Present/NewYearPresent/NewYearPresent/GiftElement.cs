@@ -12,11 +12,14 @@ namespace NewYearPresent
         public int weith { get; private set; }
         public int sugar { get; private set; }
         public int calories { get; private set; }
+        public abstract void TypeGiftElement();
 
-        public GiftElement(string name, int weith, int sugar, int calories)
+        public GiftElement(string elementName, int elementWeith, int elementSugar, int elementCalories)
         {
-
+            name = elementName;
+            weith = elementWeith;
+            sugar = elementSugar;
+            calories = elementCalories;
         }
-
     }
 }
