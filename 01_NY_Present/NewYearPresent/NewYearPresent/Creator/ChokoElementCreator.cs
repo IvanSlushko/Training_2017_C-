@@ -11,7 +11,7 @@ namespace NewYearPresent.Creator
     public class ChokoElementCreator : Creator
 
     {
-        public override GiftElement BuildChoco(
+        public override GiftElement Build(
             string elementName,
             int elementWeith,
             int elementSugar,
@@ -19,19 +19,19 @@ namespace NewYearPresent.Creator
             ChocoElement.TypeChocoElement type)
         {
             return new ChocoElement(
-          elementName,
-          elementWeith,
-          elementSugar,
-          elementCalories,
-          type);
+            elementName,
+            elementWeith,
+            elementSugar,
+            elementCalories,
+            type);
         }
 
-        public override GiftElement BuildCandy(string elementName, int elementWeith, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
+        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
         {
             throw new NotImplementedException();
         }
 
-        public override GiftElement BuildWaffle(string elementName, int elementWeith, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
+        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
         {
             throw new NotImplementedException();
         }

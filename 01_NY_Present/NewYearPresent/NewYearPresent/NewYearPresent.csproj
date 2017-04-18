@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creator\CandyElementCreator.cs" />
+    <Compile Include="Creator\ChokoElementCreator.cs" />
+    <Compile Include="Creator\Creator.cs" />
+    <Compile Include="Creator\WaffleElementCreator.cs" />
     <Compile Include="Elements\CandyElement.cs" />
     <Compile Include="Elements\ChocoElement.cs" />
     <Compile Include="Elements\GiftElement.cs" />
     <Compile Include="Elements\WaffleElement.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Gift\Gift.cs" />
     <Compile Include="Gift\IGift.cs" />
     <Compile Include="Program.cs" />

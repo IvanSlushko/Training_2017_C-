@@ -6,21 +6,21 @@ namespace NewYearPresent.Creator
 {
     public abstract class Creator
     {
-        public abstract GiftElement BuildCandy(
+        public abstract GiftElement Build(
             string elementName,
             int elementWeith,
             int elementSugar,
             int elementCalories,
             TypeCandyElement type);
 
-        public abstract GiftElement BuildChoco(
+        public abstract GiftElement Build(
             string elementName,
             int elementWeith,
             int elementSugar,
             int elementCalories,
             TypeChocoElement type);
 
-        public abstract GiftElement BuildWaffle(
+        public abstract GiftElement Build(
             string elementName,
             int elementWeith,
             int elementSugar,

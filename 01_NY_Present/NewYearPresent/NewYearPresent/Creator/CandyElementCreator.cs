@@ -10,7 +10,7 @@ namespace NewYearPresent.Creator
     public class CandyElementCreator : Creator
     {
 
-        public override GiftElement BuildCandy(
+        public override GiftElement Build(
             string elementName, 
             int elementWeith, 
             int elementSugar, 
@@ -25,12 +25,12 @@ namespace NewYearPresent.Creator
                 type);
         }
 
-        public override GiftElement BuildChoco(string elementName, int elementWeith, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
+        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
         {
             throw new NotImplementedException();
         }
 
-        public override GiftElement BuildWaffle(string elementName, int elementWeith, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
+        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
         {
             throw new NotImplementedException();
         }

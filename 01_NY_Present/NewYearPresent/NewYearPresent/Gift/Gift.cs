@@ -26,6 +26,11 @@ namespace NewYearPresent.Gift
             elements.Add(giftElements);
         }
 
+        public void Add(string v1, int v2, int v3, int v4, CandyElement.TypeCandyElement chocolateCandy)
+        {
+            throw new NotImplementedException();
+        }
+
         //int result1 = Sum(integers, x => x > 5);
         //int result2 = Sum(integers, x => x % 2 == 0);
         //var q2 = orders.Join(
