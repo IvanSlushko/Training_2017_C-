@@ -1,17 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static NewYearPresent.CandyElement;
+using static NewYearPresent.ChocoElement;
+using static NewYearPresent.Elements.WaffleElement;
 
 namespace NewYearPresent.Creator
 {
     abstract class Creator
     {
+        public abstract GiftElement BuildCandy(
+            string elementName,
+            int elementWeith,
+            int elementSugar,
+            int elementCalories,
+            TypeCandyElement type);
 
+        public abstract GiftElement BuildChoco(
+            string elementName,
+            int elementWeith,
+            int elementSugar,
+            int elementCalories,
+            TypeChocoElement type);
 
-        public abstract GiftElement BuildCandy();
-
-
+        public abstract GiftElement BuildWaffle(
+            string elementName,
+            int elementWeith,
+            int elementSugar,
+            int elementCalories,
+            TypeWaffleElement type);
     }
 }

@@ -35,9 +35,6 @@ namespace NewYearPresent.Gift
         //        (order, user) => new { OrderId = order.Id, UserName = user.Name, OrderSum = order.Sum }
         //            ).ToConsole(x => String.Format("{0} {1}", x.OrderId, x.UserName));
 
-
-
-
         //        Sum with Selector
 
         //This example sums lengths of all strings in the list.
