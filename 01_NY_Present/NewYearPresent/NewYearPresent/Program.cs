@@ -1,5 +1,6 @@
-﻿using NewYearPresent.Gift;
-using static NewYearPresent.CandyElement;
+﻿using System;
+using NewYearPresent.Gift;
+using NewYearPresent.Creator;
 
 namespace NewYearPresent
 {
@@ -7,13 +8,19 @@ namespace NewYearPresent
     {
         static void Main(string[] args)
         {
+            Creator.Creator[] variants = new Creator.Creator[3];
+            variants[0] = new CandyElementCreator();
 
-            IGift gift = new Gift();
-
-            Creator[] variants = new Creator[1];
             //     Имя | Вес | Сахар | Калории | Тип элемента
 
-            //gift.Add("Конфета Мишка", 10, 15, 20, CandyElement.TypeCandyElement.ChocolateCandy);
+            variants[0].BuildCandy("Конфета Мишка", 10, 15, 20, CandyElement.TypeCandyElement.ChocolateCandy);
+            variants[0].BuildCandy("Конфета Мишка1", 10, 13, 1, CandyElement.TypeCandyElement.Sweetmeat);
+            variants[0].BuildCandy("Конфета1", 10, 13, 1, CandyElement.TypeCandyElement.DropCandy);
+
+            IGift gift = new Gift.Gift();
+
+
+
 
 
 

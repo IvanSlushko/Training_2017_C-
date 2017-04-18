@@ -2,13 +2,17 @@
 
 namespace NewYearPresent.Elements
 {
-    class WaffleElement : GiftElement
+    public class WaffleElement : GiftElement
     {
         public enum TypeWaffleElement { ChocolateWaffle, CreamyWafer };
         public TypeWaffleElement type;
 
-        public WaffleElement(string elementName, int elementWeith, int elementSugar,
-            int elementCalories, TypeWaffleElement type) :
+        public WaffleElement(
+            string elementName, 
+            int elementWeith, 
+            int elementSugar,
+            int elementCalories, 
+            TypeWaffleElement type) :
             base(elementName, elementWeith, elementSugar, elementCalories)
         {
             this.type = type;

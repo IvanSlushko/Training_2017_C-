@@ -7,8 +7,12 @@ namespace NewYearPresent
         public enum TypeChocoElement { MilkChocolate, PorousChocolate, DarkChocolate };
         public TypeChocoElement type;
 
-        public ChocoElement(string elementName, int elementWeith, int elementSugar, 
-            int elementCalories, TypeChocoElement type) : 
+        public ChocoElement(
+            string elementName, 
+            int elementWeith, 
+            int elementSugar, 
+            int elementCalories, 
+            TypeChocoElement type) : 
             base(elementName, elementWeith, elementSugar, elementCalories)
         {
             this.type = type;

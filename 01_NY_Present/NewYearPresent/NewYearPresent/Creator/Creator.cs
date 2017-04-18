@@ -4,7 +4,7 @@ using static NewYearPresent.Elements.WaffleElement;
 
 namespace NewYearPresent.Creator
 {
-    abstract class Creator
+    public abstract class Creator
     {
         public abstract GiftElement BuildCandy(
             string elementName,
