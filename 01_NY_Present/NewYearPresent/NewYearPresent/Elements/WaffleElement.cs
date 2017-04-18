@@ -9,11 +9,11 @@ namespace NewYearPresent.Elements
 
         public WaffleElement(
             string elementName, 
-            int elementWeith, 
+            int elementWeigth, 
             int elementSugar,
             int elementCalories, 
             TypeWaffleElement type) :
-            base(elementName, elementWeith, elementSugar, elementCalories)
+            base(elementName, elementWeigth, elementSugar, elementCalories)
         {
             this.type = type;
         }

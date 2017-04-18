@@ -49,9 +49,9 @@ namespace NewYearPresent.Gift
         //        // these two lines do the same
         //        int lengthSum = stringList.Select(x => x.Length).Sum();  // lengthSum: 19
         //        int lengthSum = stringList.Sum(x => x.Length);           // lengthSum: 19
-        public int GiftWeith()
+        public int GiftWeight()
         {
-            return elements.Sum(x => x.weith);
+            return elements.Sum(x => x.weight);
         }
     }
 }

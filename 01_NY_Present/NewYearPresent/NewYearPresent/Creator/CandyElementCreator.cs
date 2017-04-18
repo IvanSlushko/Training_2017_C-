@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NewYearPresent.Elements;
 
 namespace NewYearPresent.Creator
@@ -12,25 +8,25 @@ namespace NewYearPresent.Creator
 
         public override GiftElement Build(
             string elementName, 
-            int elementWeith, 
+            int elementWeigth, 
             int elementSugar, 
             int elementCalories,
             CandyElement.TypeCandyElement type)
         {
             return new CandyElement (
                 elementName, 
-                elementWeith, 
+                elementWeigth, 
                 elementSugar, 
                 elementCalories, 
                 type);
         }
 
-        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
         {
             throw new NotImplementedException();
         }
 
-        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
         {
             throw new NotImplementedException();
         }

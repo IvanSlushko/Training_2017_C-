@@ -1,6 +1,7 @@
 ﻿using System;
 using NewYearPresent.Gift;
 using NewYearPresent.Creator;
+using NewYearPresent.Elements;
 
 namespace NewYearPresent
 {
@@ -8,13 +9,15 @@ namespace NewYearPresent
     {
         static void Main(string[] args)
         {
+            
             //Creator[] qqq = new Creator[3];
 
             Creator.Creator[] variants = new Creator.Creator[3];
             variants[0] = new CandyElementCreator();
+            variants[1] = new ChokoElementCreator();
+            variants[2] = new WaffleElementCreator();
 
             //     Имя | Вес | Сахар | Калории | Тип элемента
-
 
             IGift gift = new Gift.Gift();
 
@@ -22,11 +25,15 @@ namespace NewYearPresent
             gift.Add(variants[0].Build("Конфета Мишка1", 10, 13, 1, CandyElement.TypeCandyElement.Sweetmeat));
             gift.Add(variants[0].Build("Конфета1", 10, 13, 1, CandyElement.TypeCandyElement.DropCandy));
 
+            gift.Add(variants[1].Build("Milkа", 100, 13, 210, ChocoElement.TypeChocoElement.MilkChocolate));
 
-            foreach (var i in gift.Elements)
+            gift.Add(variants[2].Build("Vaffle cream", 103, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer ));
+            gift.Add(variants[2].Build("Vaffle komunarka", 170, 14, 20, WaffleElement.TypeWaffleElement.ChocolateWaffle));
+
+            foreach (var i in gift.Elements) 
             {
-                Console.WriteLine("element : {0}, weith: {1}, sugar: {2}, cal: {3}, "
-                    , i.name, i.weith, i.sugar, i.calories);
+                Console.WriteLine("element : {0}, weigth: {1}, sugar: {2}, cal: {3},  TYPE: {4} "
+                    , i.name, i.weight, i.sugar, i.calories, i.GetType().Name);
 
             }
 

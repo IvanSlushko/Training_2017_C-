@@ -9,11 +9,11 @@ namespace NewYearPresent
 
         public ChocoElement(
             string elementName, 
-            int elementWeith, 
+            int elementWeight, 
             int elementSugar, 
             int elementCalories, 
             TypeChocoElement type) : 
-            base(elementName, elementWeith, elementSugar, elementCalories)
+            base(elementName, elementWeight, elementSugar, elementCalories)
         {
             this.type = type;
         }

@@ -8,21 +8,21 @@ namespace NewYearPresent.Creator
     {
         public abstract GiftElement Build(
             string elementName,
-            int elementWeith,
+            int elementWeigth,
             int elementSugar,
             int elementCalories,
             TypeCandyElement type);
 
         public abstract GiftElement Build(
             string elementName,
-            int elementWeith,
+            int elementWeigth,
             int elementSugar,
             int elementCalories,
             TypeChocoElement type);
 
         public abstract GiftElement Build(
             string elementName,
-            int elementWeith,
+            int elementWeigth,
             int elementSugar,
             int elementCalories,
             TypeWaffleElement type);

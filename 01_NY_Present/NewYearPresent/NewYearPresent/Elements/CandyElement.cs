@@ -9,11 +9,11 @@ namespace NewYearPresent
 
         public CandyElement(
             string elementName,
-            int elementWeith,
+            int elementWeigth,
             int elementSugar,
             int elementCalories,
             TypeCandyElement type) :
-            base(elementName, elementWeith, elementSugar, elementCalories)
+            base(elementName, elementWeigth, elementSugar, elementCalories)
         {
             this.type = type;
         }

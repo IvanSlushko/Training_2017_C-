@@ -7,7 +7,7 @@ namespace NewYearPresent.Gift
         IEnumerable<GiftElement> Elements { get; }
         void Add( GiftElement giftElements);
 
-        int GiftWeith();
+        int GiftWeight();
 
 
         void Add(string v1, int v2, int v3, int v4, CandyElement.TypeCandyElement chocolateCandy);

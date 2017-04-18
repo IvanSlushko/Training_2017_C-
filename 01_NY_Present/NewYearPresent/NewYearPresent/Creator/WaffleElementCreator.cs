@@ -11,25 +11,25 @@ namespace NewYearPresent.Creator
     {
         public override GiftElement Build(
             string elementName,
-            int elementWeith,
+            int elementWeigth,
             int elementSugar,
             int elementCalories,
             WaffleElement.TypeWaffleElement type)
         {
             return new WaffleElement(
             elementName,
-            elementWeith,
+            elementWeigth,
             elementSugar,
             elementCalories,
             type);
         }
 
-        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
         {
             throw new NotImplementedException();
         }
 
-        public override GiftElement Build(string elementName, int elementWeith, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
         {
             throw new NotImplementedException();
         }
