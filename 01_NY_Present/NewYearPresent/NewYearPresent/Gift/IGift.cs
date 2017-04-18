@@ -6,5 +6,10 @@ namespace NewYearPresent.Gift
     {
         IEnumerable<GiftElement> Elements { get; }
         void Add( GiftElement giftElements);
+
+        int GiftWeith();
+
+
+
     }
 }

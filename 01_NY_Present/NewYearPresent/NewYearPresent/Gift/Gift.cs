@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NewYearPresent.Gift
 {
@@ -25,9 +26,12 @@ namespace NewYearPresent.Gift
             elements.Add(giftElements);
         }
 
+        //int result1 = Sum(integers, x => x > 5);
+        //int result2 = Sum(integers, x => x % 2 == 0);
 
-
-
-
+        public int GiftWeith()
+        {
+            return elements.Sum.ToConsole();
+        }
     }
 }
