@@ -7,22 +7,12 @@ using NewYearPresent.Elements;
 
 namespace NewYearPresent.Creator
 {
-    public class CandyElementCreator : Creator
-    {
+    public class ChokoElementCreator : Creator
 
-        public override GiftElement BuildCandy(
-            string elementName, 
-            int elementWeith, 
-            int elementSugar, 
-            int elementCalories,
-            CandyElement.TypeCandyElement type)
+    {
+        public override GiftElement BuildCandy(string elementName, int elementWeith, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
         {
-            return new CandyElement (
-                elementName, 
-                elementWeith, 
-                elementSugar, 
-                elementCalories, 
-                type);
+            throw new NotImplementedException();
         }
 
         public override GiftElement BuildChoco(string elementName, int elementWeith, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
