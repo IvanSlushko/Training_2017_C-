@@ -22,13 +22,13 @@ namespace NewYearPresent
             IGift gift = new Gift.Gift();
 
             gift.Add(variants[0].Build("Конфета Мишка", 10, 15, 20, CandyElement.TypeCandyElement.ChocolateCandy));
-            gift.Add(variants[0].Build("Конфета Мишка1", 10, 13, 1, CandyElement.TypeCandyElement.Sweetmeat));
-            gift.Add(variants[0].Build("Конфета1", 10, 13, 1, CandyElement.TypeCandyElement.DropCandy));
+            gift.Add(variants[0].Build("Конфета Мишка1", 11, 13, 5, CandyElement.TypeCandyElement.Sweetmeat));
+            gift.Add(variants[0].Build("Конфета1", 8, 13, 1, CandyElement.TypeCandyElement.DropCandy));
 
             gift.Add(variants[1].Build("Milkа", 100, 13, 210, ChocoElement.TypeChocoElement.MilkChocolate));
 
-            gift.Add(variants[2].Build("Vaffle cream", 103, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer ));
-            gift.Add(variants[2].Build("Vaffle komunarka", 170, 14, 20, WaffleElement.TypeWaffleElement.ChocolateWaffle));
+            gift.Add(variants[2].Build("Вафля cream", 110, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer ));
+            gift.Add(variants[2].Build("Вафля komunarka", 170, 14, 22, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
             //foreach (var i in gift.Elements) 
             //{
@@ -36,9 +36,11 @@ namespace NewYearPresent
             //        , i.name, i.weight, i.sugar, i.calories, i.GetType().Name);
 
             //}
-            Console.WriteLine("------------------");
             gift.ToConsole();
 
+            Console.WriteLine("Итого масса:              {0} гр.",gift.GiftWeight());
+            Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
+            Console.WriteLine(new string('-', 75));
 
         }
     }
