@@ -39,7 +39,8 @@ namespace NewYearPresent
                 if (line.Contains("CandyElement"))
                 {
                     Console.WriteLine("конфета  {0}  ", line);
-                    //gift.Add(variants[0].Build(line);
+
+                    gift.Add(variants[0].Build(line.CompareTo(GiftElement));
                 }
                 else if (line.Contains("ChocoElement"))
                 {

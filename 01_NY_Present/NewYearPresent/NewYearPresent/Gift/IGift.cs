@@ -9,5 +9,7 @@ namespace NewYearPresent.Gift
         int GiftWeight();
         int GiftSumCalories();
 
+
+
     }
 }
