@@ -2,7 +2,7 @@
 using static NewYearPresent.ChocoElement;
 using static NewYearPresent.Elements.WaffleElement;
 
-namespace NewYearPresent.Creator
+namespace NewYearPresent.Creators
 {
     public abstract class Creator
     {

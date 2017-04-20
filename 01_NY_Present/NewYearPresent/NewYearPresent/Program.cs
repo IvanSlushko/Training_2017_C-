@@ -1,6 +1,6 @@
 ﻿using System;
 using NewYearPresent.Gift;
-using NewYearPresent.Creator;
+using NewYearPresent.Creators;
 using NewYearPresent.Elements;
 
 namespace NewYearPresent
@@ -10,9 +10,8 @@ namespace NewYearPresent
         static void Main(string[] args)
         {
             
-            //Creator[] qqq = new Creator[3];
+            Creator[] variants = new Creator[3];
 
-            Creator.Creator[] variants = new Creator.Creator[3];
             variants[0] = new CandyElementCreator();
             variants[1] = new ChokoElementCreator();
             variants[2] = new WaffleElementCreator();

@@ -4,19 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NewYearPresent.Elements;
+using NewYearPresent;
 
-namespace NewYearPresent.Creator
+namespace NewYearPresent.Creators
 {
-    public class WaffleElementCreator : Creator
+    public class ChokoElementCreator : Creator
+
     {
         public override GiftElement Build(
             string elementName,
             int elementWeigth,
             int elementSugar,
             int elementCalories,
-            WaffleElement.TypeWaffleElement type)
+            ChocoElement.TypeChocoElement type)
         {
-            return new WaffleElement(
+            return new ChocoElement(
             elementName,
             elementWeigth,
             elementSugar,
@@ -29,11 +31,9 @@ namespace NewYearPresent.Creator
             throw new NotImplementedException();
         }
 
-        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, WaffleElement.TypeWaffleElement type)
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

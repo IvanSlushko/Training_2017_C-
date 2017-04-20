@@ -1,7 +1,7 @@
 ﻿using System;
 using NewYearPresent.Elements;
 
-namespace NewYearPresent.Creator
+namespace NewYearPresent.Creators
 {
     public class CandyElementCreator : Creator
     {
