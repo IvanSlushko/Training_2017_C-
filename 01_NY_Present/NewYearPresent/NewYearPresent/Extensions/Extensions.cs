@@ -1,23 +1,28 @@
-﻿namespace NewYearPresent.Extensions
+﻿using NewYearPresent.Gift;
+using System;
+using System.Collections.Generic;
+
+namespace NewYearPresent.Extensions
 {
-    class Extensions
+    public static class Extensions
     {
 
-    //    namespace ConsoleApplication8
-    //{    ПРИМЕР ВЫВОДА урок про лямбда и линк
-    //    public static class Extensions
-    //    {
-    //        public static IEnumerable<T> ToConsole<T>(this IEnumerable<T> source, Func<T, string> projector)
-    //        {
-    //            foreach (var p in source)
-    //            {
-    //                Console.WriteLine(projector(p));
-    //                yield return p;
-    //            }
-    //        }
-    //    }
-    //}
+        //    namespace ConsoleApplication8
+        //{    ПРИМЕР ВЫВОДА урок про лямбда и линк
+        //    public static class Extensions
+        //    {
+        public static void ToConsole<T>(this IGift element)
+        {
+            Console.WriteLine("Подарок: ");
+            foreach (var p in element.Elements)
+            {
+                Console.WriteLine(p.name);
+                yield return p;
+            }
+        }
+        //    }
+        //}
 
 
-}
+    }
 }

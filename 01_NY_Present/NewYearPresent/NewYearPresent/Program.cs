@@ -29,12 +29,13 @@ namespace NewYearPresent
             gift.Add(variants[2].Build("Vaffle cream", 103, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer ));
             gift.Add(variants[2].Build("Vaffle komunarka", 170, 14, 20, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
-            foreach (var i in gift.Elements) 
-            {
-                Console.WriteLine("element : {0}, weigth: {1}, sugar: {2}, cal: {3},  TYPE: {4} "
-                    , i.name, i.weight, i.sugar, i.calories, i.GetType().Name);
+            //foreach (var i in gift.Elements) 
+            //{
+            //    Console.WriteLine("element : {0}, weigth: {1}, sugar: {2}, cal: {3},  TYPE: {4} "
+            //        , i.name, i.weight, i.sugar, i.calories, i.GetType().Name);
 
-            }
+            //}
+
 
         }
     }
