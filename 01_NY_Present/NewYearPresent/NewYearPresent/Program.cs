@@ -2,6 +2,7 @@
 using NewYearPresent.Gift;
 using NewYearPresent.Creators;
 using NewYearPresent.Elements;
+using NewYearPresent.Extensions;
 
 namespace NewYearPresent
 {
@@ -35,6 +36,8 @@ namespace NewYearPresent
             //        , i.name, i.weight, i.sugar, i.calories, i.GetType().Name);
 
             //}
+            Console.WriteLine("------------------");
+            gift.ToConsole();
 
 
         }
