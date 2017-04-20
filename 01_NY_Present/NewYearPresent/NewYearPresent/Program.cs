@@ -31,7 +31,10 @@ namespace NewYearPresent
             gift.Add(variants[2].Build("Вафля komunarka", 170, 14, 22, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
             string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
-
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
 
             //foreach (var i in gift.Elements) 
             //{
