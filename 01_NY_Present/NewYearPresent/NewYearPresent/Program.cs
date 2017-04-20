@@ -30,10 +30,26 @@ namespace NewYearPresent
             gift.Add(variants[2].Build("Вафля cream", 110, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer));
             gift.Add(variants[2].Build("Вафля komunarka", 170, 14, 22, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
+
+
             string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
             foreach (string line in lines)
             {
-                Console.WriteLine(line);
+
+                if (line.Contains("CandyElement"))
+                {
+                    Console.WriteLine("конфета  {0}  ", line);
+                    //gift.Add(variants[0].Build(line);
+                }
+                else if (line.Contains("ChocoElement"))
+                {
+                    Console.WriteLine("шоколад  {0}  ", line);
+                }
+                else if (line.Contains("WaffleElement"))
+                {
+                    Console.WriteLine("вафля  {0}  ", line);
+                }
+                else Console.WriteLine("плохая строка {0} ",line);
             }
 
             //foreach (var i in gift.Elements) 
@@ -47,41 +63,41 @@ namespace NewYearPresent
             Console.WriteLine("Итого масса:              {0} гр.", gift.GiftWeight());
             Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
             Console.WriteLine(new string('-', 75));
-            ReadFromFile.Go();
+           // ReadFromFile.Go();
 
 
         }
     }
 
-    class ReadFromFile
-    {
-        public static void Go()
-        {
-            // Example #1
-            // Read the file as one string.
-            string text = System.IO.File.ReadAllText(@"C:\Text.txt");
+    //class ReadFromFile
+    //{
+    //    public static void Go()
+    //    {
+    //        // Example #1
+    //        // Read the file as one string.
+    //        string text = System.IO.File.ReadAllText(@"C:\Text.txt");
 
-            // Display the file contents to the console. Variable text is a string.
-            Console.WriteLine("Contents of Text.txt_________________");
-            System.Console.WriteLine(text);
+    //        // Display the file contents to the console. Variable text is a string.
+    //        Console.WriteLine("Contents of Text.txt_________________");
+    //        System.Console.WriteLine(text);
 
-            // Example #2
-            // Read each line of the file into a string array. Each element
-            // of the array is one line of the file.
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
+    //        // Example #2
+    //        // Read each line of the file into a string array. Each element
+    //        // of the array is one line of the file.
+    //        string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
 
-            // Display the file contents by using a foreach loop.
-            System.Console.WriteLine("Contents of Lines.txt__________________");
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
+    //        // Display the file contents by using a foreach loop.
+    //        System.Console.WriteLine("Contents of Lines.txt__________________");
+    //        foreach (string line in lines)
+    //        {
+    //            Console.WriteLine(line);
+    //        }
 
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            System.Console.ReadKey();
-        }
-    }
+    //        // Keep the console window open in debug mode.
+    //        Console.WriteLine("Press any key to exit.");
+    //        System.Console.ReadKey();
+    //    }
+    //}
 
 
 
