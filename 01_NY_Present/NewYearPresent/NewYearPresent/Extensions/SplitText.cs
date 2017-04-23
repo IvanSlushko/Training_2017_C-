@@ -15,7 +15,6 @@ namespace NewYearPresent.Extensions
 
             foreach (string line in lines)
             {
-                //string[] elements = line.Split(new char[] { ',' });
 
                 Console.WriteLine(line);
 
@@ -24,7 +23,9 @@ namespace NewYearPresent.Extensions
                 foreach (var substring in substrings)
                 {
                     Console.WriteLine(substring);
-                    Console.WriteLine(substring.GetType());
+                    int res;
+                    bool isInt = Int32.TryParse(substring, out res);
+                    Console.WriteLine(res+1);//!!!!!!!!!!!!!
                 }
 
                 Console.WriteLine(new string('-', 20));
