@@ -34,11 +34,16 @@ namespace NewYearPresent
             string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
             foreach (string line in lines)
             {
+                string[] elements = line.Split(new char[]{ ','});
+
+
 
                 if (line.Contains("CandyElement"))
                 {
                     Console.WriteLine("конфета {0}", line);
-                    //gift.Add(variants[0].Build(line as GiftElement));
+                    gift.Add(variants[0].Build(line as GiftElement));
+
+
                 }
                 else if (line.Contains("ChocoElement"))
                 {
