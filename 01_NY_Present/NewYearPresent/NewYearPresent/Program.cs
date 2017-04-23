@@ -31,40 +31,14 @@ namespace NewYearPresent
             gift.Add(variants[2].Build("Вафля komunarka", 170, 14, 22, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
-            foreach (string line in lines)
-            {
-                string[] elements = line.Split(new char[]{ ','});
-
-
-
-                if (line.Contains("CandyElement"))
-                {
-                    Console.WriteLine("конфета {0}", line);
-                    gift.Add(variants[0].Build(line as GiftElement));
-
-
-                }
-                else if (line.Contains("ChocoElement"))
-                {
-                    Console.WriteLine("шоколад {0}", line);
-                }
-                else if (line.Contains("WaffleElement"))
-                {
-                    Console.WriteLine("вафля {0}", line);
-                }
-                else Console.WriteLine("плохая строка {0}",line);
-            }
-
-
             Console.WriteLine(new string('-', 75));
             gift.ToConsole();
 
             Console.WriteLine("Итого масса:              {0} гр.", gift.GiftWeight());
             Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
             Console.WriteLine(new string('-', 75));
-           // ReadFromFile.Go();
-
+            // ReadFromFile.Go();
+            SplitText.Go();
 
         }
     }

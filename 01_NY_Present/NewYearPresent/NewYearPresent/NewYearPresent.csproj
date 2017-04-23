@@ -52,6 +52,7 @@
     <Compile Include="Elements\GiftElement.cs" />
     <Compile Include="Elements\WaffleElement.cs" />
     <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\SplitText.cs" />
     <Compile Include="Gift\Gift.cs" />
     <Compile Include="Gift\IGift.cs" />
     <Compile Include="Program.cs" />
