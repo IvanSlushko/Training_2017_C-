@@ -1,7 +1,10 @@
-﻿using System;
+﻿using NewYearPresent.Creators;
+using NewYearPresent.Gift;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace NewYearPresent.Extensions
@@ -17,36 +20,58 @@ namespace NewYearPresent.Extensions
             {
 
                 Console.WriteLine(line);
+                //Console.WriteLine(line.Length);
+
+               
+
+                Creator[] variants = new Creator[3];
+                variants[0] = new CandyElementCreator();
+                variants[1] = new ChokoElementCreator();
+                variants[2] = new WaffleElementCreator();
 
                 Char delimiter = ',';
                 String[] substrings = line.Split(delimiter);
+
+                IGift gift = new Gift.Gift();
+
                 foreach (var substring in substrings)
                 {
-                    Console.WriteLine(substring);
+                    // Console.WriteLine(substring);
+
+                    //убираю пробелы
+                    var substring1 = Regex.Replace(substring, @"\s+", "");
+
                     int res;
-                    bool isInt = Int32.TryParse(substring, out res);
-                    Console.WriteLine(res+1);//!!!!!!!!!!!!!
+                    bool isInt = int.TryParse(substring1, out res);
+
+                    if (isInt == true) {
+                        Console.WriteLine("Цифра  {0}", res);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Текст  {0}", substring1);
+                    }
+
+
+
+
+                    //bool IsDigit = substring.Length == substring.Where(c => char.IsDigit(c)).Count();
+
+
+
+                    //    int[] matches = Regex.Matches(substring, "\\d+")
+                    //.Cast<Match>()
+                    //.Select(x => int.Parse(x.Value))
+                    //.ToArray();
+                    //    foreach (int match in matches)
+                    //        Console.WriteLine(match);
+
                 }
 
                 Console.WriteLine(new string('-', 20));
 
 
-                //if (line.Contains("CandyElement"))
-                //{
-                //    Console.WriteLine("конфета {0}", line);
-                //    gift.Add(variants[0].Build(line as GiftElement));
-
-
-                //}
-                //else if (line.Contains("ChocoElement"))
-                //{
-                //    Console.WriteLine("шоколад {0}", line);
-                //}
-                //else if (line.Contains("WaffleElement"))
-                //{
-                //    Console.WriteLine("вафля {0}", line);
-                //}
-                //else Console.WriteLine("плохая строка {0}",line);
             }
         }
 

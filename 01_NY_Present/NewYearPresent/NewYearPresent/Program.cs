@@ -49,7 +49,7 @@ namespace NewYearPresent
             gift.FindBySugar(0,14);
             gift.ToConsole();
 
-      
+
             //var _FindBySugar = gift.FindBySugar(0, 14);
 
             // _FindBySugar.ToConsole();
@@ -59,10 +59,10 @@ namespace NewYearPresent
             //    Console.WriteLine("Название конфеты: {0}, Сахар: {1}", elements.name, elements.sugar);
             //}
 
+            Console.WriteLine("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
 
 
-
-            //SplitText.Go();
+            SplitText.Go();
 
         }
     }
