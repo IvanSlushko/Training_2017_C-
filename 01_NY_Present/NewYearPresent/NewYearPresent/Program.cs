@@ -30,7 +30,6 @@ namespace NewYearPresent
             gift.Add(variants[2].Build("Вафля cream", 110, 15, 20, WaffleElement.TypeWaffleElement.CreamyWafer));
             gift.Add(variants[2].Build("Вафля komunarka", 170, 14, 22, WaffleElement.TypeWaffleElement.ChocolateWaffle));
 
-
             Console.WriteLine(new string('-', 75));
             gift.ToConsole();
 
@@ -38,11 +37,28 @@ namespace NewYearPresent
             Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
             Console.WriteLine(new string('-', 75));
 
+            Console.WriteLine("SortByWeight:");
             gift.SortByWeight();
             gift.ToConsole();
 
+            Console.WriteLine("SortByCalorie:");
             gift.SortByCalorie();
             gift.ToConsole();
+
+            Console.WriteLine("FindBySugar:");
+            gift.FindBySugar(0,14);
+            gift.ToConsole();
+
+      
+            //var _FindBySugar = gift.FindBySugar(0, 14);
+
+            // _FindBySugar.ToConsole();
+
+            //foreach (var elements in gift.FindBySugar(0, 14))
+            //{
+            //    Console.WriteLine("Название конфеты: {0}, Сахар: {1}", elements.name, elements.sugar);
+            //}
+
 
 
 

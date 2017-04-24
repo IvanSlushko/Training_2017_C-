@@ -44,7 +44,6 @@ namespace NewYearPresent.Gift
             }
 
         }
-
         public void SortByCalorie()
         {
             var tempSortEl = elements.OrderBy(x => x.calories).ToList();
@@ -53,7 +52,24 @@ namespace NewYearPresent.Gift
             {
                 elements.Add(element);
             }
+        }
 
+        public IEnumerable<GiftElement> FindBySugar(int min, int max)
+        {
+            if (elements != null)
+            {
+                var tempFind = elements.Where(x => (x.sugar >= min) && (x.sugar <= max)).ToList();
+                elements.Clear();
+                foreach (var element in tempFind)
+                {
+                    elements.Add(element);
+                }
+                return elements;
+            }
+            else
+            {
+                throw new InvalidOperationException("null!!!!!!");
+            }
         }
     }
 }
