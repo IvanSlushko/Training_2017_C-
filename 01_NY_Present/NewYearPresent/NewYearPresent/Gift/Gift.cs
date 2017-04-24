@@ -34,14 +34,26 @@ namespace NewYearPresent.Gift
         {
             return elements.Sum(x => x.calories);
         }
-        public void Sort()
+        public void SortByWeight()
         {
+            var tempSortEl = elements.OrderBy(x => x.weight).ToList();
+            elements.Clear();
+            foreach (var element in tempSortEl)
+            {
+                elements.Add(element);
+            }
 
+        }
 
+        public void SortByCalorie()
+        {
+            var tempSortEl = elements.OrderBy(x => x.calories).ToList();
+            elements.Clear();
+            foreach (var element in tempSortEl)
+            {
+                elements.Add(element);
+            }
 
-
-
-            throw new NotImplementedException();
         }
     }
 }

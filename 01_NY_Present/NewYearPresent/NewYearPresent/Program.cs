@@ -38,13 +38,14 @@ namespace NewYearPresent
             Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
             Console.WriteLine(new string('-', 75));
 
+            gift.SortByWeight();
+            gift.ToConsole();
+
+            gift.SortByCalorie();
+            gift.ToConsole();
 
 
 
-
-
-
-         
             //SplitText.Go();
 
         }

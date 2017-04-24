@@ -5,11 +5,11 @@ namespace NewYearPresent.Gift
     public interface IGift
     {
         IEnumerable<GiftElement> Elements { get; }
-        void Add( GiftElement giftElements);
+        void Add(GiftElement giftElements);
         int GiftWeight();
         int GiftSumCalories();
-        void Sort();
-
+        void SortByWeight();
+        void SortByCalorie();
 
     }
 }
