@@ -8,7 +8,7 @@ namespace NewYearPresent.Gift
         void Add( GiftElement giftElements);
         int GiftWeight();
         int GiftSumCalories();
-
+        void Sort();
 
 
     }

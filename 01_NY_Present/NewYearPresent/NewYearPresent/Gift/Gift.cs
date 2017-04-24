@@ -34,5 +34,14 @@ namespace NewYearPresent.Gift
         {
             return elements.Sum(x => x.calories);
         }
+        public void Sort()
+        {
+
+
+
+
+
+            throw new NotImplementedException();
+        }
     }
 }

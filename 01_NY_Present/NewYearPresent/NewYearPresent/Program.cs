@@ -37,42 +37,18 @@ namespace NewYearPresent
             Console.WriteLine("Итого масса:              {0} гр.", gift.GiftWeight());
             Console.WriteLine("Калорий во всем подарке:  {0}.", gift.GiftSumCalories());
             Console.WriteLine(new string('-', 75));
-            // ReadFromFile.Go();
-            SplitText.Go();
+
+
+
+
+
+
+
+         
+            //SplitText.Go();
 
         }
     }
-
-    //class ReadFromFile
-    //{
-    //    public static void Go()
-    //    {
-    //        // Example #1
-    //        // Read the file as one string.
-    //        string text = System.IO.File.ReadAllText(@"C:\Text.txt");
-
-    //        // Display the file contents to the console. Variable text is a string.
-    //        Console.WriteLine("Contents of Text.txt_________________");
-    //        System.Console.WriteLine(text);
-
-    //        // Example #2
-    //        // Read each line of the file into a string array. Each element
-    //        // of the array is one line of the file.
-    //        string[] lines = System.IO.File.ReadAllLines(@"C:\Lines.txt");
-
-    //        // Display the file contents by using a foreach loop.
-    //        System.Console.WriteLine("Contents of Lines.txt__________________");
-    //        foreach (string line in lines)
-    //        {
-    //            Console.WriteLine(line);
-    //        }
-
-    //        // Keep the console window open in debug mode.
-    //        Console.WriteLine("Press any key to exit.");
-    //        System.Console.ReadKey();
-    //    }
-    //}
-
 
 
 }
