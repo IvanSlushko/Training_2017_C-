@@ -26,5 +26,6 @@ namespace NewYearPresent.Creators
             int elementSugar,
             int elementCalories,
             TypeWaffleElement type);
+       
     }
 }

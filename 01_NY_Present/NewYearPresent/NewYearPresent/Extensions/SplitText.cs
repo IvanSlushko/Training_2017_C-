@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static NewYearPresent.CandyElement;
 
 namespace NewYearPresent.Extensions
 {
@@ -28,7 +29,7 @@ namespace NewYearPresent.Extensions
 
                 if (line.Contains("CandyElement"))
                 {
-                    Console.WriteLine("CandyElement");
+                    //Console.WriteLine("CandyElement");
 
                     Regex.Replace(line, @"\s+", ""); //убрал пробелы
 
@@ -36,12 +37,14 @@ namespace NewYearPresent.Extensions
 
                     if (substrings.Length == 5)
                     {
-                        variants[0].Build(
+
+                        gift.Add(variants[0].Build(
                             substrings[0],
                             Convert.ToInt32(substrings[1], 16),
                             Convert.ToInt32(substrings[2], 16),
                             Convert.ToInt32(substrings[3], 16),
-                            Convert.ChangeType(substrings[4] as CandyElement.TypeCandyElement));
+                            Convert.ChangeType(substrings[4], typeof(TypeCandyElement))));
+
                     }
 
                     else Console.WriteLine("Битая строка!!!");
@@ -56,7 +59,7 @@ namespace NewYearPresent.Extensions
                 {
                     Console.WriteLine("WaffleElement");
                 }
-                
+
 
 
 
