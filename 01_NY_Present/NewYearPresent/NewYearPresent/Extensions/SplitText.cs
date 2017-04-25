@@ -37,14 +37,14 @@ namespace NewYearPresent.Extensions
 
                     if (substrings.Length == 5)
                     {
-
+                        //     Имя | Вес | Сахар | Калории | Тип элемента
                         gift.Add(variants[0].Build(
                             substrings[0],
                             Convert.ToInt32(substrings[1], 16),
                             Convert.ToInt32(substrings[2], 16),
                             Convert.ToInt32(substrings[3], 16),
-                            Convert.ChangeType(substrings[4], typeof(TypeCandyElement))));
-
+                            Convert.ChangeType(substrings[4], typeof(CandyElement.TypeCandyElement))));
+                        //5 тип, метод в креаторе
                     }
 
                     else Console.WriteLine("Битая строка!!!");
