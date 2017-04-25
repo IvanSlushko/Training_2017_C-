@@ -11,10 +11,6 @@ namespace NewYearPresent.Extensions
 {
     public static class SplitText
     {
-        private static String[] substringsNew;
-
-        //private static string substring;
-
         public static void Go()
         {
 
@@ -33,19 +29,23 @@ namespace NewYearPresent.Extensions
                 if (line.Contains("CandyElement"))
                 {
                     Console.WriteLine("CandyElement");
-                    String[] substrings = line.Split(',');
-                    for (int i = 0; i < substrings.Length; i++)
+
+                    Regex.Replace(line, @"\s+", ""); //убрал пробелы
+
+                    String[] substrings = line.Split(',');//разделил на  подстроки
+
+                    if (substrings.Length == 5)
                     {
-                        var substring1 = Regex.Replace(substrings[i], @"\s+", "");
-                        substringsNew[i] += substring1;
+                        variants[0].Build(
+                            substrings[0],
+                            Convert.ToInt32(substrings[1], 16),
+                            Convert.ToInt32(substrings[2], 16),
+                            Convert.ToInt32(substrings[3], 16),
+                            Convert.ChangeType(substrings[4] as CandyElement.TypeCandyElement));
                     }
 
-                    if (substringsNew.Length == 5)
-                    {
-                        variants[0].Build(substringsNew[0], substringsNew[1], substringsNew[2], substringsNew[3], substringsNew[4]);
-
-                    }
                     else Console.WriteLine("Битая строка!!!");
+
 
                 }
                 else if (line.Contains("ChocoElement"))
@@ -56,7 +56,7 @@ namespace NewYearPresent.Extensions
                 {
                     Console.WriteLine("WaffleElement");
                 }
-
+                
 
 
 

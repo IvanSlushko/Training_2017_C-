@@ -46,22 +46,11 @@ namespace NewYearPresent
             gift.ToConsole();
 
             Console.WriteLine("FindBySugar:");
-            gift.FindBySugar(0,14);
+            gift.FindBySugar(0, 14);
             gift.ToConsole();
 
 
-            //var _FindBySugar = gift.FindBySugar(0, 14);
-
-            // _FindBySugar.ToConsole();
-
-            //foreach (var elements in gift.FindBySugar(0, 14))
-            //{
-            //    Console.WriteLine("Название конфеты: {0}, Сахар: {1}", elements.name, elements.sugar);
-            //}
-
-
-
-             SplitText.Go();
+            SplitText.Go();
 
         }
     }
