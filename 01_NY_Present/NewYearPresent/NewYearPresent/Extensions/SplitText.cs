@@ -11,6 +11,8 @@ namespace NewYearPresent.Extensions
 {
     public static class SplitText
     {
+        private static String[] substringsNew;
+
         //private static string substring;
 
         public static void Go()
@@ -26,23 +28,53 @@ namespace NewYearPresent.Extensions
 
             foreach (string line in lines)
             {
-
                 Console.WriteLine(line);
-                //Console.WriteLine(line.Length);
 
-                Char delimiter = ',';
-                String[] substrings = line.Split(delimiter);
-
-
-                //Console.WriteLine(substrings.Length);
-
-                for (int i = 0; i < substrings.Length; i++)
+                if (line.Contains("CandyElement"))
                 {
-                    var substring1 = Regex.Replace(substrings[i], @"\s+", "");
-                    //substring1 = Regex.Replace(substrings[i], @",", "");
-                    Console.WriteLine("-->{0}, ",substring1);
+                    Console.WriteLine("CandyElement");
+                    String[] substrings = line.Split(',');
+                    for (int i = 0; i < substrings.Length; i++)
+                    {
+                        var substring1 = Regex.Replace(substrings[i], @"\s+", "");
+                        substringsNew[i] += substring1;
+                    }
+
+                    if (substringsNew.Length == 5)
+                    {
+                        variants[0].Build(substringsNew[0], substringsNew[1], substringsNew[2], substringsNew[3], substringsNew[4]);
+
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+
                 }
-                
+                else if (line.Contains("ChocoElement"))
+                {
+                    Console.WriteLine("ChocoElement");
+                }
+                else if (line.Contains("WaffleElement"))
+                {
+                    Console.WriteLine("WaffleElement");
+                }
+
+
+
+
+                //String[] substrings = line.Split(',');
+
+                //if (substrings.Length == 5)
+                //{
+                //    for (int i = 0; i < substrings.Length; i++)
+                //    {
+                //        var substring1 = Regex.Replace(substrings[i], @"\s+", "");
+                //        Console.WriteLine(substring1);
+                //    }
+
+                //}
+                //else Console.WriteLine("Битая строка!!!");
+
+
+
 
 
                 //foreach (var substring in substrings)
@@ -65,7 +97,7 @@ namespace NewYearPresent.Extensions
                 //    //bool IsDigit = substring.Length == substring.Where(c => char.IsDigit(c)).Count();
                 //}
 
-                Console.WriteLine(new string('-', 20));
+
 
 
             }
