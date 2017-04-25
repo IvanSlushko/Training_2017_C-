@@ -60,12 +60,6 @@ namespace NewYearPresent.Extensions
 
 
 
-                    //    int[] matches = Regex.Matches(substring, "\\d+")
-                    //.Cast<Match>()
-                    //.Select(x => int.Parse(x.Value))
-                    //.ToArray();
-                    //    foreach (int match in matches)
-                    //        Console.WriteLine(match);
 
                 }
 
