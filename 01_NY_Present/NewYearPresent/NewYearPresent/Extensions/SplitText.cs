@@ -48,8 +48,6 @@ namespace NewYearPresent.Extensions
                     }
 
                     else Console.WriteLine("Битая строка!!!");
-
-
                 }
                 else if (line.Contains("ChocoElement"))
                 {
