@@ -33,6 +33,7 @@ namespace NewYearPresent.Extensions
             Enum.TryParse<WaffleElement.TypeWaffleElement>("ChocolateWaffle", out p7);
             Enum.TryParse<WaffleElement.TypeWaffleElement>("CreamyWafer", out p8);
 
+
             foreach (string line in lines)
             {
 
@@ -43,9 +44,9 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[0].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p1));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p1));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
@@ -57,9 +58,9 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[0].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p2));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p2));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
@@ -71,9 +72,9 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[0].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p3));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p3));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
@@ -85,9 +86,9 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[1].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p4));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p4));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
@@ -99,9 +100,9 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[1].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p5));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p5));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
@@ -113,42 +114,42 @@ namespace NewYearPresent.Extensions
                     if (substrings.Length == 5)
                     {
                         gift.Add(variants[1].Build(substrings[0],
-                        Convert.ToInt32(substrings[1], 16),
-                        Convert.ToInt32(substrings[2], 16),
-                        Convert.ToInt32(substrings[3], 16), p6));
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p6));
                     }
                     else Console.WriteLine("Битая строка!!!");
                 }
 
-                //if (line.Contains("ChocolateWaffle"))
-                //{
-                //    Regex.Replace(line, @"\s+", "");           //убрал пробелы
-                //    String[] substrings = line.Split(',');//разделил на  подстроки
-                //    if (substrings.Length == 5)
-                //    {
-                //        gift.Add(variants[2].Build(substrings[0],
-                //        Convert.ToInt32(substrings[1], 16),
-                //        Convert.ToInt32(substrings[2], 16),
-                //        Convert.ToInt32(substrings[3], 16), p7));
-                //    }
-                //    else Console.WriteLine("Битая строка!!!");
-                //}
+                if (line.Contains("ChocolateWaffle"))
+                {
+                    Regex.Replace(line, @"\s+", "");           //убрал пробелы
+                    String[] substrings = line.Split(',');//разделил на  подстроки
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[2].Build(substrings[0],
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p7));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //if (line.Contains("CreamyWafer"))
-                //{
-                //    Regex.Replace(line, @"\s+", "");           //убрал пробелы
-                //    String[] substrings = line.Split(',');//разделил на  подстроки
-                //    if (substrings.Length == 5)
-                //    {
-                //        gift.Add(variants[2].Build(substrings[0],
-                //        Convert.ToInt32(substrings[1], 16),
-                //        Convert.ToInt32(substrings[2], 16),
-                //        Convert.ToInt32(substrings[3], 16), p8));
-                //    }
-                //    else Console.WriteLine("Битая строка!!!");
-                //}
+                if (line.Contains("CreamyWafer"))
+                {
+                    Regex.Replace(line, @"\s+", "");           //убрал пробелы
+                    String[] substrings = line.Split(',');//разделил на  подстроки
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[2].Build(substrings[0],
+                        Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]),
+                        Int32.Parse(substrings[3]), p8));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
             }
-            Console.WriteLine("-------- FILE INPUT!! ------>");
+            Console.WriteLine("--------FROM FILE!! ------>");
             gift.ToConsole();
         }
     }
