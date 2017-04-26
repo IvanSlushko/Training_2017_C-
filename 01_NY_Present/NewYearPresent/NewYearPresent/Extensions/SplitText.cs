@@ -25,83 +25,38 @@ namespace NewYearPresent.Extensions
 
             foreach (string line in lines)
             {
-                Console.WriteLine(line);
+                TypeCandyElement p1, p2, p3;
+                Enum.TryParse<CandyElement.TypeCandyElement>("ChocolateCandy", out p1);
+                Enum.TryParse<CandyElement.TypeCandyElement>("DropCandy", out p2);
+                Enum.TryParse<CandyElement.TypeCandyElement>("Sweetmeat", out p3);
 
-                if (line.Contains("CandyElement"))
+                if (line.Contains("ChocolateCandy"))
                 {
-                    //Console.WriteLine("CandyElement");
-
                     Regex.Replace(line, @"\s+", ""); //убрал пробелы
-
                     String[] substrings = line.Split(',');//разделил на  подстроки
-
                     if (substrings.Length == 5)
                     {
-                        //     Имя | Вес | Сахар | Калории | Тип элемента
-                        gift.Add(variants[0].Build(
-                            substrings[0],
-                            Convert.ToInt32(substrings[1], 16),
-                            Convert.ToInt32(substrings[2], 16),
-                            Convert.ToInt32(substrings[3], 16),
-                            Convert.ChangeType(substrings[4], typeof(CandyElement.TypeCandyElement))));
-                        //5 тип, метод в креаторе
+                        gift.Add(variants[0].Build(substrings[0],
+                            Convert.ToInt32(substrings[1], 16), Convert.ToInt32(substrings[2], 16),
+                            Convert.ToInt32(substrings[3], 16), p1));
+
                     }
 
                     else Console.WriteLine("Битая строка!!!");
                 }
                 else if (line.Contains("ChocoElement"))
                 {
-                    Console.WriteLine("ChocoElement");
+                    // Console.WriteLine("ChocoElement");
                 }
                 else if (line.Contains("WaffleElement"))
                 {
-                    Console.WriteLine("WaffleElement");
+                    //Console.WriteLine("WaffleElement");
                 }
 
 
-
-
-                //String[] substrings = line.Split(',');
-
-                //if (substrings.Length == 5)
-                //{
-                //    for (int i = 0; i < substrings.Length; i++)
-                //    {
-                //        var substring1 = Regex.Replace(substrings[i], @"\s+", "");
-                //        Console.WriteLine(substring1);
-                //    }
-
-                //}
-                //else Console.WriteLine("Битая строка!!!");
-
-
-
-
-
-                //foreach (var substring in substrings)
-                //{
-                //    // Console.WriteLine(substring);!!!!!
-                //    //убираю пробелы
-                //    var substring1 = Regex.Replace(substring, @"\s+", "");
-                //    int res;
-                //    bool isInt = int.TryParse(substring1, out res);
-
-                //    if (isInt == true)
-                //    {
-                //        Console.WriteLine("Цифра  {0}", res);
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("Текст  {0}", substring1);
-                //    }
-
-                //    //bool IsDigit = substring.Length == substring.Where(c => char.IsDigit(c)).Count();
-                //}
-
-
-
-
             }
+            Console.WriteLine("-------- FILE INPUT!! ------>");
+            gift.ToConsole();
         }
 
     }
