@@ -49,10 +49,6 @@ namespace NewYearPresent
             gift.ToConsole();
 
             SplitText.Go();
-
-
         }
     }
-
-
 }
