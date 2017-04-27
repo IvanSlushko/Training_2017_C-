@@ -50,6 +50,7 @@ namespace NewYearPresent
             gift.ToConsole();
 
             SplitText.Go();
+            gift.ToConsole();
 
         }
     }
