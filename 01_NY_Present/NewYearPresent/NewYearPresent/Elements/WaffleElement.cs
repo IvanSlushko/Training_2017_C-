@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NewYearPresent.Elements
+namespace NewYearPresent
 {
     public class WaffleElement : GiftElement
     {

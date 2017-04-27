@@ -1,6 +1,7 @@
-﻿using static NewYearPresent.CandyElement;
+﻿using System;
+using static NewYearPresent.CandyElement;
 using static NewYearPresent.ChocoElement;
-using static NewYearPresent.Elements.WaffleElement;
+using static NewYearPresent.WaffleElement;
 
 namespace NewYearPresent.Creators
 {
@@ -26,6 +27,6 @@ namespace NewYearPresent.Creators
             int elementSugar,
             int elementCalories,
             TypeWaffleElement type);
-       
+
     }
 }

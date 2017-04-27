@@ -1,7 +1,6 @@
 ﻿using System;
 using NewYearPresent.Gift;
 using NewYearPresent.Creators;
-using NewYearPresent.Elements;
 using NewYearPresent.Extensions;
 
 namespace NewYearPresent
