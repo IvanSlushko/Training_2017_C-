@@ -11,10 +11,11 @@ namespace NewYearPresent.Creators
     public abstract class Creator
     {
 
-        IDictionary<string, GiftElement> diction = new Dictionary<string, GiftElement>();
+        IDictionary<string, GiftElement> diction = new Dictionary<string, GiftElement>(10);
 
-       // diction.
-
+        
+            Dictionary<int, string> countries = new Dictionary<int, string>(5);
+        
     //    _dictionary.Add(  "ChocolateCandy", TypeCandyElement.ChocolateCandy);
     //_dictionary.Add(  "DropCandy", TypeCandyElement.DropCandy);
     //        _dictionary.Add(  "Sweetmeat", TypeCandyElement.Sweetmeat);
