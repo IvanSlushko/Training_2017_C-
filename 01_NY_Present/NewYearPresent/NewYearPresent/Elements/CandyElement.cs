@@ -5,7 +5,6 @@ namespace NewYearPresent
 {
     public class CandyElement : GiftElement
     {
-        //public enum TypeCandyElement { ChocolateCandy, DropCandy, Sweetmeat };
         public TypeCandyElement type;
 
         public CandyElement(
