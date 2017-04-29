@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewYearPresent.Enum
+namespace NewYearPresent.Enums
 {
-    public enum TypeChocoElement
+    public enum TypeCandyElement
     {
-        MilkChocolate,
-        PorousChocolate,
-        DarkChocolate
+        ChocolateCandy,
+        DropCandy,
+        Sweetmeat
     }
 }

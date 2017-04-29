@@ -1,4 +1,4 @@
-﻿using NewYearPresent.Enum;
+﻿using NewYearPresent.Enums;
 using System;
 
 namespace NewYearPresent

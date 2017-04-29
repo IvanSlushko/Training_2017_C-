@@ -51,9 +51,9 @@
     <Compile Include="Elements\ChocoElement.cs" />
     <Compile Include="Elements\GiftElement.cs" />
     <Compile Include="Elements\WaffleElement.cs" />
-    <Compile Include="Enum\TypeCandyElement.cs" />
-    <Compile Include="Enum\TypeChocoElement.cs" />
-    <Compile Include="Enum\TypeWaffleElement.cs" />
+    <Compile Include="Enums\TypeCandyElement.cs" />
+    <Compile Include="Enums\TypeChocoElement.cs" />
+    <Compile Include="Enums\TypeWaffleElement.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\SplitText.cs" />
     <Compile Include="Gift\Gift.cs" />

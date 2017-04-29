@@ -2,7 +2,7 @@
 using NewYearPresent.Gift;
 using NewYearPresent.Creators;
 using NewYearPresent.Extensions;
-using NewYearPresent.Enum;
+using NewYearPresent.Enums;
 
 namespace NewYearPresent
 {
