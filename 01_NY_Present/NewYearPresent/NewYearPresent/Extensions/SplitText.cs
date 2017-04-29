@@ -96,6 +96,7 @@ namespace NewYearPresent.Extensions
 
                 if (line.Contains("DropCandy"))
                 {
+                    ;
                     String[] substrings = line.Split(',');
                     if (substrings.Length == 5)
                     {
