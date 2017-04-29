@@ -48,15 +48,9 @@ namespace NewYearPresent.Extensions
             Enum.TryParse<TypeWaffleElement>("CreamyWafer", out p8);
 
 
-            gift.Add(variants[0].Build("Конфета TEST", 
-                10, 
-                15, 
-                20, 
-                TypeCandyElement.ChocolateCandy));
-
             foreach (string line in lines)
             {
-                
+
                 Regex.Replace(line, @"\s+", "");           //убрал пробелы
 
 
@@ -99,108 +93,107 @@ namespace NewYearPresent.Extensions
 
                 //if (substrings.Length == 5)
                 //{
-                //    TypeCandyElement p;
                 //    gift.Add(variants[0].Build(substrings[0],
                 //    Int32.Parse(substrings[1]),
                 //    Int32.Parse(substrings[2]),
                 //    Int32.Parse(substrings[3]), p));
                 //}
 
-                ////HERE
-                //if (line.Contains("ChocolateCandy"))
-                //{
-                //    String[] substrings = line.Split(',');//разделил на  подстроки
-                //    if (substrings.Length == 5)
-                //    {
-                //        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
-                //        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), _dictionary["p11"]));
-                //    }
-                //    else Console.WriteLine("Битая строка!!!");
-                //}
+                if (line.Contains("ChocolateCandy"))
+                {
+                    String[] substrings = line.Split(',');//разделил на  подстроки
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p1));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //if (line.Contains("DropCandy"))
-                //{
-                //    ;
-                //    String[] substrings = line.Split(',');
-                //    if (substrings.Length == 5)
-                //    {
-                //        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
-                //        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p2));
-                //    }
-                //    else Console.WriteLine("Битая строка!!!");
-                //}
+                if (line.Contains("DropCandy"))
+                {
+                    ;
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p2));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //if (line.Contains("Sweetmeat"))
-                //{
-                //    String[] substrings = line.Split(',');
-                //    if (substrings.Length == 5)
-                //    {
-                //        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
-                //        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p3));
-                //    }
-                //    else Console.WriteLine("Битая строка!!!");
-                //}
+                if (line.Contains("Sweetmeat"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[0].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p3));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //    if (line.Contains("MilkChocolate"))
-                //    {
-                //        String[] substrings = line.Split(',');
-                //        if (substrings.Length == 5)
-                //        {
-                //            gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
-                //            Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p4));
-                //        }
-                //        else Console.WriteLine("Битая строка!!!");
-                //    }
+                if (line.Contains("MilkChocolate"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p4));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //    if (line.Contains("PorousChocolate"))
-                //    {
-                //        String[] substrings = line.Split(',');
-                //        if (substrings.Length == 5)
-                //        {
-                //            gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
-                //            Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p5));
-                //        }
-                //        else Console.WriteLine("Битая строка!!!");
-                //    }
+                if (line.Contains("PorousChocolate"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p5));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //    if (line.Contains("DarkChocolate"))
-                //    {
-                //        String[] substrings = line.Split(',');
-                //        if (substrings.Length == 5)
-                //        {
-                //            gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
-                //            Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p6));
-                //        }
-                //        else Console.WriteLine("Битая строка!!!");
-                //    }
+                if (line.Contains("DarkChocolate"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[1].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p6));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //    if (line.Contains("ChocolateWaffle"))
-                //    {
-                //        String[] substrings = line.Split(',');
-                //        if (substrings.Length == 5)
-                //        {
-                //            gift.Add(variants[2].Build(substrings[0], Int32.Parse(substrings[1]),
-                //            Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p7));
-                //        }
-                //        else Console.WriteLine("Битая строка!!!");
-                //    }
+                if (line.Contains("ChocolateWaffle"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[2].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p7));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
 
-                //    if (line.Contains("CreamyWafer"))
-                //    {
-                //        String[] substrings = line.Split(',');
-                //        if (substrings.Length == 5)
-                //        {
-                //            gift.Add(variants[2].Build(substrings[0], Int32.Parse(substrings[1]),
-                //            Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p8));
-                //        }
-                //        else Console.WriteLine("Битая строка!!!");
-                //    }
+                if (line.Contains("CreamyWafer"))
+                {
+                    String[] substrings = line.Split(',');
+                    if (substrings.Length == 5)
+                    {
+                        gift.Add(variants[2].Build(substrings[0], Int32.Parse(substrings[1]),
+                        Int32.Parse(substrings[2]), Int32.Parse(substrings[3]), p8));
+                    }
+                    else Console.WriteLine("Битая строка!!!");
+                }
             }
 
             Console.WriteLine("--------FROM FILE!! ------>");
             gift.ToConsole();
 
             //gift.SortByWeight();
+            //gift.SortByName();
             //gift.ToConsole();
         }
     }

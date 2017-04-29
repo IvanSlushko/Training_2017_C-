@@ -54,6 +54,16 @@ namespace NewYearPresent.Gift
             }
         }
 
+        public void SortByName()
+        {
+            var tempSortEl = elements.OrderBy(x => x.name ).ToList();
+            elements.Clear();
+            foreach (var element in tempSortEl)
+            {
+                elements.Add(element);
+            }
+        }
+
         public IEnumerable<GiftElement> FindBySugar(int min, int max)
         {
             if (elements != null)

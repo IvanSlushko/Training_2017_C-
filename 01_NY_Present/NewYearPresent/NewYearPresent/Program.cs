@@ -49,6 +49,9 @@ namespace NewYearPresent
             gift.FindBySugar(0, 14);
             gift.ToConsole();
 
+            //gift.SortByName();
+            //gift.ToConsole();
+
             SplitText.Go();
         }
     }

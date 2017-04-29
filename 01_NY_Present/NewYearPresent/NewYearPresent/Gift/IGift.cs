@@ -10,6 +10,7 @@ namespace NewYearPresent.Gift
         int GiftSumCalories();
         void SortByWeight();
         void SortByCalorie();
+        void SortByName();
         IEnumerable<GiftElement> FindBySugar(int min, int max);
     }
 }
