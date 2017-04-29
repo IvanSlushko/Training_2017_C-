@@ -17,7 +17,7 @@ namespace NewYearPresent
             variants[1] = new ChokoElementCreator();
             variants[2] = new WaffleElementCreator();
 
-            //     Имя | Вес | Сахар | Калории | Тип элемента
+            //  Имя | Вес | Сахар | Калории | Тип элемента
 
             IGift gift = new Gift.Gift();
 

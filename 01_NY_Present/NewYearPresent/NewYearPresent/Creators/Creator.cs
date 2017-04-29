@@ -1,10 +1,5 @@
 ﻿using NewYearPresent.Enums;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using static NewYearPresent.CandyElement;
-using static NewYearPresent.ChocoElement;
-using static NewYearPresent.WaffleElement;
 
 namespace NewYearPresent.Creators
 {
@@ -12,15 +7,11 @@ namespace NewYearPresent.Creators
     {
 
         IDictionary<string, GiftElement> diction = new Dictionary<string, GiftElement>(10);
-
-        
-            Dictionary<int, string> countries = new Dictionary<int, string>(5);
+        Dictionary<int, string> countries = new Dictionary<int, string>(5);
         
     //    _dictionary.Add(  "ChocolateCandy", TypeCandyElement.ChocolateCandy);
     //_dictionary.Add(  "DropCandy", TypeCandyElement.DropCandy);
     //        _dictionary.Add(  "Sweetmeat", TypeCandyElement.Sweetmeat);
-           
-            
            
         //IDictionary<string, CreateObjMethod> _dictionary = new Dictionary<string, CreateObjMethod>();
         //IDictionary<string, Enumer> _d1
@@ -28,18 +19,13 @@ namespace NewYearPresent.Creators
         //    { ChocolateCandy, 
         //            , DropCandy
         //            , Sweetmeat },
-
         //}
+
 
         //protected Enumer GetEnumByString(string param)
         //{
             
         //}
-
-
-
-
-
 
         public abstract GiftElement Build(
             string elementName,

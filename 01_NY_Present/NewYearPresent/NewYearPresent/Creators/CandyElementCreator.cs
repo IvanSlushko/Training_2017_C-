@@ -5,7 +5,6 @@ namespace NewYearPresent.Creators
 {
     public class CandyElementCreator : Creator
     {
-
         public override GiftElement Build(
             string elementName, 
             int elementWeigth, 
