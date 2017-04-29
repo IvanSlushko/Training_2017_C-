@@ -51,6 +51,9 @@
     <Compile Include="Elements\ChocoElement.cs" />
     <Compile Include="Elements\GiftElement.cs" />
     <Compile Include="Elements\WaffleElement.cs" />
+    <Compile Include="Enum\TypeCandyElement.cs" />
+    <Compile Include="Enum\TypeChocoElement.cs" />
+    <Compile Include="Enum\TypeWaffleElement.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\SplitText.cs" />
     <Compile Include="Gift\Gift.cs" />
@@ -61,6 +64,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

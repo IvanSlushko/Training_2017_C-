@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NewYearPresent.Enum;
+using System;
 
 namespace NewYearPresent
 {
     public class ChocoElement : GiftElement
     {
-        public enum TypeChocoElement { MilkChocolate, PorousChocolate, DarkChocolate };
+        //public enum TypeChocoElement { MilkChocolate, PorousChocolate, DarkChocolate };
         public TypeChocoElement type;
 
         public ChocoElement(

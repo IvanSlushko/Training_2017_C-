@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewYearPresent.Enum;
+using System;
 
 namespace NewYearPresent.Creators
 {
@@ -9,7 +10,7 @@ namespace NewYearPresent.Creators
             int elementWeigth,
             int elementSugar,
             int elementCalories,
-            WaffleElement.TypeWaffleElement type)
+            TypeWaffleElement type)
         {
             return new WaffleElement(
             elementName,
@@ -19,12 +20,12 @@ namespace NewYearPresent.Creators
             type);
         }
 
-        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, CandyElement.TypeCandyElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, TypeCandyElement type)
         {
             throw new NotImplementedException();
         }
 
-        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, ChocoElement.TypeChocoElement type)
+        public override GiftElement Build(string elementName, int elementWeigth, int elementSugar, int elementCalories, TypeChocoElement type)
         {
             throw new NotImplementedException();
         }

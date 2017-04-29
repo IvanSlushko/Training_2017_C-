@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NewYearPresent.Enum;
+using System;
 
 namespace NewYearPresent
 {
     public class WaffleElement : GiftElement
     {
-        public enum TypeWaffleElement { ChocolateWaffle, CreamyWafer };
+        //public enum TypeWaffleElement { ChocolateWaffle, CreamyWafer };
         public TypeWaffleElement type;
 
         public WaffleElement(

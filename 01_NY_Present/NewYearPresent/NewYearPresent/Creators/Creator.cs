@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewYearPresent.Enum;
+using System;
 using static NewYearPresent.CandyElement;
 using static NewYearPresent.ChocoElement;
 using static NewYearPresent.WaffleElement;
