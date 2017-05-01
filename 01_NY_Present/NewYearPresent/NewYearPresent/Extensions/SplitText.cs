@@ -19,22 +19,6 @@ namespace NewYearPresent.Extensions
             variants[2] = new WaffleElementCreator();
             IGift gift = new Gift.Gift();
 
-            //IDictionary<string, TypeCandyElement> _dictionary = new Dictionary<string, TypeCandyElement>();
-
-            //_dictionary.Add("p11", TypeCandyElement.ChocolateCandy);
-            //_dictionary.Add("p22", TypeCandyElement.DropCandy);
-            //_dictionary.Add("p33", TypeCandyElement.Sweetmeat);
-            //Console.WriteLine(_dictionary[ "p11"]);
-            //foreach (var pair in _dictionary)
-            //    Console.WriteLine("{0} - {1}", pair.Key, pair.Value);
-            //_dictionary.Add("p2", TypeCandyElement.DropCandy);
-            //_dictionary.Add("p3", TypeCandyElement.Sweetmeat);
-            //_dictionary.Add("p4", TypeChocoElement.MilkChocolate);
-            //_dictionary.Add("p5", TypeChocoElement.ChocolateCandy);
-            //_dictionary.Add("p6", TypeChocoElement.ChocolateCandy);
-            //_dictionary.Add("p7", TypeWaffleElement.ChocolateCandy);
-            //_dictionary.Add("p8", TypeWaffleElement.ChocolateCandy);
-
             TypeCandyElement p1, p2, p3;
             Enum.TryParse<TypeCandyElement>("ChocolateCandy", out p1);
             Enum.TryParse<TypeCandyElement>("DropCandy", out p2);
@@ -47,12 +31,10 @@ namespace NewYearPresent.Extensions
             Enum.TryParse<TypeWaffleElement>("ChocolateWaffle", out p7);
             Enum.TryParse<TypeWaffleElement>("CreamyWafer", out p8);
 
-
             foreach (string line in lines)
             {
 
                 Regex.Replace(line, @"\s+", "");           //убрал пробелы
-
 
                 //if (line.Contains("ChocolateCandy"))
                 //{
@@ -112,7 +94,6 @@ namespace NewYearPresent.Extensions
 
                 if (line.Contains("DropCandy"))
                 {
-                    ;
                     String[] substrings = line.Split(',');
                     if (substrings.Length == 5)
                     {
