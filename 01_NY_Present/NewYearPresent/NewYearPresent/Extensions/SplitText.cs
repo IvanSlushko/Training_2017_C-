@@ -31,6 +31,7 @@ namespace NewYearPresent.Extensions
             Enum.TryParse<TypeWaffleElement>("ChocolateWaffle", out p7);
             Enum.TryParse<TypeWaffleElement>("CreamyWafer", out p8);
 
+
             foreach (string line in lines)
             {
 
@@ -38,35 +39,35 @@ namespace NewYearPresent.Extensions
 
                 //if (line.Contains("ChocolateCandy"))
                 //{
-                //    var p = p1;
+                //    var p = Factory.GetEnumByString("ChocolateCandy");
                 //}
-                //else if (line.Contains("DropCandy"))
+                //if (line.Contains("DropCandy"))
                 //{
-                //    var p = p2;
+                //    var p = Factory.GetEnumByString("DropCandy");
                 //}
-                //else if (line.Contains("Sweetmeat"))
+                //if (line.Contains("Sweetmeat"))
                 //{
-                //    var p = p3;
+                //    var p = Factory.GetEnumByString("Sweetmeat");
                 //}
-                //else if (line.Contains("MilkChocolate"))
+                //if (line.Contains("MilkChocolate"))
                 //{
-                //    var p = p4;
+                //    var p = Factory.GetEnumByString("MilkChocolate");
                 //}
-                //else if (line.Contains("PorousChocolate"))
+                //if (line.Contains("PorousChocolate"))
                 //{
-                //    var p = p5;
+                //    var p = Factory.GetEnumByString("PorousChocolate");
                 //}
-                //else if (line.Contains("DarkChocolate"))
+                //if (line.Contains("DarkChocolate"))
                 //{
-                //    var p = p6;
+                //    var p = Factory.GetEnumByString("DarkChocolate");
                 //}
-                //else if (line.Contains("ChocolateWaffle"))
+                //if (line.Contains("ChocolateWaffle"))
                 //{
-                //    var p = p7;
+                //    var p = Factory.GetEnumByString("ChocolateWaffle");
                 //}
-                //else if (line.Contains("CreamyWafer"))
+                //if (line.Contains("CreamyWafer"))
                 //{
-                //    var p = p8;
+                //    var p = Factory.GetEnumByString("CreamyWafer");
                 //}
                 //else { Console.WriteLine("Битая строка или не содержит элементов!!!"); }
 
@@ -78,8 +79,10 @@ namespace NewYearPresent.Extensions
                 //    gift.Add(variants[0].Build(substrings[0],
                 //    Int32.Parse(substrings[1]),
                 //    Int32.Parse(substrings[2]),
-                //    Int32.Parse(substrings[3]), p));
+                //    Int32.Parse(substrings[3]),
+                //    p));
                 //}
+
 
                 if (line.Contains("ChocolateCandy"))
                 {

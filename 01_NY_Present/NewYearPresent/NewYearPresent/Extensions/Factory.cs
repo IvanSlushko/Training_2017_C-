@@ -11,10 +11,15 @@ namespace NewYearPresent.Extensions
     public class Factory
     {
 
-       // IDictionary<string, enum> _dictionary = new Dictionary<string, CreatObjectMethod>();
-      //  IDictionary<String, Enum> _d1;
+        //IDictionary<string, enum> _dictionary = new Dictionary<string, CreatObjectMethod>();
+        //IDictionary<string, Enum> _d1;
 
-        protected  Enum GetEnumByString(string param)
+        //public Factory(IDictionary<string, CreatObjectMethod> dictionary)
+        //{
+        //    _dictionary = dictionary;
+        //}
+
+        protected Enum GetEnumByString(string param)
         {
             if (param == "ChocolateCandy")
             { return TypeCandyElement.ChocolateCandy; }
@@ -35,10 +40,12 @@ namespace NewYearPresent.Extensions
             else return null;
         }
 
-
+        public object CreateInstance(string key, string elementName
+            ,int elementWeigth, int elementSugar, int elementCalories)
+        {
+            return null;
+        }
 
 
     }
-
-
 }
