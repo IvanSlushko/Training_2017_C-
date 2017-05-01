@@ -25,6 +25,7 @@ namespace NewYearPresent.Creators
 
         //protected Enumer GetEnumByString(string param)
         //{
+        //    return    ;
         //}
 
         public abstract GiftElement Build(
