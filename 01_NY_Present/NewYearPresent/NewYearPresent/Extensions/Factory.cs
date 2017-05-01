@@ -11,12 +11,10 @@ namespace NewYearPresent.Extensions
     public class Factory
     {
 
-        //IDictionary<string, enum> _dictionary = new Dictionary<string, Creator>();
-        IDictionary<String, Enum> _d1;
+       // IDictionary<string, enum> _dictionary = new Dictionary<string, CreatObjectMethod>();
+      //  IDictionary<String, Enum> _d1;
 
-
-
-        protected Emun GetEnumByString(string param)
+        protected  Enum GetEnumByString(string param)
         {
             if (param == "ChocolateCandy")
             { return TypeCandyElement.ChocolateCandy; }
@@ -38,5 +36,9 @@ namespace NewYearPresent.Extensions
         }
 
 
+
+
     }
+
+
 }
