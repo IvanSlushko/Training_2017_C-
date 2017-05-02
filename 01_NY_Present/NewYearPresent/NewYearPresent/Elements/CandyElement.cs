@@ -18,9 +18,9 @@ namespace NewYearPresent
             this.type = type;
         }
 
-        public override void TypeGiftElement()
-        {
-            throw new NotImplementedException();
-        }
+        //public override void TypeGiftElement()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
