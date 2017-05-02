@@ -37,53 +37,6 @@ namespace NewYearPresent.Extensions
 
                 Regex.Replace(line, @"\s+", "");           //убрал пробелы
 
-                //if (line.Contains("ChocolateCandy"))
-                //{
-                //    var p = Factory.GetEnumByString("ChocolateCandy");
-                //}
-                //if (line.Contains("DropCandy"))
-                //{
-                //    var p = Factory.GetEnumByString("DropCandy");
-                //}
-                //if (line.Contains("Sweetmeat"))
-                //{
-                //    var p = Factory.GetEnumByString("Sweetmeat");
-                //}
-                //if (line.Contains("MilkChocolate"))
-                //{
-                //    var p = Factory.GetEnumByString("MilkChocolate");
-                //}
-                //if (line.Contains("PorousChocolate"))
-                //{
-                //    var p = Factory.GetEnumByString("PorousChocolate");
-                //}
-                //if (line.Contains("DarkChocolate"))
-                //{
-                //    var p = Factory.GetEnumByString("DarkChocolate");
-                //}
-                //if (line.Contains("ChocolateWaffle"))
-                //{
-                //    var p = Factory.GetEnumByString("ChocolateWaffle");
-                //}
-                //if (line.Contains("CreamyWafer"))
-                //{
-                //    var p = Factory.GetEnumByString("CreamyWafer");
-                //}
-                //else { Console.WriteLine("Битая строка или не содержит элементов!!!"); }
-
-
-                //String[] substrings = line.Split(',');//разделил на  подстроки
-
-                //if (substrings.Length == 5)
-                //{
-                //    gift.Add(variants[0].Build(substrings[0],
-                //    Int32.Parse(substrings[1]),
-                //    Int32.Parse(substrings[2]),
-                //    Int32.Parse(substrings[3]),
-                //    p));
-                //}
-
-
                 if (line.Contains("ChocolateCandy"))
                 {
                     String[] substrings = line.Split(',');//разделил на  подстроки

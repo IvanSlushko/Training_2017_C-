@@ -1,0 +1,11 @@
+"-Milka-File",101,13,210,    NewYearPresent.  ChocoElement.TypeChocoElement.ChocolateCandy
+"-Misha-file",10,15,20,NewYearPresent.CandyElement.  TypeCandyElement.ChocolateCandy
+"-Drop-file",10,15  ,20,NewYearPresent.CandyElement.TypeCandyElement.DropCandy
+"Vafle-file", 110, 15,20,NewYearPresent. WaffleElement.TypeWaffleElement.CreamyWafer
+"BAD Vafle-file",    1 1 0, 15, 2 0
+"-Sweetmeat-file",13,15,20,NewYearPresent.CandyElement.TypeCandyElement.Sweetmeat
+"--Milka",100,13,210  , NewYearPresent.ChocoElement. TypeChocoElement.MilkChocolate
+"vafle cream", 110, 15, 20,  NewYearPresent.WaffleElement.TypeWaffleElement.CreamyWafer
+"vafle komunarka", 170, 14, 22,NewYearPresent. WaffleElement.TypeWaffleElement.ChocolateWaffle
+"BAD Mi1",102,123,NewYearPresent.ChocoElement.TypeChocoElement. PorousChocolate
+
