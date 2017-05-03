@@ -10,12 +10,12 @@ namespace TextHandler.TextUnits
     public class Word : IWord
     {
 
-        public Word (string chars)
+        public Word(string chars)
         {
-            //
+            if (chars != null)
+            { Symbols = chars.Select(x => new Symbol(x)).ToArray(); }
+            else { Symbols = null; }
         }
-
-
 
 
 
@@ -29,9 +29,6 @@ namespace TextHandler.TextUnits
 
         public int Length
         { get { return (Symbols != null) ? Symbols.Length : 0; } }
-
-       
-
 
 
 

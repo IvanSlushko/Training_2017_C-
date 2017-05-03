@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TextHandler.Interfaces;
 
-namespace TextHandler.TextUnits
+namespace TextHandler.Interfaces
 {
-    public class Sentence: ISentence
+    public interface ISentenceItem
     {
-
-
+        string Chars { get; }
     }
 }
