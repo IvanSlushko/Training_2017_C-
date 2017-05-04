@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TextHandler.Parsers;
 
 namespace Test
 {
@@ -15,9 +16,16 @@ namespace Test
             //Инициализирует новый экземпляр класса StreamReader для заданного потока, 
             //используя указанную кодировку символов. (default)
             var streamReader = new StreamReader(@"..\..\SourceFile\TextFile.txt", Encoding.Default);
+            var parser = new TextParser();
+            var text = parser.Parse(streamReader);
+
+            foreach (var sentence in text.Sentences)
+            {
+                Console.WriteLine(sentence.SentenceToString());
+            }
 
 
-           
+
 
 
 
