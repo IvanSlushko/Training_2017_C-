@@ -18,7 +18,6 @@ namespace TextHandler.TextUnits
         }
 
 
-
         public Symbol[] Symbols { get; }
 
 

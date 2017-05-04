@@ -15,7 +15,20 @@ namespace TextHandler.TextUnits
         }
 
 
-        public List<ISentenceItem> Items { get; }// private set; }
+        public IList<ISentenceItem> Items { get; }// private set; }
+
+
+        public Sentence(IEnumerable<ISentenceItem> items) : this()
+        {
+            foreach (var item in items)
+            {
+                Items.Add(item);
+            }
+        }
+
+
+
+
 
 
 

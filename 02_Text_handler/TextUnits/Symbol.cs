@@ -18,7 +18,7 @@ namespace TextHandler.TextUnits
 
         public Symbol(char source)
         {
-            Chars = String.Format("{0}", source);
+            Chars = string.Format("{0}", source);
             //this.chars = String.Format("{0}", source);
         }
 
