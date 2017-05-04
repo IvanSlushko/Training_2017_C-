@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Test
@@ -16,6 +17,7 @@ namespace Test
             var streamReader = new StreamReader(@"..\..\SourceFile\TextFile.txt", Encoding.Default);
 
 
+           
 
 
 
@@ -26,3 +28,4 @@ namespace Test
         }
     }
 }
+
