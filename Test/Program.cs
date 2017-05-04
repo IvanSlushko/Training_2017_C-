@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,18 @@ namespace Test
     {
         static void Main(string[] args)
         {
+            //Инициализирует новый экземпляр класса StreamReader для заданного потока, 
+            //используя указанную кодировку символов. (default)
+            var streamReader = new StreamReader(@"..\TextUnits\Text.txt", Encoding.Default);
+
+
+
+
+
+
+
+
+
         }
     }
 }
