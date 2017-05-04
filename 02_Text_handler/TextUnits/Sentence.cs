@@ -9,6 +9,16 @@ namespace TextHandler.TextUnits
 {
     public class Sentence: ISentence
     {
+        public Sentence()
+        {
+            Items = new List<ISentenceItem>();
+        }
+
+
+        public List<ISentenceItem> Items { get; }// private set; }
+
+
+
 
 
     }
