@@ -17,7 +17,7 @@ namespace TextHandler.Parsers
         //// Define a case-sensitive regular expression for repeated words.
         //Regex rxSensitive = new Regex(@"\b(?<word>\w+)\s+(\k<word>)\b",
         //  RegexOptions.Compiled);
-
+        //https://msdn.microsoft.com/ru-ru/library/system.text.regularexpressions.regexoptions(v=vs.110).aspx
 
         public override Text Parse(StreamReader fileReader)
         {
