@@ -13,7 +13,7 @@ namespace Test
         {
             //Инициализирует новый экземпляр класса StreamReader для заданного потока, 
             //используя указанную кодировку символов. (default)
-            var streamReader = new StreamReader(@"..\Test\Text.txt", Encoding.Default);
+            var streamReader = new StreamReader(@"..\..\SourceFile\TextFile.txt", Encoding.Default);
 
 
 
