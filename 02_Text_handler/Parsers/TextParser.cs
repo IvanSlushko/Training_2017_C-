@@ -48,23 +48,109 @@ namespace TextHandler.Parsers
                 RegexOptions.Compiled);
 
 
-
-
-
         public override Text Parse(StreamReader fileReader)
         {
-            throw new NotImplementedException();
+            var textResult = new Text();
+
+            try
+            {
+                string line;
+                string buffer = null;
+
+                while ((line = fileReader.ReadLine()) != null)
+                {
+                    if (Regex.Replace(line.Trim(), @"\s+", @" ") != "")  // 1 пробел или более
+                    {
+                        line = buffer + line;
+
+                        var sentences = _lineToSentenceRegex.Split(line)
+                                .Select(x => Regex.Replace(x.Trim(), @"\s+", @" "))
+                                .ToArray();
+
+                        if (
+                            !Separator.SentenceSeparators.Contains(
+                                sentences.Last().Last().ToString()))
+                        {
+                            buffer = sentences.Last();
+                            textResult.Sentences.AddRange(
+                            sentences.Select(x => x).Where(x => x != sentences.Last()).Select(ParseSentence));
+                        }
+                        else
+                        {
+                            textResult.Sentences.AddRange(sentences.Select(ParseSentence));
+                            buffer = null;
+                        }
+                    }
+                }
+            }
+            catch (IOException exception)
+            {
+                Console.WriteLine(exception.Data.ToString());
+                fileReader.Close();
+            }
+            finally
+            {
+                fileReader.Close();
+                fileReader.Dispose();
+            }
+
+            return textResult;
         }
+
+
+        //public override ISentence ParseSentence(string sentence)
+        //{
+        //    var result = new Sentence();
+
+        //    Func<string, ISentenceItem> toISentenceItem =
+        //        item =>
+        //            (!Separator.AllSeparators.Contains(item)
+        //            && !Separator.Digits.Contains(item[0].ToString()))
+        //                ? (ISentenceItem)new Word(item)
+        //                : (Separator.Digits.Contains(item[0].ToString()))
+        //                ? (ISentenceItem)new Digit(item)
+        //                : new Punctuation(item);
+
+        //    foreach (Match match in _sentenceToWordsRegex.Matches(sentence))
+        //    {
+        //        for (var i = 1; i < match.Groups.Count; i++)
+        //        {
+        //            if (match.Groups[i].Value.Trim() != "")
+        //            {
+        //                result.Items.Add(toISentenceItem(match.Groups[i].Value.Trim()));
+        //            }
+        //        }
+        //    }
+
+        //    return result;
+        //}
 
         public override ISentence ParseSentence(string sentence)
         {
-            throw new NotImplementedException();
+            var result = new Sentence();
+
+            Func<string, ISentenceItem> toISentenceItem = item => (!Separator.AllSeparators.Contains(item) && !Separator.Digits.Contains(item[0].ToString()))
+                     ? (ISentenceItem)new Word(item) : (Separator.Digits.Contains(item[0].ToString()))
+                     ? (ISentenceItem)new Digit(item) : new Punctuation(item);
+
+
+            foreach (Match match in _sentenceToWordsRegex.Matches(sentence))
+            {
+                for (var i = 1; i < match.Groups.Count; i++)
+                {
+                    if (match.Groups[i].Value.Trim() != "")
+                    {
+                        result.Items.Add(toISentenceItem(match.Groups[i].Value.Trim()));
+                    }
+                }
+            }
+            return result;
         }
+
+
+
+
+
+
     }
-
-
-
-
-
-
 }

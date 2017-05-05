@@ -13,10 +13,5 @@ namespace TextHandler.Interfaces
         Symbol this[int index] { get; }
         int Length { get; }
 
-
-
-
-
-
     }
 }
