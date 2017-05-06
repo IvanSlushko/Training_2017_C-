@@ -31,5 +31,18 @@ namespace TextHandler.TextUnits
 
 
 
+
+        public string Chars
+        {
+            get
+            {
+                var strBuilder = new StringBuilder();
+                foreach (var symbol in Symbols)
+                { strBuilder.Append(symbol.Chars); }
+                return strBuilder.ToString();
+            }
+        }
+
+
     }
 }

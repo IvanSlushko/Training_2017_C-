@@ -11,22 +11,17 @@ namespace TextHandler.TextUnits
     public class Text
     {
         public Text()
-        {
-            Sentences = new List<ISentence>();
-        }
+        { Sentences = new List<ISentence>(); }
 
         public List<ISentence> Sentences { get; set; }
 
         public Text(IEnumerable<ISentence> sentences) : this()
         {
             foreach (var sentence in sentences)
-            {
-                Sentences.Add(sentence);
-            }
+            { Sentences.Add(sentence); }
         }
 
         public ISentence this[int index] => Sentences[index];
-
 
 
     }
