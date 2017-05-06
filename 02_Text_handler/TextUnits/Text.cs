@@ -23,6 +23,7 @@ namespace TextHandler.TextUnits
 
         public ISentence this[int index] => Sentences[index];
 
+        public IEnumerable<ISentence> SortByAscending() => Sentences.OrderBy(x => x.Items.Count);
 
     }
 }

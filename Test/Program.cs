@@ -20,15 +20,18 @@ namespace Test
             var text = parser.Parse(streamReader);
 
             Console.WriteLine(new string('-', 75));
-
             foreach (var sentence in text.Sentences)
             {
                 Console.WriteLine(sentence.SentenceToString());
                 Console.WriteLine("=> {0}", sentence.Items.Count);
             }
 
-
-
+            Console.WriteLine(new string('-', 75));
+            foreach (var sentence in text.SortByAscending())
+            {
+                Console.WriteLine(sentence.SentenceToString());
+                Console.WriteLine("=> {0}", sentence.Items.Count);
+            }
 
 
 
