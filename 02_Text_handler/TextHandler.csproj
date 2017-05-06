@@ -46,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDigit.cs" />
     <Compile Include="Interfaces\IPunctuation.cs" />
     <Compile Include="Interfaces\ISentence.cs" />
     <Compile Include="Interfaces\ISentenceItem.cs" />
     <Compile Include="Interfaces\IWord.cs" />
+    <Compile Include="Parsers\CollectionHelper.cs" />
     <Compile Include="Parsers\Parser.cs" />
     <Compile Include="Parsers\Separator.cs" />
     <Compile Include="Parsers\TextParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextUnits\Digit.cs" />
     <Compile Include="TextUnits\Punctuation.cs" />
     <Compile Include="TextUnits\Sentence.cs" />
     <Compile Include="TextUnits\Symbol.cs" />

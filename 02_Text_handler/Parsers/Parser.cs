@@ -13,6 +13,5 @@ namespace TextHandler.Parsers
     {
         public abstract Text Parse(StreamReader fileReader);
         public abstract ISentence ParseSentence(string sentence);
-
     }
 }
