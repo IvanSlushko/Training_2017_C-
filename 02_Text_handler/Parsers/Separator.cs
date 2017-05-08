@@ -15,13 +15,11 @@ namespace TextHandler.Parsers
         //public static string[] WordSeparators = new string[] { " ", " - " };
         //public static string[] OperationPunctuationSeparator { get; } = { "*", "/", "+", "=", "==", "!=", ">=", "=<" };
 
-
         public static string[] SentenceSeparators { get; } = { "!", ".", "?", "...", "?!", "!?" };
         //public IEnumerable<string> SentenceSeparators()
         //{
         //    return sentenceSeparators.AsEnumerable();
         //}
-
 
         public static string[] AllSeparators { get; } = {
             ",", ".", "!", "?", "—", "-", "\"", "'", "(", ")",
