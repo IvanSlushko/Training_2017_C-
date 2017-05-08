@@ -8,10 +8,8 @@ namespace TextHandler.Interfaces
 {
     public interface ISentence
     {
-
         IList<ISentenceItem> Items { get; }
         string SentenceToString();
-
 
 
 

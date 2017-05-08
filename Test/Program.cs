@@ -37,6 +37,16 @@ namespace Test
 
 
 
+            //var streamReader1 = new StreamReader(@"..\..\SourceFile\TextFile - Copy.txt", Encoding.Default);
+            //var parser1 = new TextParser();
+            //var text1 = parser1.Parse(streamReader1);
+            //Console.WriteLine(new string('-', 75));
+            //foreach (var sentence in text1.SortByAscending())
+            //{
+            //    Console.WriteLine(sentence.SentenceToString());
+            //    Console.WriteLine("=> {0}", sentence.Items.Count);
+            //}
+
 
 
 
