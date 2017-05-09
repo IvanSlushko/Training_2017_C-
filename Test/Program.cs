@@ -46,6 +46,9 @@ namespace Test
             text.DeleteConsonantsWords(10);
             Console.WriteLine(text.TextOut());
 
+         
+
+
 
 
             //var streamReader1 = new StreamReader(@"..\..\SourceFile\TextFile1.txt", Encoding.Default);
@@ -56,9 +59,6 @@ namespace Test
             //{ Console.WriteLine(sentence.SentenceToString()); }
             //foreach (var word in text1.GetWordsGivenLength(4))
             //{ Console.WriteLine(word.Chars); }
-
-
-
         }
     }
 }

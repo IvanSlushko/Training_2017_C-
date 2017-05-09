@@ -15,11 +15,13 @@ namespace TextHandler.Parsers
         //public static string[] WordSeparators = new string[] { " ", " - " };
         //public static string[] OperationPunctuationSeparator { get; } = { "*", "/", "+", "=", "==", "!=", ">=", "=<" };
 
-        public static string[] SentenceSeparators { get; } = { "!", ".", "?", "...", "?!", "!?" };
+        public static string[] SentenceSeparators { get; } = {".", "?", "!", "...", "?!", "!?" };
         //public IEnumerable<string> SentenceSeparators()
         //{
         //    return sentenceSeparators.AsEnumerable();
         //}
+
+        const string quote = "\"";
 
         public static string[] AllSeparators { get; } = {
             ",", ".", "!", "?", "—", "-", "\"", "'", "(", ")",
@@ -29,7 +31,7 @@ namespace TextHandler.Parsers
         public static string[] InnerSeparator { get; } = { ",", ";", ":" };
         public static string[] OpenSeparator { get; } = { "<", "(", "[", "{", "„", "«", "‘" };
         public static string[] CloseSeparator { get; } = { ")", ">", "]", "}", "“", "»", "’" };
-        public static string[] RepeatSeparator { get; } = { "\"", "'" };
+        public static string[] RepeatSeparator { get; } = { "\"", "'", quote }; //   \" - знак "
         public static string[] RuVowelsSeparator { get; } = {
             "а", "А", "у", "У", "о", "О", "ы", "Ы", "и", "И",
             "э", "Э", "я", "Я", "ю", "Ю", "ё", "Ё", "е", "Е" };

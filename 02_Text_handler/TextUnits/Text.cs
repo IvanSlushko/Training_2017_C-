@@ -34,6 +34,10 @@ namespace TextHandler.TextUnits
             return result.GroupBy(x => x.Chars.ToLower()).Select(x => x.First()).ToList();
         }
 
+        /// <summary>
+        /// Удаляем слова на согласную
+        /// </summary>
+        /// <param name="length"></param>
         public void DeleteConsonantsWords(int length)
         {
             Sentences = Sentences.Select(
@@ -41,7 +45,6 @@ namespace TextHandler.TextUnits
                 && y.IsСonsonant(Separator.RuVowelsSeparator)))
                 .ToList();
         }
-
 
         /// <summary>
         /// Выводим обработанные предложения
