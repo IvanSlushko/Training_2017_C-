@@ -73,5 +73,27 @@ namespace TextHandler.TextUnits
             }
         }
 
+
+
+        /// <summary>
+        /// Проверяем вопросительное ли предложение
+        /// </summary>
+        public bool IsInterrogative
+            => Items.Last().Chars == "?" || Items.Last().Chars == "?!" || Items.Last().Chars == "!?";
+       
+        
+        /// <summary>
+        /// Получаем слова без посторений
+        /// </summary>
+        /// <param name="length">длинна заданного слова</param>
+        /// <returns>массив слов</returns>
+        public IEnumerable<IWord> GetWordsWithoutRepetition(int length)
+        {
+            return Items.Where(x => x is Word).Cast<Word>().Where(x => x.Length == length);
+        }
+
+
+
+
     }
 }
