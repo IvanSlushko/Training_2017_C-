@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TextHandler.Interfaces;
+using TextHandler.Parsers;
 using TextHandler.TextUnits;
 
 namespace TextHandler.TextUnits
@@ -21,7 +22,7 @@ namespace TextHandler.TextUnits
         //    { Sentences.Add(sentence); }
         //}
 
-        public ISentence this[int index] => Sentences[index];
+        //public ISentence this[int index] => Sentences[index];
 
         public IEnumerable<ISentence> SortByAscending() => Sentences.OrderBy(x => x.Items.Count);
 
@@ -31,6 +32,27 @@ namespace TextHandler.TextUnits
             foreach (var sentence in Sentences.Where(sentence => sentence.IsInterrogative))
             { result.AddRange(sentence.GetWordsWithoutRepetition(length)); }
             return result.GroupBy(x => x.Chars.ToLower()).Select(x => x.First()).ToList();
+        }
+
+        public void DeleteConsonantsWords(int length)
+        {
+            Sentences = Sentences.Select(
+                x => x.RemoveWordsBy(y => y.Length == length
+                && y.IsСonsonant(Separator.RuVowelsSeparator)))
+                .ToList();
+        }
+
+
+        /// <summary>
+        /// Выводим обработанные предложения
+        /// </summary>
+        /// <returns></returns>
+        public string TextOut()
+        {
+            var strBuilder = new StringBuilder();
+            foreach (var sentence in Sentences)
+            { strBuilder.Append(sentence.SentenceToString() + "\n"); }
+            return strBuilder.ToString();
         }
 
 

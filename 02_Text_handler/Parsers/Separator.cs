@@ -29,8 +29,14 @@ namespace TextHandler.Parsers
         public static string[] InnerSeparator { get; } = { ",", ";", ":" };
         public static string[] OpenSeparator { get; } = { "<", "(", "[", "{", "„", "«", "‘" };
         public static string[] CloseSeparator { get; } = { ")", ">", "]", "}", "“", "»", "’" };
-        public static string[] RepeatSeparator { get; } = { "\"", "'"};
-        public static string[] RuVowelsSeparator { get; } = { "а", "А", "у", "У", "о", "О", "ы", "Ы", "и", "И", "э", "Э", "я", "Я", "ю", "Ю", "ё", "Ё", "е","Е" };
+        public static string[] RepeatSeparator { get; } = { "\"", "'" };
+        public static string[] RuVowelsSeparator { get; } = {
+            "а", "А", "у", "У", "о", "О", "ы", "Ы", "и", "И",
+            "э", "Э", "я", "Я", "ю", "Ю", "ё", "Ё", "е", "Е" };
+        public static string[] RuConsonantSeparator { get; } = {
+            " б", "в", "г", "д"," ж"," з", "й"," к"," л"," м", "н",
+            "п", "р", "с", "т", "ф", "х", "ц", "ч"," ш"," щ" };
+
 
     }
 }

@@ -12,6 +12,6 @@ namespace TextHandler.Interfaces
         Symbol[] Symbols { get; }
         Symbol this[int index] { get; }
         int Length { get; }
-
+        bool IsСonsonant(string[] vowels);
     }
 }

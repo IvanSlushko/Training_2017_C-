@@ -69,7 +69,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SourceFile\TextFile - Copy.txt" />
+    <Content Include="SourceFile\TextFile1.txt" />
     <Content Include="SourceFile\TextFile.txt" />
   </ItemGroup>
   <ItemGroup>

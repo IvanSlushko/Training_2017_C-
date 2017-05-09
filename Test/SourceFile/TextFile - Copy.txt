@@ -1,4 +1,0 @@
-﻿You can iterate the members of the T:System.Text.RegularExpressions.GroupCollection object by 
-using a foreach (C#) or For Each (Visual Basic) construct.
-Because a single match can involve multiple capturing groups. 	
-Match ADD  zero or one occurrence of the string "Line".

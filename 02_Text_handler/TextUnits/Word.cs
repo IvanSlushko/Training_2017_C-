@@ -24,6 +24,8 @@ namespace TextHandler.TextUnits
         public Symbol this[int index]
         { get { return Symbols[index]; } }
 
+
+
         //public int Length { get; }
 
         public int Length
@@ -43,6 +45,7 @@ namespace TextHandler.TextUnits
             }
         }
 
-
+        public bool IsСonsonant(string[] vowels)
+        { return !vowels.Contains(Symbols[0].Chars); }
     }
 }

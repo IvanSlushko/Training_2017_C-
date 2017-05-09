@@ -12,9 +12,7 @@ namespace TextHandler.Interfaces
         string SentenceToString();
         bool IsInterrogative { get; }
         IEnumerable<IWord> GetWordsWithoutRepetition(int length);
-
-
-
+        ISentence RemoveWordsBy(Func<IWord, bool> predicate);
 
     }
 }

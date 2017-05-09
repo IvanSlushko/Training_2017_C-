@@ -23,20 +23,19 @@ namespace TextHandler.TextUnits
             { Items.Add(item); }
         }
 
+
+
         public string SentenceToString()
         {
             var strBuilder = new StringBuilder();
-
             GlueWords(-1, strBuilder);
             return strBuilder.ToString();
         }
 
 
-
         private void GlueWords(int index, StringBuilder strBuilder)
         {
             _index = index;
-            // var flag = false;////???
 
             while (true)
             {
@@ -96,6 +95,14 @@ namespace TextHandler.TextUnits
 
 
 
+        //Возвращает элемент последовательности, удовлетворяющий указанному условию.
+        //https://msdn.microsoft.com/ru-ru/library/bb534960(v=vs.110).aspx    ????
+        public ISentence RemoveWordsBy(Func<IWord, bool> predicate)
+        {
+            return new Sentence(Items.Where(x => !(x is IWord && predicate((IWord)x))));
+        }
 
+
+        
     }
 }
