@@ -25,5 +25,14 @@ namespace TextHandler.TextUnits
 
         public IEnumerable<ISentence> SortByAscending() => Sentences.OrderBy(x => x.Items.Count);
 
+        public IEnumerable<IWord> GetWordsGivenLength(int length)
+        {
+            var result = new List<IWord>();
+            foreach (var sentence in Sentences.Where(sentence => sentence.IsInterrogative))
+            { result.AddRange(sentence.GetWordsWithoutRepetition(length)); }
+            return result.GroupBy(x => x.Chars.ToLower()).Select(x => x.First()).ToList();
+        }
+
+
     }
 }

@@ -13,6 +13,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
+
             //Инициализирует новый экземпляр класса StreamReader для заданного потока, 
             //используя указанную кодировку символов. (default)
             var streamReader = new StreamReader(@"..\..\SourceFile\TextFile.txt", Encoding.Default);
@@ -32,6 +33,15 @@ namespace Test
                 Console.WriteLine(sentence.SentenceToString());
                 Console.WriteLine("=> {0}", sentence.Items.Count);
             }
+
+            Console.WriteLine(new string('-', 75));
+            foreach (var word in text.GetWordsGivenLength(4))
+            {
+                Console.WriteLine(word.Chars);
+            }
+
+
+
 
 
             //var streamReader1 = new StreamReader(@"..\..\SourceFile\TextFile - Copy.txt", Encoding.Default);

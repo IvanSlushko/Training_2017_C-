@@ -51,7 +51,7 @@ namespace TextHandler.TextUnits
                 if (Separator.SentenceSeparators.Contains(Items[_index].Chars) ||   //после точки пробел (т. к.)
                     Separator.InnerSeparator.Contains(nextElement.Chars) ||         //перед запятыми пробел
                     Separator.SentenceSeparators.Contains(nextElement.Chars))// ||  //перед запятой или точкой пробел
-                   
+
                     //Separator.OperationPunctuationSeparator.Contains(nextElement.Chars))
                     //Separator.OperationPunctuationSeparator.Contains(Items[_index].Chars) ||
                     //Separator.CloseSeparator.Contains(nextElement.Chars) ||
@@ -79,9 +79,11 @@ namespace TextHandler.TextUnits
         /// Проверяем вопросительное ли предложение
         /// </summary>
         public bool IsInterrogative
-            => Items.Last().Chars == "?" || Items.Last().Chars == "?!" || Items.Last().Chars == "!?";
-       
-        
+            => Items.Last().Chars == "?"
+            || Items.Last().Chars == "?!"
+            || Items.Last().Chars == "!?";
+
+
         /// <summary>
         /// Получаем слова без посторений
         /// </summary>

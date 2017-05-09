@@ -11,7 +11,7 @@ namespace TextHandler.Interfaces
         IList<ISentenceItem> Items { get; }
         string SentenceToString();
         bool IsInterrogative { get; }
-
+        IEnumerable<IWord> GetWordsWithoutRepetition(int length);
 
 
 
