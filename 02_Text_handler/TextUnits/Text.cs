@@ -58,6 +58,13 @@ namespace TextHandler.TextUnits
             return strBuilder.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="index">номер строки</param>
+        /// <param name="length">длинна слова, которое будем менять</param>
+        /// <param name="line">строка подмены</param>
+        /// <param name="parseSentence">метод парсинга и возврат нового предложения</param>
         public void ReplaceSubstring(int index, int length, string line, Func<string, ISentence> parseSentence)
         {
             Sentences[index] =
