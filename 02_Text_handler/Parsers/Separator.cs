@@ -8,12 +8,6 @@ namespace TextHandler.Parsers
 {
     public static class Separator
     {
-        //private string[] sentenceSeparators = new string[] { "?", "!", ".", "...", "?!" };
-        //private string[] wordSeparators = new string[] { " ", " - " };
-        //public static string[] RepeatPunctuationSeparator { get; } = { "\"", "'" };
-        //public static string[] Digits { get; } = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-        //public static string[] WordSeparators = new string[] { " ", " - " };
-        //public static string[] OperationPunctuationSeparator { get; } = { "*", "/", "+", "=", "==", "!=", ">=", "=<" };
 
         public static string[] SentenceSeparators { get; } = {".", "?", "!", "...", "?!", "!?" };
         //public IEnumerable<string> SentenceSeparators()

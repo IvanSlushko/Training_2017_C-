@@ -23,15 +23,12 @@ namespace TextHandler.TextUnits
             { Items.Add(item); }
         }
 
-
-
         public string SentenceToString()
         {
             var strBuilder = new StringBuilder();
             GlueWords(-1, strBuilder);
             return strBuilder.ToString();
         }
-
 
         private void GlueWords(int index, StringBuilder strBuilder)
         {
@@ -47,23 +44,14 @@ namespace TextHandler.TextUnits
 
                 if (nextElement == null) continue;
 
-                if (Separator.SentenceSeparators.Contains(Items[_index].Chars) ||   //после точки пробел (т. к.)
-                    Separator.InnerSeparator.Contains(nextElement.Chars) ||         //перед запятыми пробел
-                    Separator.SentenceSeparators.Contains(nextElement.Chars))// ||  //перед запятой или точкой пробел
-
-                    //Separator.OperationPunctuationSeparator.Contains(nextElement.Chars))
-                    //Separator.OperationPunctuationSeparator.Contains(Items[_index].Chars) ||
-                    //Separator.CloseSeparator.Contains(nextElement.Chars) ||
+                if (Separator.SentenceSeparators.Contains(Items[_index].Chars) ||   // , . ? ! !? ?! ...
+                    Separator.InnerSeparator.Contains(nextElement.Chars) ||         // , ; :
+                    Separator.SentenceSeparators.Contains(nextElement.Chars))       // , . ? ! !? ?! ...
                     continue;
 
-                //if (Separator.CloseSeparator.Contains(Items[_index].Chars))
-                //{
-                //    break;
-                //}
-
                 // чтобы в конце после ковычек не было пробела
-                if (Separator.OpenSeparator.Contains(Items[_index].Chars)
-                    || Separator.RepeatSeparator.Contains(Items[_index].Chars))
+                if (Separator.OpenSeparator.Contains(Items[_index].Chars) // все открытые скобки
+                    || Separator.RepeatSeparator.Contains(Items[_index].Chars)) //закрытая " скобка
                 { GlueWords(_index, strBuilder); }
 
                 // добавляем в конце (пробелы между словами)
@@ -72,8 +60,6 @@ namespace TextHandler.TextUnits
             }
         }
 
-
-
         /// <summary>
         /// Проверяем вопросительное ли предложение
         /// </summary>
@@ -81,7 +67,6 @@ namespace TextHandler.TextUnits
             => Items.Last().Chars == "?"
             || Items.Last().Chars == "?!"
             || Items.Last().Chars == "!?";
-
 
         /// <summary>
         /// Получаем слова без посторений
@@ -92,7 +77,6 @@ namespace TextHandler.TextUnits
         {
             return Items.Where(x => x is Word).Cast<Word>().Where(x => x.Length == length);
         }
-
 
 
         //Возвращает элемент последовательности, удовлетворяющий указанному условию.
@@ -114,10 +98,8 @@ namespace TextHandler.TextUnits
                     newSentence.AddRange(items);
                     continue;
                 }
-
                 newSentence.Add(item);
             }
-
             return newSentence;
         }
     }
