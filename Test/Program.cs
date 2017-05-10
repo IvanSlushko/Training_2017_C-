@@ -46,9 +46,12 @@ namespace Test
             text.DeleteConsonantsWords(10);
             Console.WriteLine(text.TextOut());
 
-         
 
-
+            //В некотором предложении текста слова заданной длины заменить указанной подстрокой.
+            Console.WriteLine(new string('-', 75));
+            // Номер предложеиня\длинна слова\вставляемая строка
+            text.ReplaceSubstring(0, 5, "XXXxxx, yy YYYYY: Yyyy zZZzz", parser.ParseSentence);
+            Console.WriteLine(text.TextOut());
 
 
             //var streamReader1 = new StreamReader(@"..\..\SourceFile\TextFile1.txt", Encoding.Default);

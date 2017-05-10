@@ -58,6 +58,10 @@ namespace TextHandler.TextUnits
             return strBuilder.ToString();
         }
 
-
+        public void ReplaceSubstring(int index, int length, string line, Func<string, ISentence> parseSentence)
+        {
+            Sentences[index] =
+                new Sentence(Sentences[index].ReplaceWord((x => x.Length == length), parseSentence(line).Items));
+        }
     }
 }

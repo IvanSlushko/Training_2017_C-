@@ -13,6 +13,6 @@ namespace TextHandler.Interfaces
         bool IsInterrogative { get; }
         IEnumerable<IWord> GetWordsWithoutRepetition(int length);
         ISentence RemoveWordsBy(Func<IWord, bool> predicate);
-
+        IEnumerable<ISentenceItem> ReplaceWord(Func<IWord, bool> predicate, IList<ISentenceItem> items);
     }
 }

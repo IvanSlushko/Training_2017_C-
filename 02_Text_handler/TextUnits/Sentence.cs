@@ -103,6 +103,22 @@ namespace TextHandler.TextUnits
         }
 
 
-        
+        public IEnumerable<ISentenceItem> ReplaceWord(Func<IWord, bool> predicate, IList<ISentenceItem> items)
+        {
+            var newSentence = new List<ISentenceItem>();
+
+            foreach (var item in Items)
+            {
+                if (item is IWord && predicate(item as IWord))
+                {
+                    newSentence.AddRange(items);
+                    continue;
+                }
+
+                newSentence.Add(item);
+            }
+
+            return newSentence;
+        }
     }
 }
