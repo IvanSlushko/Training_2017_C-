@@ -17,22 +17,13 @@ namespace TextHandler.TextUnits
             else { Symbols = null; }
         }
 
-
         public Symbol[] Symbols { get; }
-
 
         public Symbol this[int index]
         { get { return Symbols[index]; } }
 
-
-
-        //public int Length { get; }
-
         public int Length
         { get { return (Symbols != null) ? Symbols.Length : 0; } }
-
-
-
 
         public string Chars
         {

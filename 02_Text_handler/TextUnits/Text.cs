@@ -16,14 +16,6 @@ namespace TextHandler.TextUnits
 
         public List<ISentence> Sentences { get; set; }
 
-        //public Text(IEnumerable<ISentence> sentences) : this()
-        //{
-        //    foreach (var sentence in sentences)
-        //    { Sentences.Add(sentence); }
-        //}
-
-        //public ISentence this[int index] => Sentences[index];
-
         public IEnumerable<ISentence> SortByAscending() => Sentences.OrderBy(x => x.Items.Count);
 
         public IEnumerable<IWord> GetWordsGivenLength(int length)
@@ -42,8 +34,7 @@ namespace TextHandler.TextUnits
         {
             Sentences = Sentences.Select(
                 x => x.RemoveWordsBy(y => y.Length == length
-                && y.IsСonsonant(Separator.RuVowelsSeparator)))
-                .ToList();
+                && y.IsСonsonant(Separator.RuVowelsSeparator))).ToList();
         }
 
         /// <summary>
@@ -59,10 +50,10 @@ namespace TextHandler.TextUnits
         }
 
         /// <summary>
-        /// 
+        /// Замена подстроки
         /// </summary>
         /// <param name="index">номер строки</param>
-        /// <param name="length">длинна слова, которое будем менять</param>
+        /// <param name="length">длинна слов, которые будем менять</param>
         /// <param name="line">строка подмены</param>
         /// <param name="parseSentence">метод парсинга и возврат нового предложения</param>
         public void ReplaceSubstring(int index, int length, string line, Func<string, ISentence> parseSentence)
