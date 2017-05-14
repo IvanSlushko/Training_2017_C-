@@ -88,7 +88,6 @@ namespace TextHandler.Parsers
         {
             var result = new Sentence();
 
-            // итем становится ....))
             // condition ? first_expression : second_expression;
             //если condition true - first expression
             //если false - second expression
@@ -100,6 +99,8 @@ namespace TextHandler.Parsers
                        : new Punctuation(item);
 
             //Представляет результаты из отдельного совпадения регулярного выражения.
+            //Получает коллекцию групп, соответствующих регулярному выражению.
+
             foreach (Match match in _sentenceToWordsRegex.Matches(sentence))
             {
                 for (var i = 1; i < match.Groups.Count; i++)

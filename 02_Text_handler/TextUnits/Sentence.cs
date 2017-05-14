@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using TextHandler.Interfaces;
 using TextHandler.Parsers;
 
@@ -69,7 +68,7 @@ namespace TextHandler.TextUnits
             || Items.Last().Chars == "!?";
 
         /// <summary>
-        /// Получаем слова без посторений
+        /// Получаем слова без повторений заданной длинны
         /// </summary>
         /// <param name="length">длинна заданного слова</param>
         /// <returns>массив слов</returns>
@@ -80,20 +79,23 @@ namespace TextHandler.TextUnits
 
 
         //Возвращает элемент последовательности, удовлетворяющий указанному условию.
-        //https://msdn.microsoft.com/ru-ru/library/bb534960(v=vs.110).aspx    ????
+        //https://msdn.microsoft.com/ru-ru/library/bb534960(v=vs.110).aspx    
+        //https://habrahabr.ru/post/256821/
+        //http://stackoverflow.com/questions/11143602/possible-ways-to-use-func-t-bool-while-using-a-linq-repository
+
         public ISentence RemoveWordsBy(Func<IWord, bool> predicate)
         {
             return new Sentence(Items.Where(x => !(x is IWord && predicate((IWord)x))));
         }
 
-
+        //
         public IEnumerable<ISentenceItem> ReplaceWord(Func<IWord, bool> predicate, IList<ISentenceItem> items)
         {
             var newSentence = new List<ISentenceItem>();
-
             foreach (var item in Items)
             {
-                if (item is IWord && predicate(item as IWord))
+                //сравнение принадлежит ли наш объект этому типу
+                if (item is IWord && predicate(item as IWord))//приведение без исключения (если что null)
                 {
                     newSentence.AddRange(items);
                     continue;

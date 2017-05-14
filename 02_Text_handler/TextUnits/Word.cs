@@ -19,12 +19,12 @@ namespace TextHandler.TextUnits
 
         public Symbol[] Symbols { get; }
 
-        public Symbol this[int index]
-        { get { return Symbols[index]; } }
-
         public int Length
         { get { return (Symbols != null) ? Symbols.Length : 0; } }
 
+        /// <summary>
+        /// Добавляет строковое представление указанного объекта Char в данный экземпляр.
+        /// </summary>
         public string Chars
         {
             get
@@ -36,6 +36,7 @@ namespace TextHandler.TextUnits
             }
         }
 
+        //Проверка первого символа согласный или нет
         public bool IsСonsonant(string[] vowels)
         { return !vowels.Contains(Symbols[0].Chars); }
     }
