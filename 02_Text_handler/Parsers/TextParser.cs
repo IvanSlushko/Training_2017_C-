@@ -39,6 +39,13 @@ namespace TextHandler.Parsers
         {
             var textResult = new Text();
 
+
+            //using(var reader= new StreamReader(""))
+            //{
+
+            //}
+
+
             try
             {
                 string line;
@@ -72,7 +79,12 @@ namespace TextHandler.Parsers
             }
             catch (IOException exception)
             {
-                Console.WriteLine(exception.Data.ToString());
+                Console.WriteLine("io exception", exception.StackTrace);
+                fileReader.Close();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("null");
                 fileReader.Close();
             }
             finally

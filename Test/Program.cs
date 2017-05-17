@@ -52,7 +52,6 @@ namespace Test
             text.ReplaceSubstring(0, 5, "XXXxxx, yy YYYYY: Yyyy zZZzz", parser.ParseSentence);
             Console.WriteLine(text.TextOut());
 
-
             //var streamReader1 = new StreamReader(@"..\..\SourceFile\TextFile1.txt", Encoding.Default);
             //var parser1 = new TextParser();
             //var text1 = parser1.Parse(streamReader1);

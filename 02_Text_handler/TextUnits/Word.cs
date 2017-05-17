@@ -9,18 +9,31 @@ namespace TextHandler.TextUnits
 {
     public class Word : IWord
     {
+        public Symbol[] Symbols { get; }
+
 
         public Word(string chars)
         {
             if (chars != null)
-            { Symbols = chars.Select(x => new Symbol(x)).ToArray(); }
-            else { Symbols = null; }
+            {
+                Symbols = chars.Select(x => new Symbol(x)).ToArray();
+            }
+            else
+            {
+                Symbols = null;
+            }
         }
 
-        public Symbol[] Symbols { get; }
+
 
         public int Length
-        { get { return (Symbols != null) ? Symbols.Length : 0; } }
+        {
+            get
+
+            {
+                return (Symbols != null) ? Symbols.Length : 0;
+            }
+        }
 
         /// <summary>
         /// Добавляет строковое представление указанного объекта Char в данный экземпляр.
@@ -29,12 +42,27 @@ namespace TextHandler.TextUnits
         {
             get
             {
-                var strBuilder = new StringBuilder();
-                foreach (var symbol in Symbols)
-                { strBuilder.Append(symbol.Chars); }
-                return strBuilder.ToString();
+                if (string.IsNullOrEmpty(chars))
+                {
+                    var strBuilder = new StringBuilder();
+
+                    foreach (var symbol in Symbols)
+                    {
+                        strBuilder.Append(symbol.Chars);
+                    }
+                    return strBuilder.ToString();
+                }
+
+                else
+                {
+                    return chars;
+                }
             }
         }
+
+        private string chars;
+
+
 
         //Проверка первого символа согласный или нет
         public bool IsСonsonant(string[] vowels)
