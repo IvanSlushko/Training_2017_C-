@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BillingSystem.Interfaces
+namespace BillingSystem
 {
-    public interface IContact
+    public enum TypeOffTariffPlan
     {
-
-
-
+        SmartMini,
+        Smart,
+        SmartUnlim,
+        Business
     }
 }
