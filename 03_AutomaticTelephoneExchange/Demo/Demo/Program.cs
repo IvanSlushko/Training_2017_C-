@@ -15,15 +15,17 @@ namespace Demo
         {
 
             IContract con1 = new Contract(new User("Anton", "Goncharuk"), TypeOffTariffPlan.Business);
-            //Console.ReadKey();
+            Console.ReadKey();
             IContract con2 = new Contract(new User("Olga", "Gordeeva"), TypeOffTariffPlan.Smart);
-            //Console.ReadKey();
+            Console.ReadKey();
             IContract con3 = new Contract(new User("Alex", "Kulesh"), TypeOffTariffPlan.SmartUnlim);
-            //Console.ReadKey();
+            Console.ReadKey();
             IContract con4 = new Contract(new User("Misha", "Antonov"), TypeOffTariffPlan.SmartMini);
-            //Console.ReadKey();
+            Console.ReadKey();
 
             //TODO  почему номера не рандомит???????????
+
+            Console.WriteLine(DateTime.Now.AddMonths(-1));
 
             Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName
                 + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan);

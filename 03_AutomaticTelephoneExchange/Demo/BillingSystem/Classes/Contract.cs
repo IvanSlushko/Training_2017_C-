@@ -27,7 +27,18 @@ namespace BillingSystem.Classes
 
         public bool ChangeTariff(TypeOffTariffPlan typeOffTariffPlan)
         {
-            throw new NotImplementedException();
+            if (DateTime.Now.AddMonths(-1) >= ChangeTarifDate)
+            {
+                ChangeTarifDate = DateTime.Now;
+                Tariff = new Tariff(typeOffTariffPlan);
+                Console.WriteLine("Tariff changed!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You can not change the tariff if the month has not passed!");
+                return false;
+            }
         }
     }
 }
