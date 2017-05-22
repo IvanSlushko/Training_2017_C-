@@ -13,9 +13,8 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Abonents:           Press 4 =>");
             IContract con1 = new Contract(new User("Anton", "Goncharuk"), TypeOffTariffPlan.Business);
-            Console.WriteLine("Press 4");
             Console.ReadKey();
             IContract con2 = new Contract(new User("Olga", "Gordeeva"), TypeOffTariffPlan.Smart);
             Console.ReadKey();
@@ -40,7 +39,7 @@ namespace Demo
             Console.WriteLine(con4.User.FirstName + "  " + con4.User.LastName
                 + "  " + con4.Number + " " + con4.Tariff.TypeOffTariffPlan);
 
-            Console.WriteLine(new string('-', 30));
+            Console.WriteLine(new string('-', 40));
 
 
 

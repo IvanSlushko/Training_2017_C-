@@ -40,15 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AnswerEvent.cs" />
     <Compile Include="Classes\ATE.cs" />
+    <Compile Include="Classes\CallEvent.cs" />
+    <Compile Include="Classes\CallInfo.cs" />
+    <Compile Include="Classes\EndCallEvent.cs" />
     <Compile Include="Classes\Port.cs" />
     <Compile Include="Classes\Terminal.cs" />
+    <Compile Include="Enums\CallStatus.cs" />
+    <Compile Include="Enums\CallType.cs" />
+    <Compile Include="Enums\PortStatus.cs" />
+    <Compile Include="Enums\TypeOfSort.cs" />
     <Compile Include="Interfaces\IATE.cs" />
+    <Compile Include="Interfaces\ICallEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

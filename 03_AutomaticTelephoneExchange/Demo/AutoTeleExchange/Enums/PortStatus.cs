@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoTeleExchange.Enums
 {
-    public enum PortState
+    public enum PortStatus
     {
         Connect,
         Disconnect,
