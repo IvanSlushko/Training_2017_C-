@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoTeleExchange.Interfaces
+namespace AutoTeleExchange.Classes
 {
-    public interface IATE
+    public class Port
     {
 
     }

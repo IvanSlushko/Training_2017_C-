@@ -15,6 +15,7 @@ namespace Demo
         {
 
             IContract con1 = new Contract(new User("Anton", "Goncharuk"), TypeOffTariffPlan.Business);
+            Console.WriteLine("Press 4");
             Console.ReadKey();
             IContract con2 = new Contract(new User("Olga", "Gordeeva"), TypeOffTariffPlan.Smart);
             Console.ReadKey();

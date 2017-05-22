@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoTeleExchange.Interfaces
+namespace AutoTeleExchange.Enums
 {
-    public interface IATE
+    public enum PortState
     {
-
+        Connect,
+        Disconnect,
+        InCall
     }
 }
