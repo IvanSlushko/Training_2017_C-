@@ -25,7 +25,7 @@ namespace Demo
 
             //TODO  почему номера не рандомит???????????
 
-            Console.WriteLine(DateTime.Now.AddMonths(-1));
+           
 
             Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName
                 + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan);
@@ -40,6 +40,8 @@ namespace Demo
                 + "  " + con4.Number + " " + con4.Tariff.TypeOffTariffPlan);
 
             Console.WriteLine(new string('-', 30));
+
+
 
 
         }
