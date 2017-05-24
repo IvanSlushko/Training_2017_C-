@@ -13,3 +13,4 @@ namespace AutoTeleExchange.Interfaces
         Guid Id { get; }
     }
 }
+
