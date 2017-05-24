@@ -13,7 +13,12 @@ namespace BillingSystem.Classes
         Random rand = new Random(DateTime.Now.Millisecond);
         public int GetRandom (int minValue, int maxValue)
         {
+            Delay();
             return (rand.Next(minValue, maxValue));
+        }
+        public void Delay()
+        {
+            Thread.Sleep(10);
         }
     }
 }

@@ -11,12 +11,6 @@ namespace BillingSystem.Classes
     public class Contract : IContract
     {
         RandomGenerator random = new RandomGenerator();
-        public void qqq()
-        {
-            Thread.Sleep(100);
-        } 
-       
-
         private DateTime ChangeTarifDate;
 
         public User User { get; private set; }
@@ -29,7 +23,6 @@ namespace BillingSystem.Classes
             ChangeTarifDate = DateTime.Now;
             User = user;
             Number = random.GetRandom(7000000, 7999999);
-            qqq();
             Tariff = new Tariff(typeOffTariffPlan);
         }
 

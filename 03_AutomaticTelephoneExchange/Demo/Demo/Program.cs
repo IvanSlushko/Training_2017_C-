@@ -22,7 +22,6 @@ namespace Demo
 
             Console.WriteLine("Abonents: =>");
 
-            //TODO  почему номера не рандомит???????????
             IContract con1 = aTEx.RegisterContract(new User("Anton", "Goncharuk"), TypeOffTariffPlan.Business);
             IContract con2 = aTEx.RegisterContract(new User("Olga", "Gordeeva"), TypeOffTariffPlan.Smart);
             IContract con3 = aTEx.RegisterContract(new User("Alex", "Kulesh"), TypeOffTariffPlan.SmartUnlim);
@@ -40,13 +39,6 @@ namespace Demo
 
 
 
-
-
-            //RandomGenerator i = new RandomGenerator();
-            //Console.WriteLine(i.GetRandom(7000000, 7999999));
-            //Console.WriteLine(i.GetRandom(7000000, 7999999));
-            //Console.WriteLine(i.GetRandom(7000000, 7999999));
-            //Console.WriteLine(i.GetRandom(7000000, 7999999));
 
 
 
