@@ -16,7 +16,7 @@ namespace BillingSystem.Classes
         {
             FirstName = firstName;
             LastName = lastName;
-            Money = 10;           //default in a purse
+            Money = 30;           //default in a purse
         }
 
         public void AddMoneyToAccount(int money)
