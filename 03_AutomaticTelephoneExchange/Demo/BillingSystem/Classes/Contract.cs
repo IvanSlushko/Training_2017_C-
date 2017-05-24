@@ -9,7 +9,7 @@ namespace BillingSystem.Classes
 {
     public class Contract : IContract
     {
-        Random random = new Random();
+        RandomGenerator random = new RandomGenerator();
         private DateTime ChangeTarifDate;
 
         public User User { get; private set; }
@@ -21,7 +21,7 @@ namespace BillingSystem.Classes
         {
             ChangeTarifDate = DateTime.Now;
             User = user;
-            Number = Convert.ToInt32("29" + random.Next(7000000, 7999999));
+            Number = random.GetRandom(7000000, 7999999);
             Tariff = new Tariff(typeOffTariffPlan);
         }
 

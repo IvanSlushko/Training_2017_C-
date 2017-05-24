@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoTeleExchange">
+      <HintPath>..\AutoTeleExchange\bin\Debug\AutoTeleExchange.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\BillingSystem.cs" />
+    <Compile Include="Classes\BillingSys.cs" />
     <Compile Include="Classes\Contract.cs" />
+    <Compile Include="Classes\RandomGenerator.cs" />
     <Compile Include="Classes\Tariff.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Interfaces\IBillingSystem.cs" />
