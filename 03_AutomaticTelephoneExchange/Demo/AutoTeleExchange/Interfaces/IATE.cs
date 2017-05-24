@@ -10,7 +10,7 @@ using AutoTeleExchange.Classes;
 
 namespace AutoTeleExchange.Interfaces
 {
-    public interface IATE
+    public interface IATE : IStorage<CallInfo>
     {
         Terminal GetNewTerminal(IContract contract);
         IContract RegisterContract(User user, TypeOffTariffPlan type);

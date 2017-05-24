@@ -53,6 +53,7 @@
     <ProjectReference Include="..\AutoTeleExchange\AutoTeleExchange.csproj">
       <Project>{7B0E4780-D36C-4DB1-8FC0-4BD1FE9CA91A}</Project>
       <Name>AutoTeleExchange</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\BillingSystem\BillingSystem.csproj">
       <Project>{80407646-CB60-4A72-90D7-995E598DFF0D}</Project>
