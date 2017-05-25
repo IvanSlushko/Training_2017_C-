@@ -12,7 +12,7 @@ namespace AutoTeleExchange.Interfaces
 {
     public interface IATE : IStorage<CallInfo>
     {
-        Terminal GetNewTerminal(IContract contract);
+        Terminal NewTerminal(IContract contract);
         IContract RegisterContract(User user, TypeOffTariffPlan type);
         void CallingTo(object sender, ICallEvent e);
     }

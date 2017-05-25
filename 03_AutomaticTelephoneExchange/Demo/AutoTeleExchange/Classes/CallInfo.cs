@@ -9,18 +9,18 @@ namespace AutoTeleExchange.Classes
     public class CallInfo
     {
         public Guid Id { get; set; }
-        public int MyNumber { get; set; }
+        public int SourceNumber { get; set; }
         public int TargetNumber { get; set; }
-        public DateTime BeginCall { get; set; }
+        public DateTime StartCall { get; set; }
         public DateTime EndCall { get; set; }
         public int Cost { get; set; }
 
-        public CallInfo(int myNumber, int targetNumber, DateTime beginCall)
+        public CallInfo(int sourceNumber, int targetNumber, DateTime startCall)
         {
             Id = Guid.NewGuid();
-            MyNumber = myNumber;
+            SourceNumber = sourceNumber;
             TargetNumber = targetNumber;
-            BeginCall = beginCall;
+            StartCall = startCall;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace ReportCreat.Interfaces
 {
     public interface IReportCreator
     {
-        void Create(Report report);
-        IEnumerable<ReportEvent> SortByCallType(Report report);
+        void Create(Report report, TypeOfSort sortType);
+        IEnumerable<ReportEvent> sortType(Report report);
         IEnumerable<ReportEvent> SortByDate(Report report);
         IEnumerable<ReportEvent> SortByCost(Report report);
         IEnumerable<ReportEvent> SortByNumber(Report report);
