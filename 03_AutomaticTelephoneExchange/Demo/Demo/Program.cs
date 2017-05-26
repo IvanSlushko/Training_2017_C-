@@ -1,8 +1,11 @@
 ﻿using AutoTeleExchange.Classes;
+using AutoTeleExchange.Enums;
 using AutoTeleExchange.Interfaces;
 using BillingSystem;
 using BillingSystem.Classes;
 using BillingSystem.Interfaces;
+using ReportCreat.Classes;
+using ReportCreat.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +19,9 @@ namespace Demo
         static void Main(string[] args)
         {
 
-
             IATE aTEx = new ATE();
             IBillingSystem bs = new BillingSys(aTEx);
+            IReportCreator report = new ReportCreator();
 
             Console.WriteLine("Abonents: =>");
 
@@ -34,24 +37,44 @@ namespace Demo
             Console.WriteLine(con2.User.FirstName + "  " + con2.User.LastName + "  " + con2.Number + " " + con2.Tariff.TypeOffTariffPlan + "  " + con2.User.Money);
             Console.WriteLine(con3.User.FirstName + "  " + con3.User.LastName + "  " + con3.Number + " " + con3.Tariff.TypeOffTariffPlan + "  " + con3.User.Money);
             Console.WriteLine(con4.User.FirstName + "  " + con4.User.LastName + "  " + con4.Number + " " + con4.Tariff.TypeOffTariffPlan + "  " + con4.User.Money);
-            Console.WriteLine(new string('-', 40));
+            Console.WriteLine(new string('=', 75));
 
+            var ter1 = aTEx.NewTerminal(con1);
+            var ter2 = aTEx.NewTerminal(con2);
+            var ter3 = aTEx.NewTerminal(con3);
+            var ter4 = aTEx.NewTerminal(con4);
 
+            ter1.ConnectToPort();
+            ter2.ConnectToPort();
+            ter3.ConnectToPort();
+            ter4.ConnectToPort();
 
+            ter1.Call(ter2.Number);
+            Console.WriteLine("........");
+            ter2.EndCall();
 
+            ter3.Call(ter1.Number);
+            Console.WriteLine("........");
+            ter3.EndCall();
 
+            ter2.Call(ter1.Number);
+            Console.WriteLine("........");
+            ter1.EndCall();
 
+            ter1.Call(ter4.Number);
+            ter4.EndCall();
 
+            Console.WriteLine(new string('=', 75));
+            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCallType);
+            Console.WriteLine(new string('=', 75));
+            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
+            Console.WriteLine(new string('=', 75));
+            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
+            Console.WriteLine(new string('=', 75));
+            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCost);
+            Console.WriteLine(new string('=', 75));
 
-            //var ter1 = aTEx.GetNewTerminal(con1);
-            //var ter2 = aTEx.GetNewTerminal(con2);
-            //var ter3 = aTEx.GetNewTerminal(con3);
-            //var ter4 = aTEx.GetNewTerminal(con4);
-
-            //ter1.ConnectToPort();
-            //Console.WriteLine(ter1.Number );
-
-
+    // PRICE^^
 
         }
     }
