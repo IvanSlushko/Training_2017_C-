@@ -30,8 +30,8 @@ namespace Demo
             IContract con3 = aTEx.RegisterContract(new User("Alex", "Kulesh"), TypeOffTariffPlan.SmartUnlim);
             IContract con4 = aTEx.RegisterContract(new User("Misha", "Antonov"), TypeOffTariffPlan.SmartMini);
 
-            con1.User.AddMoneyToAccount(7);
-            con4.User.AddMoneyToAccount(2);
+            con1.User.AddMoneyToAccount(7m);
+            con4.User.AddMoneyToAccount(2m);
 
             Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan + "  " + con1.User.Money);
             Console.WriteLine(con2.User.FirstName + "  " + con2.User.LastName + "  " + con2.Number + " " + con2.Tariff.TypeOffTariffPlan + "  " + con2.User.Money);
@@ -67,12 +67,12 @@ namespace Demo
             Console.WriteLine(new string('=', 75));
             report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCallType);
             Console.WriteLine(new string('=', 75));
-            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
-            Console.WriteLine(new string('=', 75));
-            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
-            Console.WriteLine(new string('=', 75));
-            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCost);
-            Console.WriteLine(new string('=', 75));
+            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
+            //Console.WriteLine(new string('=', 75));
+            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
+            //Console.WriteLine(new string('=', 75));
+            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCost);
+            //Console.WriteLine(new string('=', 75));
 
     // PRICE^^
 

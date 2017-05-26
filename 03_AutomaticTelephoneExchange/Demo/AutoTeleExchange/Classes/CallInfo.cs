@@ -13,7 +13,7 @@ namespace AutoTeleExchange.Classes
         public int TargetNumber { get; set; }
         public DateTime StartCall { get; set; }
         public DateTime EndCall { get; set; }
-        public int Cost { get; set; }
+        public decimal Cost { get; set; }
 
         public CallInfo(int sourceNumber, int targetNumber, DateTime startCall)
         {

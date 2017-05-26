@@ -40,7 +40,7 @@ namespace ReportCreat.Classes
                        item.Time.ToString("mm:ss"),
                        item.Date,
                        item.Number,
-                       item.Cost);
+                       decimal.Round(item.Cost,2));
             }
         }
 

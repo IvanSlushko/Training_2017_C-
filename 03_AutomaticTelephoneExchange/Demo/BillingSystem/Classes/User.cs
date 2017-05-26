@@ -10,23 +10,24 @@ namespace BillingSystem.Classes
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public int Money { get; private set; }
+        public decimal Money { get; private set; }
 
         public User(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
-            Money = 30;           //default in a purse
+            Money = 30m;           //default in a purse
         }
 
-        public void AddMoneyToAccount(int money)
+        public void AddMoneyToAccount(decimal money)
         {
             Money += money;
         }
 
-        public void RemoveMoneyFromAccount(int money)
+        public void RemoveMoneyFromAccount(decimal money)
         {
             Money -= money;
         }
+
     }
 }
