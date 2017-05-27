@@ -23,14 +23,13 @@ namespace Demo
             IBillingSystem bs = new BillingSys(aTEx);
             IReportCreator report = new ReportCreator();
 
-            Console.WriteLine("Abonents: =>");
-
             IContract con1 = aTEx.RegisterContract(new User("Anton", "Goncharuk"), TypeOffTariffPlan.Business);
             IContract con2 = aTEx.RegisterContract(new User("Olga", "Gordeeva"), TypeOffTariffPlan.Smart);
             IContract con3 = aTEx.RegisterContract(new User("Alex", "Kulesh"), TypeOffTariffPlan.SmartUnlim);
             IContract con4 = aTEx.RegisterContract(new User("Misha", "Antonov"), TypeOffTariffPlan.SmartMini);
             
             Console.WriteLine(new string('=', 75));
+            Console.WriteLine("Abonents: =>");
             Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan + "  " + con1.User.Money);
             Console.WriteLine(con2.User.FirstName + "  " + con2.User.LastName + "  " + con2.Number + " " + con2.Tariff.TypeOffTariffPlan + "  " + con2.User.Money);
             Console.WriteLine(con3.User.FirstName + "  " + con3.User.LastName + "  " + con3.Number + " " + con3.Tariff.TypeOffTariffPlan + "  " + con3.User.Money);
@@ -54,27 +53,10 @@ namespace Demo
             ter3.Call(ter1.Number);
             ter1.Call(ter4.Number);
 
-            
-
-            //ter1.EndCall();
-            //ter3.EndCall();
-
-            //Console.WriteLine("........");
-            //ter3.EndCall();
-
-            //ter2.Call(ter1.Number);
-            //Console.WriteLine("........");
-            //ter1.EndCall();
-
-            //ter1.Call(ter4.Number);
-            //ter4.EndCall();
-
             Console.WriteLine(new string('=', 75));
             Console.WriteLine(  "Report by number: {0}", ter1.Number);
             report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
             Console.WriteLine(new string('=', 75));
-
-
             //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCallType);
             //Console.WriteLine(new string('=', 75));
             //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
