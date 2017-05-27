@@ -37,7 +37,7 @@ namespace BillingSystem.Classes
             }
             else
             {
-                Console.WriteLine("You can not change the tariff if the month has not passed!");
+                Console.WriteLine("You can hange tariff once in month !");
                 return false;
             }
         }

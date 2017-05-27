@@ -37,7 +37,8 @@ namespace BillingSystem.Classes
                     callType = CallType.IncomingCall;
                     number = call.SourceNumber;
                 }
-                var record = new ReportEvent(callType, number, call.StartCall, new DateTime((call.EndCall - call.StartCall).Ticks), call.Cost); 
+
+                var record = new ReportEvent(callType, number, call.StartCall, new DateTime((call.EndCall - call.StartCall).Ticks), call.Cost);
                 report.AddRecord(record);
             }
             return report;
