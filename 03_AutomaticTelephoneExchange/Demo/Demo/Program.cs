@@ -50,26 +50,35 @@ namespace Demo
             ter4.ConnectToPort();
 
             ter1.Call(ter2.Number);
-            Console.WriteLine("........");
-            ter2.EndCall();
+           
+
+            //ter2.EndCall();
 
             ter3.Call(ter1.Number);
-            Console.WriteLine("........");
-            ter3.EndCall();
+            //ter1.EndCall();
 
-            ter2.Call(ter1.Number);
-            Console.WriteLine("........");
-            ter1.EndCall();
 
-            ter1.Call(ter4.Number);
-            ter4.EndCall();
+
+
+            //Console.WriteLine("........");
+            //ter3.EndCall();
+
+            //ter2.Call(ter1.Number);
+            //Console.WriteLine("........");
+            //ter1.EndCall();
+
+            //ter1.Call(ter4.Number);
+            //ter4.EndCall();
 
             Console.WriteLine(new string('=', 75));
-            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCallType);
+            Console.WriteLine(  "Report by number: {0}", ter1.Number);
+            report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
             Console.WriteLine(new string('=', 75));
-            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
+
+
+            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCallType);
             //Console.WriteLine(new string('=', 75));
-            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByDate);
+            //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByNumber);
             //Console.WriteLine(new string('=', 75));
             //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCost);
             //Console.WriteLine(new string('=', 75));
