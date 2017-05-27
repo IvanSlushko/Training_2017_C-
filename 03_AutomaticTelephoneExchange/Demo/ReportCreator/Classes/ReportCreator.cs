@@ -40,7 +40,7 @@ namespace ReportCreat.Classes
                        item.Time.ToString("mm:ss"),
                        item.Date,
                        item.Number,
-                       decimal.Round(item.Cost,2));
+                       decimal.Round(item.Cost, 2));
             }
         }
 
@@ -66,11 +66,6 @@ namespace ReportCreat.Classes
         {
             var rep = report.GetRecords();
             return rep = rep.OrderBy(x => x.Number).ToList();
-        }
-
-        public IEnumerable<ReportEvent> sortType(Report report)
-        {
-            throw new NotImplementedException();
         }
     }
 }

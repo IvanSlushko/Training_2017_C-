@@ -49,13 +49,11 @@ namespace Demo
             ter3.ConnectToPort();
             ter4.ConnectToPort();
 
+
+
             ter1.Call(ter2.Number);
-           
-
-            //ter2.EndCall();
-
             ter3.Call(ter1.Number);
-            //ter1.EndCall();
+           
 
 
 
