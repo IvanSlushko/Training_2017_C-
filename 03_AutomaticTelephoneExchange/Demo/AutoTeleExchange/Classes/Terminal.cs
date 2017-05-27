@@ -87,6 +87,14 @@ namespace AutoTeleExchange.Classes
                 terminalPort.AnswerPortEvent += TakeAnswer;
             }
         }
+        public void DisconnectFromPort()
+        {
+            if (terminalPort.Disconnect(this))
+            {
+                terminalPort.Disconnect(this);
+            }
+        }
+
         public void AnswerToCall(int target, CallStatus status, Guid id)
         {
             UpAnswerEvent(target, status, id);

@@ -51,6 +51,7 @@ namespace Demo
 
             ter1.Call(ter2.Number);
             ter3.Call(ter1.Number);
+            //ter4.DisconnectFromPort();
             ter1.Call(ter4.Number);
 
             Console.WriteLine(new string('=', 75));
@@ -64,12 +65,11 @@ namespace Demo
             //report.Create(bs.GetReport(ter1.Number), TypeOfSort.SortByCost);
             //Console.WriteLine(new string('=', 75));
 
-            Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan + "  " + con1.User.Money);
-            Console.WriteLine(con2.User.FirstName + "  " + con2.User.LastName + "  " + con2.Number + " " + con2.Tariff.TypeOffTariffPlan + "  " + con2.User.Money);
-            Console.WriteLine(con3.User.FirstName + "  " + con3.User.LastName + "  " + con3.Number + " " + con3.Tariff.TypeOffTariffPlan + "  " + con3.User.Money);
-            Console.WriteLine(con4.User.FirstName + "  " + con4.User.LastName + "  " + con4.Number + " " + con4.Tariff.TypeOffTariffPlan + "  " + con4.User.Money);
-            Console.WriteLine(new string('=', 75));
-
+            //Console.WriteLine(con1.User.FirstName + "  " + con1.User.LastName + "  " + con1.Number + " " + con1.Tariff.TypeOffTariffPlan + "  " + con1.User.Money);
+            //Console.WriteLine(con2.User.FirstName + "  " + con2.User.LastName + "  " + con2.Number + " " + con2.Tariff.TypeOffTariffPlan + "  " + con2.User.Money);
+            //Console.WriteLine(con3.User.FirstName + "  " + con3.User.LastName + "  " + con3.Number + " " + con3.Tariff.TypeOffTariffPlan + "  " + con3.User.Money);
+            //Console.WriteLine(con4.User.FirstName + "  " + con4.User.LastName + "  " + con4.Number + " " + con4.Tariff.TypeOffTariffPlan + "  " + con4.User.Money);
+            //Console.WriteLine(new string('=', 75));
         }
     }
 }
