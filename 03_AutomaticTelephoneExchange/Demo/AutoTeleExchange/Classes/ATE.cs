@@ -1,4 +1,5 @@
-﻿using AutoTeleExchange.Enums;
+﻿using AutoTeleExchange.Classes;
+using AutoTeleExchange.Enums;
 using AutoTeleExchange.Interfaces;
 using BillingSystem;
 using BillingSystem.Classes;
@@ -85,7 +86,7 @@ namespace AutoTeleExchange.Classes
                     //2.1 AnswerEvent
                     if (e is AnswerEvent)
                     {
-                         
+
                         var answerArgs = (AnswerEvent)e;
 
                         if (!answerArgs.Id.Equals(Guid.Empty) && callList.Any(x => x.Id.Equals(answerArgs.Id)))
@@ -137,7 +138,6 @@ namespace AutoTeleExchange.Classes
                         else
                         {
                             Console.WriteLine("Terminal with number {0} is not enough money in the account!", e.TelephoneNumber);
-
                         }
                     }
 
@@ -146,7 +146,13 @@ namespace AutoTeleExchange.Classes
                     {
                         var args = (EndCallEvent)e;
                         inf = callList.First(x => x.Id.Equals(args.Id));
-                        inf.EndCall = DateTime.Now;
+                        
+                        if (Terminal.noAnswer == false)
+                        {
+                            inf.EndCall = DateTime.Now;
+                        }
+                        else inf.EndCall = inf.StartCall;
+
                         var sumOfCall = tuple.Item2.Tariff.CostOfCallPerMinute * (decimal)TimeSpan.FromTicks((inf.EndCall - inf.StartCall).Ticks).TotalMinutes;
                         inf.Cost = sumOfCall;
                         targetTuple.Item2.User.RemoveMoneyFromAccount(sumOfCall);

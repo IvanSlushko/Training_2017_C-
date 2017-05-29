@@ -13,6 +13,7 @@ namespace AutoTeleExchange.Classes
         private int phoneNumber;
         private Port terminalPort;
         private Guid id;
+        public static bool noAnswer;
         public event EventHandler<CallEvent> CallEvent;
         public event EventHandler<AnswerEvent> AnswerEvent;
         public event EventHandler<EndCallEvent> EndCallEvent;
@@ -56,6 +57,7 @@ namespace AutoTeleExchange.Classes
 
         public void TakeIncomingCall(object sender, CallEvent e)
         {
+            noAnswer = false;
             id = e.Id;
             Console.WriteLine("   Call from {0} to {1}", e.TelephoneNumber, e.TargetTelephoneNumber);
             Console.WriteLine("   Answer? Y/N");
@@ -69,6 +71,7 @@ namespace AutoTeleExchange.Classes
             else if (key == 'N' || key == 'n')
             {
                 Console.WriteLine();
+                noAnswer = true;
                 EndCall();
             }
             else
@@ -77,7 +80,6 @@ namespace AutoTeleExchange.Classes
                 goto lable1;
             }
         }
-
 
         public void ConnectToPort()
         {
