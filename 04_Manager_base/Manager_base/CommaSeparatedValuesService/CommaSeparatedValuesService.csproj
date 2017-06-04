@@ -48,9 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoTeleExchange">
-      <HintPath>..\..\..\03_AutomaticTelephoneExchange\Demo\AutoTeleExchange\bin\Debug\AutoTeleExchange.dll</HintPath>
-    </Reference>
     <Reference Include="ReportCreator">
       <HintPath>..\..\..\03_AutomaticTelephoneExchange\Demo\ReportCreator\bin\Debug\ReportCreator.dll</HintPath>
     </Reference>
