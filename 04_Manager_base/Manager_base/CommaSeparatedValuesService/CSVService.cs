@@ -25,6 +25,7 @@ namespace CommaSeparatedValuesService
             string source = System.Configuration.ConfigurationManager.AppSettings["CSVSourceFolder"];
             manager = new CSVManager(source);
             manager.Run();
+            EventLog.WriteEntry("My service started.");
         }
 
         protected override void OnStop()
