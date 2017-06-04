@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{C44F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferToDB", "TransferToDB\TransferToDB.csproj", "{D9C5C3AE-7584-46B0-A997-7A758C6E4902}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommaSeparatedValuesService", "CommaSeparatedValuesService\CommaSeparatedValuesService.csproj", "{43FAC334-5630-44AC-9E38-E3FB395D2367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

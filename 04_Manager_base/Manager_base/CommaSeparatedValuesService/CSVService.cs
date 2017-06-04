@@ -1,4 +1,5 @@
 ﻿using BL;
+using System.Configuration;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,9 @@ namespace CommaSeparatedValuesService
 
         protected override void OnStart(string[] args)
         {
-
+            string source = System.Configuration.ConfigurationManager.AppSettings["CSVSourceFolder"];
+            manager = new CSVManager(source);
+            manager.Run();
         }
 
         protected override void OnStop()
