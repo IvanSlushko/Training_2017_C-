@@ -22,7 +22,7 @@ namespace CommaSeparatedValuesService
 
         protected override void OnStart(string[] args)
         {
-            string source = System.Configuration.ConfigurationManager.AppSettings["CSVSourceFolder"];
+            string source = ConfigurationManager.AppSettings["CSVSourceFolder"];
             manager = new CSVManager(source);
             manager.Run();
             EventLog.WriteEntry("My service started.");
@@ -38,6 +38,7 @@ namespace CommaSeparatedValuesService
             finally
             {
                 manager.Dispose();
+                EventLog.WriteEntry("My service disposed.");
             }
         }
     }

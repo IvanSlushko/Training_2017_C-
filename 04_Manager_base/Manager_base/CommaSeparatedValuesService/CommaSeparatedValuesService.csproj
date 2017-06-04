@@ -51,9 +51,6 @@
     <Reference Include="AutoTeleExchange">
       <HintPath>..\..\..\03_AutomaticTelephoneExchange\Demo\AutoTeleExchange\bin\Debug\AutoTeleExchange.dll</HintPath>
     </Reference>
-    <Reference Include="BillingSystem">
-      <HintPath>..\..\..\03_AutomaticTelephoneExchange\Demo\AutoTeleExchange\bin\Debug\BillingSystem.dll</HintPath>
-    </Reference>
     <Reference Include="ReportCreator">
       <HintPath>..\..\..\03_AutomaticTelephoneExchange\Demo\ReportCreator\bin\Debug\ReportCreator.dll</HintPath>
     </Reference>
@@ -117,6 +114,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
