@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Client_DAL.cs" />
+    <Compile Include="Data\Manager_DAL.cs" />
+    <Compile Include="Data\Product_DAL.cs" />
+    <Compile Include="Data\SaleInfo_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

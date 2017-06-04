@@ -9,22 +9,37 @@ namespace BL
 {
     public class CSVManager : IDisposable
     {
-        private string source;
+        private string sourceDir;
+        private string targetDir;
+
         private FileSystemWatcher fileWatcher;
 
 
 
         public CSVManager(string source)
         {
-            this.source = source;
+            sourceDir = source;
+            fileWatcher = new FileSystemWatcher(source, "*.csv");
+            fileWatcher.Created += OnCreated;
+            targetDir = string.Concat(source, @"\Done");
+            try
+            {
+                DirectoryInfo targetDirectory = Directory.CreateDirectory(targetDir);
+            }
+            catch
+            {
+                Console.WriteLine("It can not be created 'Done' folder!.\nProgram stop!");
+                System.Threading.Thread.CurrentThread.Abort();
+            }
         }
 
 
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            //Console.WriteLine("ADDED New file: {0}", e.FullPath);
+            Console.WriteLine("ADDED New file: {0}", e.FullPath);
 
-           
+
+            //TODO
         }
 
 
@@ -43,7 +58,7 @@ namespace BL
             {
                 fileWatcher.EnableRaisingEvents = true;
             }
-            Console.WriteLine("The catalog {0} check is started.", source);
+            Console.WriteLine("The catalog {0} check is started.", sourceDir);
         }
 
         #region IDisposable

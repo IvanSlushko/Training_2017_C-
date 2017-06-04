@@ -41,8 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSVManager.cs" />
+    <Compile Include="DataTransfer\Client_BL.cs" />
+    <Compile Include="DataTransfer\Manager_BL.cs" />
+    <Compile Include="DataTransfer\Product_BL.cs" />
+    <Compile Include="DataTransfer\SaleInfo_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

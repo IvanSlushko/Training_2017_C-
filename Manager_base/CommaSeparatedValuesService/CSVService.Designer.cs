@@ -31,6 +31,7 @@
             // 
             // CSVService
             // 
+            components = new System.ComponentModel.Container();
             this.ServiceName = "CSV_Service";
 
         }
