@@ -22,12 +22,12 @@ namespace BL
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The catalog check is stopped.");
         }
 
         public void Run()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The catalog check is started (c:/CSV)");
         }
     }
 }
