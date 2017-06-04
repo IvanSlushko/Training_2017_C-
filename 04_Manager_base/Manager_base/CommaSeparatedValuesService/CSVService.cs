@@ -33,6 +33,7 @@ namespace CommaSeparatedValuesService
             try
             {
                 manager.Stop();
+                EventLog.WriteEntry("My service stopped.");
             }
             finally
             {

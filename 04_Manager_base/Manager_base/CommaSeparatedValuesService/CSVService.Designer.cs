@@ -31,7 +31,7 @@
             // 
             // CSVService
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "CSV_Service";
 
         }
 

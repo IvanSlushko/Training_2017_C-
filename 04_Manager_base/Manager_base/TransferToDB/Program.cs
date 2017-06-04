@@ -16,14 +16,14 @@ namespace TransferToDB
             string source = ConfigurationManager.AppSettings["CSVSourceFolder"];
             CSVManager manager = new CSVManager(source);
             manager.Run();
-
+            
 
 
 
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
-            manager.Stop();
+            //manager.Stop();
 
         }
     }
