@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommaSeparatedValuesService", "CommaSeparatedValuesService\CommaSeparatedValuesService.csproj", "{2A0A6125-127C-4059-B122-541110668A5F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferToDB", "TransferToDB\TransferToDB.csproj", "{D9C5C3AE-7584-46B0-A997-7A758C6E4902}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A0A6125-127C-4059-B122-541110668A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A0A6125-127C-4059-B122-541110668A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A0A6125-127C-4059-B122-541110668A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A0A6125-127C-4059-B122-541110668A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C5C3AE-7584-46B0-A997-7A758C6E4902}.Release|Any CPU.ActiveCfg = Release|Any CPU

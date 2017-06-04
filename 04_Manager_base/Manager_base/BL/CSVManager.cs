@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TransferToDB
+namespace BL
 {
-    class Program
+    public class CSVManager : IDisposable
     {
-        static void Main(string[] args)
+
+
+
+
+
+        public void Dispose()
         {
-
-
-
-
+            throw new NotImplementedException();
         }
     }
 }
