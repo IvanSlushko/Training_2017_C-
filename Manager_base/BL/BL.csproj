@@ -45,7 +45,9 @@
     <Compile Include="DataTransfer\Manager_BL.cs" />
     <Compile Include="DataTransfer\Product_BL.cs" />
     <Compile Include="DataTransfer\SaleInfo_BL.cs" />
+    <Compile Include="IRepoTransfer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepoTransfer.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
