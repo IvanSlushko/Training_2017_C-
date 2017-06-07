@@ -44,27 +44,49 @@ namespace DAL.Repository
 
         public void Add(DAL.Data.SaleInfo_DAL salesInfo)
         {
-            this.context.SalesInfo.Add(ToEntity(salesInfo));
+            context.SalesInfo.Add(ToEntity(salesInfo));
         }
 
         public IEnumerable<SaleInfo_DAL> GetAll()
         {
-            throw new NotImplementedException();
+            return context.SalesInfo.Select(s => new DAL.Data.SaleInfo_DAL()
+            {
+                Id = s.Id,
+                Date = s.Date,
+                ManagerId = s.ManagerId,
+                ClientId = s.ClientId,
+                ProductId = s.ProductId,
+                PriceSum = s.PriceSum
+            }
+                                            ).ToArray();
         }
 
         public SaleInfo_DAL GetById(int Id)
         {
-            throw new NotImplementedException();
+            return ToObject(context.SalesInfo.FirstOrDefault(s => (s.Id == Id)));
         }
 
-        public int? GetId(SaleInfo_DAL item)
+        public int? GetId(SaleInfo_DAL saleInfo)
         {
-            throw new NotImplementedException();
+            var temp = context.SalesInfo.FirstOrDefault(s => (s.Id == saleInfo.Id));
+            if (temp == null)
+            {
+                return null;
+            }
+            else
+            {
+                return temp.Id;
+            }
         }
 
         public void Update(SaleInfo_DAL item)
         {
-            throw new NotImplementedException();
+            var sale = context.SalesInfo.FirstOrDefault(s => (s.Id == item.Id));
+            sale.Date = item.Date;
+            sale.ManagerId = item.ManagerId;
+            sale.ClientId = item.ClientId;
+            sale.ProductId = item.ProductId;
+            sale.PriceSum = item.PriceSum;
         }
     }
 }

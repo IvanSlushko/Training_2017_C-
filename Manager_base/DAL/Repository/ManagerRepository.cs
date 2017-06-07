@@ -13,34 +13,53 @@ namespace DAL.Repository
     {
         private DataBaseModelContainer context;
 
+        public DataBaseModel.Manager ToEntity(DAL.Data.Manager_DAL manager)
+        {
+            return new DataBaseModel.Manager() { SecondName = manager.SecondName };
+        }
+
+        private DAL.Data.Manager_DAL ToObject(DataBaseModel.Manager manager)
+        {
+            return new DAL.Data.Manager_DAL() { SecondName = manager.SecondName };
+        }
+
         public ManagerRepository(DataBaseModelContainer context)
         {
             this.context = context;
         }
 
-        public void Add(Manager_DAL item)
+        public void Add(Manager_DAL manager)
         {
-            throw new NotImplementedException();
+            context.Managers.Add(ToEntity(manager));
         }
 
         public IEnumerable<Manager_DAL> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Managers.Select(m => new DAL.Data.Manager_DAL() { Id = m.Id, SecondName = m.SecondName }).ToArray();
         }
 
         public Manager_DAL GetById(int Id)
         {
-            throw new NotImplementedException();
+            return ToObject(context.Managers.FirstOrDefault(m => (m.Id == Id)));
         }
 
-        public int? GetId(Manager_DAL item)
+        public int? GetId(Manager_DAL manager)
         {
-            throw new NotImplementedException();
+            var temp = context.Managers.FirstOrDefault(m => (m.SecondName == manager.SecondName));
+            if (temp == null)
+            {
+                return null;
+            }
+            else
+            {
+                return temp.Id;
+            }
         }
 
         public void Update(Manager_DAL item)
         {
-            throw new NotImplementedException();
+            var manager = context.Managers.FirstOrDefault(m => (m.Id == item.Id));
+            manager.SecondName = item.SecondName;
         }
     }
 }

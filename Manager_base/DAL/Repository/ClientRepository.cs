@@ -13,34 +13,53 @@ namespace DAL.Repository
     {
         private DataBaseModelContainer context;
 
+        public DataBaseModel.Client ToEntity(DAL.Data.Client_DAL client)
+        {
+            return new DataBaseModel.Client() { FullName = client.FullName };
+        }
+
+        private DAL.Data.Client_DAL ToObject(DataBaseModel.Client client)
+        {
+            return new DAL.Data.Client_DAL() { FullName = client.FullName };
+        }
+
         public ClientRepository(DataBaseModelContainer context)
         {
             this.context = context;
         }
 
-        public void Add(Client_DAL item)
+        public void Add(Client_DAL client)
         {
-            throw new NotImplementedException();
+            context.Clients.Add(ToEntity(client));
         }
 
         public IEnumerable<Client_DAL> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Clients.Select(c => new DAL.Data.Client_DAL() { Id = c.Id, FullName = c.FullName }).ToArray();
         }
 
         public Client_DAL GetById(int Id)
         {
-            throw new NotImplementedException();
+            return ToObject(context.Clients.FirstOrDefault(c => (c.Id == Id)));
         }
 
-        public int? GetId(Client_DAL item)
+        public int? GetId(Client_DAL client)
         {
-            throw new NotImplementedException();
+            var temp = context.Clients.FirstOrDefault(c => (c.FullName == client.FullName));
+            if (temp == null)
+            {
+                return null;
+            }
+            else
+            {
+                return temp.Id;
+            }
         }
 
         public void Update(Client_DAL item)
         {
-            throw new NotImplementedException();
+            var client = context.Clients.FirstOrDefault(c => (c.Id == item.Id));
+            client.FullName = item.FullName;
         }
     }
 }

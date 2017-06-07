@@ -62,6 +62,14 @@
       <Project>{43FAC334-5630-44AC-9E38-E3FB395D2367}</Project>
       <Name>CommaSeparatedValuesService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5e81451e-3437-4726-978b-1f3bb2231768}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseModel\DataBaseModel.csproj">
+      <Project>{ad1ef8dd-46ce-4d69-8cee-20e573ae190c}</Project>
+      <Name>DataBaseModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

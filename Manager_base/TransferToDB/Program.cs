@@ -19,6 +19,8 @@ namespace TransferToDB
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
+
+
             manager.Stop();
         }
     }

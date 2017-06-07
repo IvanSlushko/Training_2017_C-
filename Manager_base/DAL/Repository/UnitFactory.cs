@@ -73,16 +73,16 @@ namespace DAL.Repository
 
         public void Save()
         {
-            //context.
+            context.SaveChanges();
         }
 
         public void Dispose()
         {
-            //if (context != null)
-            //{
-            //    context.Dispose();
-            //    context = null;
-            //}
+            if (context != null)
+            {
+                context.Dispose();
+                context = null;
+            }
         }
     }
 }
