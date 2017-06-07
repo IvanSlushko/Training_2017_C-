@@ -22,6 +22,10 @@ namespace TransferToDB
 
 
             manager.Stop();
+
+
+
+            //https://metanit.com/sharp/mvc5/23.7.php
         }
     }
 }
