@@ -23,7 +23,7 @@ namespace DAL.Repository
             context = new DataBaseModelContainer();
         }
 
-        public IDataRepository<Client_DAL> Clients
+        public IDataRepository<DAL.Data.Client_DAL> Clients
         {
             get
             {
@@ -35,7 +35,7 @@ namespace DAL.Repository
             }
         }
 
-        public IDataRepository<Manager_DAL> Managers
+        public IDataRepository<DAL.Data.Manager_DAL> Managers
         {
             get
             {
@@ -47,7 +47,7 @@ namespace DAL.Repository
             }
         }
 
-        public IDataRepository<Product_DAL> Products
+        public IDataRepository<DAL.Data.Product_DAL> Products
         {
             get
             {
@@ -59,7 +59,7 @@ namespace DAL.Repository
             }
         }
 
-        public IDataRepository<SaleInfo_DAL> SalesInfo
+        public IDataRepository<DAL.Data.SaleInfo_DAL> SalesInfo
         {
             get
             {
@@ -71,14 +71,18 @@ namespace DAL.Repository
             }
         }
 
-        public void SaveChanges()
+        public void Save()
         {
-            throw new NotImplementedException();
+            //context.
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //if (context != null)
+            //{
+            //    context.Dispose();
+            //    context = null;
+            //}
         }
     }
 }
