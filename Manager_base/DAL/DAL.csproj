@@ -44,11 +44,20 @@
     <Compile Include="Data\Manager_DAL.cs" />
     <Compile Include="Data\Product_DAL.cs" />
     <Compile Include="Data\SaleInfo_DAL.cs" />
+    <Compile Include="Intarfaces\IDataRepository.cs" />
+    <Compile Include="Intarfaces\IDataSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ClientRepository.cs" />
     <Compile Include="Repository\ManagerRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SaleInfoRepository.cs" />
+    <Compile Include="Repository\UnitFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseModel\DataBaseModel.csproj">
+      <Project>{AD1EF8DD-46CE-4D69-8CEE-20E573AE190C}</Project>
+      <Name>DataBaseModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,10 +8,10 @@ namespace DAL.Intarfaces
 {
     public interface IDataSection : IDisposable
     {
-        IDataRepository<Data.Client_DAL> Clients { get; }
-        IDataRepository<Data.Manager_DAL> Managers { get; }
-        IDataRepository<Data.Product_DAL> Products { get; }
-        IDataRepository<Data.SaleInfo_DAL> SalesInfo { get; }
-        void SaveChanges();
+        IDataRepository<DAL.Data.Client_DAL> Clients { get; }
+        IDataRepository<DAL.Data.Manager_DAL> Managers { get; }
+        IDataRepository<DAL.Data.Product_DAL> Products { get; }
+        IDataRepository<DAL.Data.SaleInfo_DAL> SalesInfo { get; }
+        void Save();
     }
 }
