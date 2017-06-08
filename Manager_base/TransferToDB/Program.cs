@@ -20,13 +20,11 @@ namespace TransferToDB
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
 
-
             manager.Stop();
 
-            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(new string('=', 60));
             manager.GetAllTables();
             Console.ReadKey();
-
 
             //https://metanit.com/sharp/mvc5/23.7.php
         }

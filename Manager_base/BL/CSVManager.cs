@@ -127,10 +127,10 @@ namespace BL
         {
             try
             {
-                Console.WriteLine("Sales:");
+                Console.WriteLine("Sales:      DATE   -   MANAGER  - CLIENT  -  PRODUCT - PRICE");
                 foreach (var sale in repoTransfer.GetSales())
                 {
-                    Console.WriteLine("{0}, | {1} | {2} | {3} | {4}", sale.Date, sale.Manager, sale.Client, sale.Product, sale.PriceSum);
+                    Console.WriteLine("{0}, -- {1} -- {2} -- {3} -- {4}", sale.Date, sale.Manager, sale.Client, sale.Product, sale.PriceSum);
                 }
 
                 Console.WriteLine("\nManagers:");
