@@ -23,6 +23,9 @@ namespace TransferToDB
 
             manager.Stop();
 
+            Console.WriteLine("--------------------------------------------------");
+            manager.GetAllTables();
+            Console.ReadKey();
 
 
             //https://metanit.com/sharp/mvc5/23.7.php

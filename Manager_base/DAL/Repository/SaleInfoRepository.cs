@@ -9,7 +9,7 @@ using DAL.Data;
 
 namespace DAL.Repository
 {
-    public class SaleInfoRepository : IDataRepository<Data.SaleInfo_DAL>
+    public class SaleInfoRepository : IDataRepository<DAL.Data.SaleInfo_DAL>
     {
         private DataBaseModelContainer context;
 

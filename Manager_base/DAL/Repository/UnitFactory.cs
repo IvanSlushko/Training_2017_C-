@@ -11,7 +11,6 @@ namespace DAL.Repository
 {
     public class UnitFactory : IDataSection
     {
-
         private DataBaseModelContainer context;
         private ClientRepository clientRepository;
         private ManagerRepository managerRepository;

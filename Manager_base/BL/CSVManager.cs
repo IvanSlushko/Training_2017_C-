@@ -18,6 +18,7 @@ namespace BL
         public CSVManager(string source)
         {
             sourceDir = source;
+            repoTransfer = new RepoTransfer();
             fileWatcher = new FileSystemWatcher(source, "*.csv");
             fileWatcher.Created += OnCreated;
             targetDir = string.Concat(source, @"\Done");
@@ -121,6 +122,41 @@ namespace BL
             }
             Console.WriteLine("The catalog {0} check is started.", sourceDir);
         }
+
+        public void GetAllTables()
+        {
+            try
+            {
+                Console.WriteLine("Sales:");
+                foreach (var sale in repoTransfer.GetSales())
+                {
+                    Console.WriteLine("{0}, | {1} | {2} | {3} | {4}", sale.Date, sale.Manager, sale.Client, sale.Product, sale.PriceSum);
+                }
+
+                Console.WriteLine("\nManagers:");
+                foreach (var manager in repoTransfer.GetManagers())
+                {
+                    Console.WriteLine(manager.SecondName);
+                }
+
+                Console.WriteLine("\nClients:");
+                foreach (var client in repoTransfer.GetClients())
+                {
+                    Console.WriteLine(client.FullName);
+                }
+
+                Console.WriteLine("\nProducts:");
+                foreach (var product in repoTransfer.GetProducts())
+                {
+                    Console.WriteLine(product.Name);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("EXCEPTION from CSVmanager >>>:\n {0}", exception);
+            }
+        }
+
 
         #region IDisposable
         public void Dispose()
