@@ -130,10 +130,6 @@
       <Project>{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{5e81451e-3437-4726-978b-1f3bb2231768}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataBaseModel\DataBaseModel.csproj">
       <Project>{ad1ef8dd-46ce-4d69-8cee-20e573ae190c}</Project>
       <Name>DataBaseModel</Name>
