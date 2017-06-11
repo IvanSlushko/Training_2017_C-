@@ -1,6 +1,6 @@
 ﻿namespace CSVServiceNew
 {
-    partial class CSVServ
+    partial class CSVService1
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             // 
-            // CSVServ
+            // CSVService1
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "CSVService1";
 
         }
 

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferToDB", "TransferToD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommaSeparatedValuesService", "CommaSeparatedValuesService\CommaSeparatedValuesService.csproj", "{43FAC334-5630-44AC-9E38-E3FB395D2367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVServiceNew", "CSVServiceNew\CSVServiceNew.csproj", "{DBF80513-B7DA-4F19-B028-7736CB97788D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FAC334-5630-44AC-9E38-E3FB395D2367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF80513-B7DA-4F19-B028-7736CB97788D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF80513-B7DA-4F19-B028-7736CB97788D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF80513-B7DA-4F19-B028-7736CB97788D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF80513-B7DA-4F19-B028-7736CB97788D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
