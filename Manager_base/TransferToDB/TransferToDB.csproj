@@ -68,10 +68,6 @@
       <Project>{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommaSeparatedValuesService\CommaSeparatedValuesService.csproj">
-      <Project>{43FAC334-5630-44AC-9E38-E3FB395D2367}</Project>
-      <Name>CommaSeparatedValuesService</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5e81451e-3437-4726-978b-1f3bb2231768}</Project>
       <Name>DAL</Name>

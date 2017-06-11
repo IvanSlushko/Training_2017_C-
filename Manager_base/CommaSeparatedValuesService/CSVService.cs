@@ -7,8 +7,8 @@ namespace CommaSeparatedValuesService
 {
     public partial class CSVService : ServiceBase
     {
-        private CSVManager manager;
-        public CSVService()
+        private CSVManager manager; 
+        public CSVService()//текущий сервис не инсталлируется
         {
             InitializeComponent();
         }
