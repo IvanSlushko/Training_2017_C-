@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BL.DataTransfer;
 using DAL.Repository;
+using System.Threading;
 
 namespace BL
 {
@@ -62,12 +63,8 @@ namespace BL
                 repositories.SalesInfo.Add(saleInfo);
                 repositories.Save();
 
-
-                //TODO
-
-                //Console.WriteLine("wait2000");
+                //Console.WriteLine("delay 2000");
                 //Thread.Sleep(2000);
-                //// copy 2 file with delay.
             }
 
         }
