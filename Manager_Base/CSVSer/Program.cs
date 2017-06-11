@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSVServiceNew
+namespace CSVSer
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace CSVServiceNew
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new CSVService1()
+                new Service1()
             };
             ServiceBase.Run(ServicesToRun);
         }
