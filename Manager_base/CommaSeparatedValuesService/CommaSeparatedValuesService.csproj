@@ -124,9 +124,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{C44FCD81-7F48-4430-8CA0-9AA1E492C2FD}</Project>
       <Name>BL</Name>
