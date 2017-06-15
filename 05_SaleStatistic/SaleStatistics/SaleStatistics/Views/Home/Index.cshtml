@@ -1,7 +1,44 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Sale Statistics";
+    <!--Layout = null;-->
 }
 
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+
+    <body>
+        <div id="saleList">
+            <table cellspacing="2" border="1" cellpadding="5" width="600">
+                <tr>
+                    <td>Date  </td>
+                    <td>Manager  </td>
+                    <td>Client  </td>
+                    <td>Product  </td>
+                    <td>Price  </td>
+                </tr>
+
+                @foreach (var sale in ViewBag.Sales)
+                {
+                    <tr>
+                        <td> @sale.Date </td>
+                        <td> @sale.Manager </td>
+                        <td> @sale.Client </td>
+                        <td> @sale.Product </td>
+                        <td> @sale.PriceSum </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>
+</DOCTYPE>
+
+<!--
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
@@ -29,3 +66,4 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+-->
