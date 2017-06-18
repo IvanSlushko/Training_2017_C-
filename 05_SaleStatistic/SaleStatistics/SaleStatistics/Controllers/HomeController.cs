@@ -31,6 +31,17 @@ namespace SaleStatistics.Controllers
             return View(sales);
         }
 
+        public ActionResult Managers()
+        {
+            var repositoryTransfer = new RepoTransfer();
+            var managersDTO = repositoryTransfer.GetManagers();
+            var managers = managersDTO.Select(m => new Manager()
+            {
+                SecondName = m.SecondName
+            }).ToArray();
+            return View(managers);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Ivan Slushko";

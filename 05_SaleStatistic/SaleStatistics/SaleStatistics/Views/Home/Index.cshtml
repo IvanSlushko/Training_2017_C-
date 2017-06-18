@@ -13,16 +13,46 @@
 
     <body>
         <div>
-            <h3> @Html.ActionLink("View All Sales", "Sales")  </h3>
+            <h4> @Html.ActionLink("View All Sales", "Sales")  </h4>
+        </div>
+        <div>
+            <h4> @Html.ActionLink("View All Managers", "Managers")  </h4>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <style type="text/css">
+            #content {
+                width: 500px; /* Ширина слоя */
+                margin: 0 auto 50px; /* Выравнивание по центру */
+            }
+
+            #footer {
+                position: fixed; /* Фиксированное положение */
+                left: 0;
+                bottom: 0; /* Левый нижний угол */
+                padding: 10px; /* Поля вокруг текста */
+                background: #fff; /* Цвет фона */
+                color:#39b54a; /* Цвет текста */
+                width: 100%; /* Ширина слоя */
+            }
+        </style>
+
+        <div id="footer">
+            <h4>Help sites: </h4>
+            <p><a href="http://htmlbook.ru" class="btn btn-primary btn-lg">Html &raquo;</a></p>
+            <p><a href="https://professorweb.ru/my/ASP_NET/mvc/level2/2_1.php" class="btn btn-primary btn-lg">Razor &raquo;</a></p>
+            <p><a href="https://metanit.com/sharp/mvc/7.3.php" class="btn btn-primary btn-lg">Validation attribut &raquo;</a></p>
         </div>
     </body>
 
 </html>
 </DOCTYPE>
-
-<div>
-    <h3>Help sites: </h3>
-    <p><a href="http://htmlbook.ru" class="btn btn-primary btn-lg">Html &raquo;</a></p>
-    <p><a href="https://professorweb.ru/my/ASP_NET/mvc/level2/2_1.php" class="btn btn-primary btn-lg">Razor &raquo;</a></p>
-    <p><a href="https://metanit.com/sharp/mvc/7.3.php" class="btn btn-primary btn-lg">Validation attribut &raquo;</a></p>
-</div>
