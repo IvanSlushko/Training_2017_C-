@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<SaleStatistics.Models.SaleInfo>
+﻿@model IEnumerable<SaleStatistics.Models.SaleInfo>
 
 @{
     Layout = null;
@@ -11,10 +10,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Sales</title>
-    <!--<p><br></p>                                                 <!--add line after head-->
 </head>
+
 <body>
-    <h2>Sales list</h2>
+    <h2>Sales information:</h2>
 
     <div id="saleList">
         <table cellspacing="2" border="1" cellpadding="5" width="600">
@@ -27,7 +26,7 @@
                 <td><b>Price</b></td>
             </tr>
 
-            @foreach (var sale in ViewBag.Sales)
+            @foreach (var sale in Model)
             {
                 <tr>
                     <td> @sale.Id </td>
@@ -39,6 +38,12 @@
                 </tr>
             }
         </table>
+
+        <p></p>
+        <form action="Index">
+            <button type="submit">Go Homepage</button>
+        </form>
+
     </div>
 </body>
 </html>

@@ -3,18 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SaleStatistics.Models;
 using BL;
 
 namespace SaleStatistics.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: home
         public ActionResult Index()
         {
-            var repositoryTransfer = new RepoTransfer();
-            ViewBag.Sales = repositoryTransfer.GetSales();
             return View();
+        }
+
+        public ActionResult Sales()
+        {
+            var repositoryTransfer = new RepoTransfer();
+            var salesDTO = repositoryTransfer.GetSales();
+            var sales = salesDTO.Select(s => new SaleInfo()
+            {
+                Id = s.Id,
+                Date = s.Date,
+                Manager = s.Manager,
+                Client = s.Client,
+                Product = s.Product,
+                PriceSum = s.PriceSum
+            }).ToArray();
+            return View(sales);
         }
 
         public ActionResult About()
