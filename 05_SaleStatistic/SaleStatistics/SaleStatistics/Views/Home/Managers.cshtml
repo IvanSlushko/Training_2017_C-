@@ -1,40 +1,23 @@
 ﻿@model IEnumerable<SaleStatistics.Models.Manager>
 
 @{
-    Layout = null;
 }
 
-<!DOCTYPE html>
+<table cellspacing="2" border="1" cellpadding="5" width="200">
+    <tr>
+        <th>Managers:</th>
+    </tr>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Managers</title>
-</head>
-
-<body>
-    <h2>Managers:</h2>
-
-    <div id="managersList">
-        <table cellspacing="2" border="1" cellpadding="5" width="200">
-            <tr>
-                <th>Manager</th>
-            </tr>
-
-            @foreach (var manager in Model)
+    @foreach (var manager in Model)
             {
-                <tr>
-                    <td> @Html.DisplayFor(m => manager.SecondName) </td>
-                </tr>
-            }
-        </table>
+        <tr>
+            <td> @Html.DisplayFor(m => manager.SecondName) </td>
+        </tr>
+    }
+</table>
 
-        <p></p>
-        <form action="Index">
-            <button type="submit">Go Homepage</button>
-        </form>
+<p></p>
+<form action="Index">
+    <button type="submit">Go Homepage</button>
+</form>
 
-    </div>
-
-</body>
-</html>

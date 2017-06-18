@@ -1,49 +1,33 @@
 ﻿@model IEnumerable<SaleStatistics.Models.SaleInfo>
 
 @{
-    Layout = null;
 }
 
-<!DOCTYPE html>
+<table cellspacing="2" border="1" cellpadding="5" width="600">
+    <tr>
+        <td><b>ID</b></td>
+        <td><b>Date</b></td>
+        <td><b>Manager</b></td>
+        <td><b>Client</b></td>
+        <td><b>Product</b></td>
+        <td><b>Price</b></td>
+    </tr>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Sales</title>
-</head>
-
-<body>
-    <h2>Sales information:</h2>
-
-    <div id="salesList">
-        <table cellspacing="2" border="1" cellpadding="5" width="600">
-            <tr>
-                <td><b>ID</b></td>
-                <td><b>Date</b></td>
-                <td><b>Manager</b></td>
-                <td><b>Client</b></td>
-                <td><b>Product</b></td>
-                <td><b>Price</b></td>
-            </tr>
-
-            @foreach (var sale in Model)
+    @foreach (var sale in Model)
             {
-                <tr>
-                    <td> @sale.Id </td>
-                    <td> @sale.Date </td>
-                    <td> @sale.Manager </td>
-                    <td> @sale.Client </td>
-                    <td> @sale.Product </td>
-                    <td> @sale.PriceSum </td>
-                </tr>
-            }
-        </table>
+        <tr>
+            <td> @sale.Id </td>
+            <td> @sale.Date </td>
+            <td> @sale.Manager </td>
+            <td> @sale.Client </td>
+            <td> @sale.Product </td>
+            <td> @sale.PriceSum </td>
+        </tr>
+    }
+</table>
 
-        <p></p>
-        <form action="Index">
-            <button type="submit">Go Homepage</button>
-        </form>
+<p></p>
+<form action="Index">
+    <button type="submit">Go Homepage</button>
+</form>
 
-    </div>
-</body>
-</html>
