@@ -1,0 +1,71 @@
+﻿@model SaleStatistics.Models.SaleInfo
+
+@{
+    ViewBag.Title = "Sale edit";
+}
+
+<script src="~/Scripts/jquery-2.2.3.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Sale edit </legend>
+        @Html.HiddenFor(model => model.Id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Manager)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Manager)
+            @Html.ValidationMessageFor(model => model.Manager)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Client)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Client)
+            @Html.ValidationMessageFor(model => model.Client)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Product)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Product)
+            @Html.ValidationMessageFor(model => model.Product)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PriceSum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PriceSum)
+            @Html.ValidationMessageFor(model => model.PriceSum)
+        </div>
+        <p>
+            <input id="saveButton" type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<script type="text/javascript">
+    onSaleSave = function () {
+        $("form").on("submit", function (e) {
+            +e.preventDefault();
+            $.post('@Url.Action("SaleEdit", "Home")', $("form").serialize(), function (data, textStatus, jHXR) {
+                hideSaleEdit();
+                onSaleListLoad();
+            });
+        });
+    }
+    $("#saveButton").click(onSaleSave);
+</script>

@@ -1,23 +1,71 @@
 ﻿@model IEnumerable<SaleStatistics.Models.Manager>
 
 @{
+    ViewBag.Title = "Managers list";
 }
 
-<table cellspacing="2" border="1" cellpadding="5" width="200">
-    <tr>
-        <th>Managers:</th>
-    </tr>
+<script src="~/Scripts/jquery-2.2.3.min.js"></script>
 
-    @foreach (var manager in Model)
-            {
-        <tr>
-            <td> @Html.DisplayFor(m => manager.SecondName) </td>
-        </tr>
-    }
-</table>
+<header>
+    <h4> Managers: </h4>
+</header>
+
+<div>
+    @Html.DropDownList("ManagerDDLChange", new SelectList(Model, "Id", "SecondName"), "Select manager...", new { onchange = "onManagerDDLChange()" })
+    <p></p>
+</div>
+
+<section id="managerSection">
+    <div id="managerEdit">
+    </div>
+</section>
+
+<section id="managerListSection">
+    <div id="managerList">
+    </div>
+</section>
+
+<br/>
+<div>
+    @Html.ActionLink("Back to full list", "Managers")
+</div>
+
 
 <p></p>
 <form action="Index">
     <button type="submit">Go Homepage</button>
 </form>
 
+<script type="text/javascript">
+    showManagerEdit = function () {
+        $("#managerEdit").show();
+    }
+
+    hideManagerEdit = function () {
+        $("#managerEdit").hide();
+        $("#managerEdit").html(null);
+    }
+
+    onManagerListLoad = function () {
+        $.get('@Url.Action("ManagerList", "Home")', null,
+           function (data, textStatus, jqXHR) {
+               $("#managerList").html(data);
+           });
+    }
+
+    onManagerListLoad();
+
+    showSelectedManager = function (managerId) {
+        $.get('@Url.Action("ShowManager", "Home")', { id: managerId },
+           function (data, textStatus, jqXHR) {
+               $("#managerList").html(data);
+               $("#managerList").show();
+           });
+    }
+
+    onManagerDDLChange = function () {
+        var x = document.getElementById("ManagerDDLChange").value;
+        $("#managerList").html(null);
+        showSelectedManager(x);
+    }
+</script>

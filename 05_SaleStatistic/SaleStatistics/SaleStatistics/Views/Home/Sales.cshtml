@@ -1,33 +1,52 @@
 ﻿@model IEnumerable<SaleStatistics.Models.SaleInfo>
 
 @{
+    ViewBag.Title = "Sales list";
 }
 
-<table cellspacing="2" border="1" cellpadding="5" width="600">
-    <tr>
-        <td><b>ID</b></td>
-        <td><b>Date</b></td>
-        <td><b>Manager</b></td>
-        <td><b>Client</b></td>
-        <td><b>Product</b></td>
-        <td><b>Price</b></td>
-    </tr>
+<script src="~/Scripts/jquery-2.2.3.min.js"></script>
 
-    @foreach (var sale in Model)
-            {
-        <tr>
-            <td> @sale.Id </td>
-            <td> @sale.Date </td>
-            <td> @sale.Manager </td>
-            <td> @sale.Client </td>
-            <td> @sale.Product </td>
-            <td> @sale.PriceSum </td>
-        </tr>
-    }
-</table>
+<header>
+    <h4> Sales list: </h4>
+</header>
+
+<section id="saleSection">
+    <div id="saleEdit">
+    </div>
+</section>
+
+<section id="salesListSection">
+    <div id="salesList">
+    </div>
+</section>
+
+
+<!--<br />
+<div>
+    @@Html.ActionLink("Back to full list", "Sales")
+</div>
+    -->
 
 <p></p>
 <form action="Index">
     <button type="submit">Go Homepage</button>
 </form>
 
+<script type="text/javascript">
+    showSaleEdit = function () {
+        $("#saleEdit").show();
+    }
+
+    hideSaleEdit = function () {
+        $("#saleEdit").hide();
+        $("#saleEdit").html(null);
+    }
+
+    onSaleListLoad = function () {
+        $.get('@Url.Action("SalesList", "Home")', null,
+           function (data, textStatus, jqXHR) {
+               $("#salesList").html(data);
+           });
+    }
+    onSaleListLoad();
+</script>

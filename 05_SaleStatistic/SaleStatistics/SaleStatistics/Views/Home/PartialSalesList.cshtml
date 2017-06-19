@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SaleStatistics.Models.SaleInfo>
+
+<table>
+
+    <tr>
+        <th style="border: ridge medium gray">Id</th>
+        <th style="border: ridge medium gray">Date</th>
+        <th style="border: ridge medium gray">Manager</th>
+        <th style="border: ridge medium gray">Client</th>
+        <th style="border: ridge medium gray">Product</th>
+        <th style="border: ridge medium gray">Price</th>
+    </tr>
+
+    @foreach (var sale in Model)
+    {
+        <tr>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Id) </td>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Date) </td>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Manager) </td>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Client) </td>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Product) </td>
+            <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.PriceSum) </td>
+            <td><button type="button" onclick="onSaleEdit(@sale.Id)"> Edit </button></td>
+        </tr>
+    }
+</table>
+
+<script type="text/javascript">
+    onSaleEdit = function (saleId) {
+        $.get('@Url.Action("SaleEdit", "Home")', { id: saleId }, function (data, textStatus, XHR) {
+            $("#saleEdit").html(data);
+            showSaleEdit();
+        })
+    }
+</script>
