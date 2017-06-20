@@ -23,7 +23,7 @@ namespace SaleStatistics.Models
 
         public double PriceSum { get; set; }
 
-        //аттрибуты валидации!!
+        //validation attributs!!
         // https://metanit.com/sharp/mvc/7.3.php
 
     }
