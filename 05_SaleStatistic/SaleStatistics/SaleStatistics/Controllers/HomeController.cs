@@ -54,6 +54,7 @@ namespace SaleStatistics.Controllers
 
         //!!!!
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public ActionResult SaleEdit(int id)
         {
             var repositoryTransfer = new RepoTransfer();

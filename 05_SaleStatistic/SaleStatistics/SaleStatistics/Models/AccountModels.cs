@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
 
-namespace SalesInfoMVC.Models
+namespace SaleStatistics.Models
 {
     public class UsersContext : DbContext
     {
