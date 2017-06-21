@@ -43,7 +43,10 @@
     }
 
     onManagerCancel = function () {
-        $("form").on("reset", function () { hideManagerEdit(); onManagerListLoad(); });
+        $("form").on("reset", function () {
+            hideManagerEdit();
+            onManagerListLoad();
+        });
     }
 
     $("#saveButton").click(onManagerSave);

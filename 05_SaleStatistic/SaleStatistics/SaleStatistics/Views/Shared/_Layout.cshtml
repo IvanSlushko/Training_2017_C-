@@ -5,27 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 
 <body>
 
     <header>
-        <h3> Sales statistics display system </h3>
+        <div class="content-wrapper">
+
+            <div class="float-right">
+                <p class="site-title">@Html.ActionLink("Sales statistics display system", "Index", "Home")</p>
+            </div>
+
+            <div class="float-right">
+
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Sales", "Sales")</li>
+                        <li>@Html.ActionLink("Managers", "Managers")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <div class="body">
-        @RenderBody()
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
     </div>
 
+
     <footer>
-        <p> @DateTime.Now.Year - My Application</p>
+        <ul id="menu">
+            <h5>Help sites: </h5>
+            <li>@Html.ActionLink("Html", "http://htmlbook.ru")</li>
+            <li>@Html.ActionLink("Razor", "https://professorweb.ru/my/ASP_NET/mvc/level2/2_1.php")</li>
+            <li>@Html.ActionLink("Bootstrap", "https://www.w3schools.com/bootstrap/default.asp")</li>
+            <li>@Html.ActionLink("Validation attribut", "https://metanit.com/sharp/mvc/7.3.php")</li>
+            <p> @DateTime.Now.Year - My Application</p>
+        </ul>
     </footer>
 
-    <style>
-        body {
-            margin: 10px;
-        }
-    </style>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 
 </body>
 </html>
