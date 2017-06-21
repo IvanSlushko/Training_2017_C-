@@ -9,6 +9,8 @@ namespace SaleStatistics.Models
     public class Manager
     {
         public int Id { get; set; }
+
+
         [MaxLength(30, ErrorMessage = "Too many chars")]
         public string SecondName { get; set; }
     }
