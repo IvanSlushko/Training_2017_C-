@@ -36,7 +36,6 @@ namespace SaleStatistics.Controllers
             return View(sales);
         }
 
-        //!!!!!!!
         public ActionResult SalesList()
         {
             var repositoryTransfer = new RepoTransfer();

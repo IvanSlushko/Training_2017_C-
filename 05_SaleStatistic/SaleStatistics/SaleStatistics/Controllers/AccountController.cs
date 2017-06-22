@@ -16,9 +16,8 @@ namespace SaleStatistics.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
-        //
-        // GET: /Account/Login
 
+        // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -26,9 +25,7 @@ namespace SaleStatistics.Controllers
             return View();
         }
 
-        //
         // POST: /Account/Login
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -43,10 +40,8 @@ namespace SaleStatistics.Controllers
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
             return View(model);
         }
-
-        //
+        
         // POST: /Account/LogOff
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
@@ -54,19 +49,15 @@ namespace SaleStatistics.Controllers
             WebSecurity.Logout();
             return RedirectToAction("Index", "Home");
         }
-
-        //
+        
         // GET: /Account/Register
-
         [Authorize(Roles = "admin")]
         public ActionResult Register()
         {
             return View();
         }
-
-        //
+        
         // POST: /Account/Register
-
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
@@ -91,9 +82,8 @@ namespace SaleStatistics.Controllers
             return View(model);
         }
 
-        //
+        
         // POST: /Account/Disassociate
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Disassociate(string provider, string providerUserId)
@@ -120,9 +110,7 @@ namespace SaleStatistics.Controllers
             return RedirectToAction("Manage", new { Message = message });
         }
 
-        //
-        // GET: /Account/Manage
-
+         // GET: /Account/Manage
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -135,9 +123,7 @@ namespace SaleStatistics.Controllers
             return View();
         }
 
-        //
         // POST: /Account/Manage
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Manage(LocalPasswordModel model)
@@ -198,9 +184,7 @@ namespace SaleStatistics.Controllers
             return View(model);
         }
 
-        //
         // POST: /Account/ExternalLogin
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -209,9 +193,7 @@ namespace SaleStatistics.Controllers
             return new ExternalLoginResult(provider, Url.Action("ExternalLoginCallback", new { ReturnUrl = returnUrl }));
         }
 
-        //
         // GET: /Account/ExternalLoginCallback
-
         [AllowAnonymous]
         public ActionResult ExternalLoginCallback(string returnUrl)
         {
@@ -242,9 +224,8 @@ namespace SaleStatistics.Controllers
             }
         }
 
-        //
-        // POST: /Account/ExternalLoginConfirmation
 
+        // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -288,9 +269,8 @@ namespace SaleStatistics.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Account/ExternalLoginFailure
 
+        // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()
         {
@@ -356,7 +336,6 @@ namespace SaleStatistics.Controllers
 
             public string Provider { get; private set; }
             public string ReturnUrl { get; private set; }
-
             public override void ExecuteResult(ControllerContext context)
             {
                 OAuthWebSecurity.RequestAuthentication(Provider, ReturnUrl);
