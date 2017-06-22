@@ -1,12 +1,13 @@
-﻿
-<html>
+﻿<html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")
+
+    @*Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")*@
+
 </head>
 
 <body>
@@ -41,20 +42,26 @@
         </section>
     </div>
 
-@*
     <footer>
         <ul id="menu">
-            <h5>Help sites: </h5>
-            <li>@Html.ActionLink("Html", "http://htmlbook.ru")</li>
-            <li>@Html.ActionLink("Razor", "https://professorweb.ru/my/ASP_NET/mvc/level2/2_1.php")</li>
-            <li>@Html.ActionLink("Bootstrap", "https://www.w3schools.com/bootstrap/default.asp")</li>
-            <li>@Html.ActionLink("Validation attribut", "https://metanit.com/sharp/mvc/7.3.php")</li>
             <p> @DateTime.Now.Year - My Application</p>
         </ul>
     </footer>
-*@
+    @*
+        <footer>
+            <ul id="menu">
+                <h5>Help sites: </h5>
+                <li>@Html.ActionLink("Html", "http://htmlbook.ru")</li>
+                <li>@Html.ActionLink("Razor", "https://professorweb.ru/my/ASP_NET/mvc/level2/2_1.php")</li>
+                <li>@Html.ActionLink("Bootstrap", "https://www.w3schools.com/bootstrap/default.asp")</li>
+                <li>@Html.ActionLink("Validation attribut", "https://metanit.com/sharp/mvc/7.3.php")</li>
+                <p> @DateTime.Now.Year - My Application</p>
+            </ul>
+        </footer>
+    *@
 
-    @Scripts.Render("~/bundles/jquery")
+    @*  @Scripts.Render("~/bundles/jquery")*@
+
     @RenderSection("scripts", required: false)
 
 </body>

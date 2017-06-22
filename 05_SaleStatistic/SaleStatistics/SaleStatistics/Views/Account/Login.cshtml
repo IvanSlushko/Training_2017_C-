@@ -9,7 +9,7 @@
 </hgroup>
 
 <section id="loginForm">
-    <h2>Use a local account to log in.</h2>
+    <h3>Use a local account to log in.</h3>
     @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
     {
         @Html.AntiForgeryToken()
@@ -36,18 +36,24 @@
             </ol>
             <input type="submit" value="Log in" />
         </fieldset>
-
-        <p>
-            @Html.ActionLink("Register", "Register") if you don't have an account.
-        </p>
+        @*
+            <p>
+                @Html.ActionLink("Register", "Register") if you don't have an account.
+            </p>
+        *@
     }
 </section>
 
+
 <section class="social" id="socialLoginForm">
-    <h2>Use another service to log in.</h2>
+    @*
+          <h2>Use another service to log in.</h2>
         @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+    *@
 </section>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+@*
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+*@
