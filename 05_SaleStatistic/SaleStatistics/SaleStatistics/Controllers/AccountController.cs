@@ -17,6 +17,9 @@ namespace SaleStatistics.Controllers
     public class AccountController : Controller
     {
 
+        //https://habrahabr.ru/post/192238/
+        //SimpleMembership
+
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)

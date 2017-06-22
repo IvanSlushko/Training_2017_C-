@@ -13,11 +13,13 @@ namespace SaleStatistics.Controllers
     public class HomeController : Controller
     {
 
+
+
         // GET: HomePage
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View();
+              return View();
         }
 
         public ActionResult Sales()
