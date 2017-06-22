@@ -7,12 +7,19 @@
             @Html.AntiForgeryToken()
             <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
         }
+
+        @if (User.IsInRole("admin"))
+        {
+            @Html.ActionLink("Register new User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        }
+
+
     </text>
 }
 else
 {
     <ul>
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+       @* <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }

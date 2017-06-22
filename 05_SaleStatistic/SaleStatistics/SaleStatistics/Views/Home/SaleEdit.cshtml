@@ -60,7 +60,7 @@
 <script type="text/javascript">
     onSaleSave = function () {
         $("form").on("submit", function (e) {
-            +e.preventDefault();
+            e.preventDefault();
             $.post('@Url.Action("SaleEdit", "Home")', $("form").serialize(), function (data, textStatus, jHXR) {
                 hideSaleEdit();
                 onSaleListLoad();
