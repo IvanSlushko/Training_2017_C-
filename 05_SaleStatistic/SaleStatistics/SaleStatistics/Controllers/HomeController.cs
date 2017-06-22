@@ -13,6 +13,7 @@ namespace SaleStatistics.Controllers
     public class HomeController : Controller
     {
 
+        // GET: HomePage
         [AllowAnonymous]
         public ActionResult Index()
         {
