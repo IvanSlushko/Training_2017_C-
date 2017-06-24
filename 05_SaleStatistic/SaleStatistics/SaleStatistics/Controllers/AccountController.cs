@@ -52,9 +52,10 @@ namespace SaleStatistics.Controllers
             WebSecurity.Logout();
             return RedirectToAction("Index", "Home");
         }
-        
+
         // GET: /Account/Register
         [Authorize(Roles = "admin")]
+        //[AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -64,6 +65,7 @@ namespace SaleStatistics.Controllers
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
+        //[AllowAnonymous]
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
