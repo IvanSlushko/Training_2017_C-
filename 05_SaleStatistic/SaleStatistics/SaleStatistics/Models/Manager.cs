@@ -10,7 +10,7 @@ namespace SaleStatistics.Models
     {
         public int Id { get; set; }
 
-
+        [Required(ErrorMessage = "Second name can not be empty!")]
         [MaxLength(30, ErrorMessage = "Too many chars")]
         public string SecondName { get; set; }
     }

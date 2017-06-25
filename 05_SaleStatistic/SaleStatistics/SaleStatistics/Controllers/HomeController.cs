@@ -260,16 +260,21 @@ namespace SaleStatistics.Controllers
             return PartialView("PartialSalesList", sales);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Ivan Slushko";
-            return View();
+        [HttpGet]
+         public JsonResult GetManagersChartData()
+         {
+             var repositoryTransfer = new RepoTransfer();
+             var sales = repositoryTransfer.GetSales()
+                                           .GroupBy(s => s.Manager)
+                                           .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
+                                           .ToArray();
+ 
+             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "lu813@tut.by";
-            return View();
-        }
+ 
+         public ActionResult ManagersChart()
+         {
+             return View();
+         }
     }
 }
