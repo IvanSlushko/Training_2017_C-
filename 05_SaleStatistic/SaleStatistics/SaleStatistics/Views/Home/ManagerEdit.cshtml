@@ -37,7 +37,6 @@
             $.post('@Url.Action("ManagerEdit", "Home")', $("form").serialize(), function (data, textStatus, jHXR) {
                 hideManagerEdit();
                 onManagerListLoad();
-                //!!!!!!!!!after operation don't work button "back to homepage"
             });
         });
     }

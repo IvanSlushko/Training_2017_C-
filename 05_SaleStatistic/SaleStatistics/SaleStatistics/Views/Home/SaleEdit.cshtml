@@ -53,6 +53,7 @@
         </div>
         <p>
             <input id="saveButton" type="submit" value="Save" />
+            <input id="cancelButton" type="reset" value="Cancel" />
         </p>
     </fieldset>
 }
@@ -67,5 +68,14 @@
             });
         });
     }
+
+    onSaleCancel = function () {
+        $("form").on("reset", function () {
+            hideSaleEdit();
+            onSaleListLoad();
+        });
+    }
+
     $("#saveButton").click(onSaleSave);
+    $("#cancelButton").click(onSaleCancel);
 </script>
