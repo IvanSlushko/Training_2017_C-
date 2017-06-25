@@ -17,7 +17,8 @@ namespace SaleStatistics.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-              return View();
+            GetManagersChartData();
+            return View();
         }
 
         public ActionResult Sales()
@@ -261,20 +262,19 @@ namespace SaleStatistics.Controllers
         }
 
         [HttpGet]
-         public JsonResult GetManagersChartData()
-         {
-             var repositoryTransfer = new RepoTransfer();
-             var sales = repositoryTransfer.GetSales()
-                                           .GroupBy(s => s.Manager)
-                                           .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
-                                           .ToArray();
- 
-             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
+        public JsonResult GetManagersChartData()
+        {
+            var repositoryTransfer = new RepoTransfer();
+            var sales = repositoryTransfer.GetSales()
+                                          .GroupBy(s => s.Manager)
+                                          .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
+                                          .ToArray();
+            return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
         }
- 
-         public ActionResult ManagersChart()
-         {
-             return View();
-         }
+
+        public ActionResult ManagersChart()
+        {
+            return View();
+        }
     }
 }
