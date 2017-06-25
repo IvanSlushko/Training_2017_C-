@@ -54,7 +54,7 @@ namespace SaleStatistics.Controllers
 
         //!!!!
         [HttpGet]
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult SaleEdit(int id)
         {
             var repositoryTransfer = new RepoTransfer();
@@ -73,7 +73,7 @@ namespace SaleStatistics.Controllers
 
         //!!!!
         [HttpPost]
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult SaleEdit(SaleInfo sale)
         {
             TryValidateModel(sale);
@@ -129,7 +129,7 @@ namespace SaleStatistics.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult ManagerEdit(int id)
         {
             var repositoryTransfer = new RepoTransfer();
@@ -143,7 +143,7 @@ namespace SaleStatistics.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult ManagerEdit(Manager manager)
         {
             TryValidateModel(manager);

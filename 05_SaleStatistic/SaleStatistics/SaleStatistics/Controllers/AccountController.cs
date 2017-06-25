@@ -55,8 +55,8 @@ namespace SaleStatistics.Controllers
 
         // GET: /Account/Register
 
-        //[Authorize(Roles = "admin")]
-        [AllowAnonymous]
+        [Authorize(Roles = "admin")]
+        //[AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -66,8 +66,8 @@ namespace SaleStatistics.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Authorize(Roles = "admin")]
-        [AllowAnonymous]
+        [Authorize(Roles = "admin")]
+        //[AllowAnonymous]
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
