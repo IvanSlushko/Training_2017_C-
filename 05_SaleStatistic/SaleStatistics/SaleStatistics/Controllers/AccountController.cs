@@ -43,7 +43,7 @@ namespace SaleStatistics.Controllers
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
             return View(model);
         }
-        
+
         // POST: /Account/LogOff
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -54,18 +54,20 @@ namespace SaleStatistics.Controllers
         }
 
         // GET: /Account/Register
-        [Authorize(Roles = "admin")]
-        //[AllowAnonymous]
+
+        //[Authorize(Roles = "admin")]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
         }
-        
+
         // POST: /Account/Register
+
         [HttpPost]
-        [Authorize(Roles = "admin")]
         [ValidateAntiForgeryToken]
-        //[AllowAnonymous]
+        //[Authorize(Roles = "admin")]
+        [AllowAnonymous]
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
@@ -87,7 +89,7 @@ namespace SaleStatistics.Controllers
             return View(model);
         }
 
-        
+
         // POST: /Account/Disassociate
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -111,11 +113,10 @@ namespace SaleStatistics.Controllers
                     }
                 }
             }
-
             return RedirectToAction("Manage", new { Message = message });
         }
 
-         // GET: /Account/Manage
+        // GET: /Account/Manage
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
