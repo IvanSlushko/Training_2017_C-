@@ -261,7 +261,7 @@ namespace SaleStatistics.Controllers
             return PartialView("PartialSalesList", sales);
         }
 
-        [HttpGet]
+        [HttpPost]
         public JsonResult GetManagersChartData()
         {
             var repositoryTransfer = new RepoTransfer();
@@ -273,10 +273,11 @@ namespace SaleStatistics.Controllers
 
         }
 
-
         public ActionResult ManagersChart()
         {
+           // GetManagersChartData();
             return View();
+            
         }
     }
 }
