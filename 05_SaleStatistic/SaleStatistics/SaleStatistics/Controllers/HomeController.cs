@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using SaleStatistics.Models;
 using BL;
+using System.Web.Script.Serialization;
 
 namespace SaleStatistics.Controllers
 {
@@ -17,7 +18,6 @@ namespace SaleStatistics.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            GetManagersChartData();
             return View();
         }
 
@@ -270,7 +270,9 @@ namespace SaleStatistics.Controllers
                                           .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
                                           .ToArray();
             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
+
         }
+
 
         public ActionResult ManagersChart()
         {
