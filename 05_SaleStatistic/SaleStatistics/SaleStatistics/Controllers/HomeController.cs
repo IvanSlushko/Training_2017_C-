@@ -261,31 +261,30 @@ namespace SaleStatistics.Controllers
             return PartialView("PartialSalesList", sales);
         }
 
-        //[HttpGet]
-        //public JsonResult GetManagersChartData()
-        //{
-        //    var repositoryTransfer = new RepoTransfer();
-        //    var sales = repositoryTransfer.GetSales()
-        //                                  .GroupBy(s => s.Manager)
-        //                                  .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
-        //                                  .ToArray();
-        //    return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
-
-        //}
-
-
         [HttpGet]
         public JsonResult GetManagersChartData()
         {
-            List<ChartModel> sales = new List<ChartModel>
-           {
-              new ChartModel { ManagerName = "TomTailor", PriceSum = 28 },
-              new ChartModel { ManagerName = "Tom", PriceSum = 8 },
-              new ChartModel { ManagerName = "Tailor", PriceSum = 2 }
-           };
+            var repositoryTransfer = new RepoTransfer();
+            var sales = repositoryTransfer.GetSales()
+                                          .GroupBy(s => s.Manager)
+                                          .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
+                                          .ToArray();
             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
 
         }
+
+        //[HttpGet]
+        //public JsonResult GetManagersChartData()
+        //{
+        //    List<ChartModel> sales = new List<ChartModel>
+        //   {
+        //      new ChartModel { ManagerName = "TomTailor", PriceSum = 28 },
+        //      new ChartModel { ManagerName = "Tom", PriceSum = 8 },
+        //      new ChartModel { ManagerName = "Tailor", PriceSum = 2 }
+        //   };
+        //    return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
+
+        //}
 
         private List<ChartModel> GetUsers()
         {
@@ -307,7 +306,6 @@ namespace SaleStatistics.Controllers
                     PriceSum = 4
                 }
             };
-
             return usersList;
         }
 
@@ -323,7 +321,7 @@ namespace SaleStatistics.Controllers
         //test
         public ActionResult ViewChart()
         {
-            GetUsersData();
+            //GetUsersData();
             return View();
         }
 
