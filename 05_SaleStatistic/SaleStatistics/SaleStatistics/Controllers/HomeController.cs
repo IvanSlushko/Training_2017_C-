@@ -267,10 +267,10 @@ namespace SaleStatistics.Controllers
             var repositoryTransfer = new RepoTransfer();
             var sales = repositoryTransfer.GetSales()
                                           .GroupBy(s => s.Manager)
-                                          .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
+                                        .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
+                                      //  .Select(m => new ChartModel { m.Key, m.Sum(x => x.PriceSum) })
                                           .ToArray();
             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
-
         }
 
         //[HttpGet]
