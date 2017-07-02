@@ -192,7 +192,6 @@ namespace SaleStatistics.Controllers
             return PartialView("PartialManagersList", managers);
         }
 
-
         public ActionResult ShowSManager(string saleManager)
         {
             var repositoryTransfer = new RepoTransfer();
@@ -267,65 +266,10 @@ namespace SaleStatistics.Controllers
             var repositoryTransfer = new RepoTransfer();
             var sales = repositoryTransfer.GetSales()
                                           .GroupBy(s => s.Manager)
-                                        .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
-                                      //  .Select(m => new ChartModel { m.Key, m.Sum(x => x.PriceSum) })
+                                          .Select(m => new object[] { m.Key, m.Sum(x => x.PriceSum) })
                                           .ToArray();
             return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
         }
-
-        //[HttpGet]
-        //public JsonResult GetManagersChartData()
-        //{
-        //    List<ChartModel> sales = new List<ChartModel>
-        //   {
-        //      new ChartModel { ManagerName = "TomTailor", PriceSum = 28 },
-        //      new ChartModel { ManagerName = "Tom", PriceSum = 8 },
-        //      new ChartModel { ManagerName = "Tailor", PriceSum = 2 }
-        //   };
-        //    return Json(sales, JsonRequestBehavior.AllowGet); //The value of the transfer: AllowGet - Enable get request
-
-        //}
-
-        private List<ChartModel> GetUsers()
-        {
-            var usersList = new List<ChartModel>
-            {
-                new ChartModel
-                {
-                    ManagerName = "Ram",
-                    PriceSum = 2
-                },
-                new ChartModel
-                {
-                    ManagerName = "chand",
-                    PriceSum = 33
-                },
-                new ChartModel
-                {
-                    ManagerName = "Abc",
-                    PriceSum = 4
-                }
-            };
-            return usersList;
-        }
-
-
-        [AllowAnonymous]
-        [HttpGet]
-        public JsonResult GetUsersData()
-        {
-            var users = GetUsers();
-            return Json(users, JsonRequestBehavior.AllowGet);
-        }
-
-        //test
-        public ActionResult ViewChart()
-        {
-            //GetUsersData();
-            return View();
-        }
-
-
 
         public ActionResult ManagersChart()
         {
