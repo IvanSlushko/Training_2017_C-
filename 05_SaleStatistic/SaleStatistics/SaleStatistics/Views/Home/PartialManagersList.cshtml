@@ -12,7 +12,10 @@
         <tr>
             <td style="border: ridge medium gray">@Html.DisplayFor(m => manager.Id)</td>
             <td style="border: ridge medium gray">@Html.DisplayFor(m => manager.SecondName)</td>
-            <td><button type="button" onclick="onManagerEdit(@manager.Id)">Edit</button></td>
+            @if (User.IsInRole("admin"))
+            {
+                <td><button type="button" onclick="onManagerEdit(@manager.Id)">Edit</button></td>
+            }
         </tr>
     }
 </table>

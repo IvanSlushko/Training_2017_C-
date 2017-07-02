@@ -20,7 +20,10 @@
             <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Client) </td>
             <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.Product) </td>
             <td style="border: ridge medium gray"> @Html.DisplayFor(s => sale.PriceSum) </td>
-            <td><button type="button" onclick="onSaleEdit(@sale.Id)"> Edit </button></td>
+            @if (User.IsInRole("admin"))
+            {
+                <td><button type="button" onclick="onSaleEdit(@sale.Id)"> Edit </button></td>
+            }
         </tr>
     }
 </table>
