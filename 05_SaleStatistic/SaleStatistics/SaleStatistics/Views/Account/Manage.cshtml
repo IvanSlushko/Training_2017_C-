@@ -15,15 +15,3 @@
 {
     @Html.Partial("_ChangePasswordPartial")
 }
-else
-{
-    @Html.Partial("_SetPasswordPartial")
-}
-
-<section id="externalLogins">
-    @Html.Action("RemoveExternalLogins")
-</section>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

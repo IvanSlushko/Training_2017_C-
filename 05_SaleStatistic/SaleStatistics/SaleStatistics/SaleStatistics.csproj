@@ -198,7 +198,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\ChartModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\SaleInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -301,9 +300,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -313,8 +309,6 @@
     <Content Include="Views\Home\PartialManagersList.cshtml" />
     <Content Include="Views\Home\PartialSalesList.cshtml" />
     <Content Include="Views\Home\SaleEdit.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Home\ManagersChart.cshtml" />
