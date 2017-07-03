@@ -10,7 +10,7 @@ using System.Web.Script.Serialization;
 namespace SaleStatistics.Controllers
 {
 
-    [Authorize]
+    [Authorize] //To access any method you need authentication l&p
     public class HomeController : Controller
     {
 
